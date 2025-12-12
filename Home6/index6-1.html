@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Vintage Coffee &amp; Kitchen - Tangier</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Lato:wght@300;400;700&amp;family=Dancing+Script:wght@500&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#D4A373", // Warm Tan/Gold for buttons/accents
+                        secondary: "#2C1810", // Dark Coffee Brown
+                        "background-light": "#FAFAF5", // Light cream background
+                        "background-dark": "#1A1412", // Very dark brown background for dark mode
+                        "card-light": "#FFFFFF",
+                        "card-dark": "#261E1B",
+                        "text-main-light": "#3E2723",
+                        "text-main-dark": "#EFEBE9",
+                        "text-muted-light": "#5D4037",
+                        "text-muted-dark": "#BCAAA4",
+                        "panel-dark": "#32221C" // Specific dark panel color
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Lato', 'sans-serif'],
+                        script: ['Dancing Script', 'cursive'],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #D4A373;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b08d55;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            position: relative;
+        }
+
+        .carousel-indicator.active {
+            background-color: #D4A373;
+            width: 2rem;
+        }
+
+        .patron-scroll-container {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .patron-scroll-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .masonry-grid {
+            display: grid;
+            grid-template-rows: masonry;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-sans text-text-main-light dark:text-text-main-dark transition-colors duration-300 antialiased selection:bg-primary selection:text-white">
+    <nav
+        class="sticky top-0 z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-accent dark:border-accent">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <span
+                        class="font-serif font-bold text-2xl tracking-wider text-secondary dark:text-white">VINTAGE</span>
+                    <span class="text-xs tracking-[0.2em] text-primary uppercase mt-1">Coffee &amp; Kitchen</span>
+                </div>
+
+                <!-- Navigation Links -->
+                <!-- Navigation Links -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a class="text-text-main-light dark:text-text-main-dark hover:text-primary dark:hover:text-primary transition-colors text-sm font-bold tracking-widest uppercase"
+                        href="index6-1.html">Home</a>
+                    <a class="text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors text-sm font-bold tracking-widest uppercase"
+                        href="about-us6.html">Our Story</a>
+                    <a class="text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors text-sm font-bold tracking-widest uppercase"
+                        href="menu6.html">Menu</a>
+                    <a class="text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors text-sm font-bold tracking-widest uppercase"
+                        href="contact6.html">Contact</a>
+
+                    <!-- Themes Dropdown -->
+                    <div class="relative group">
+                        <button
+                            class="flex items-center gap-1 text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors text-sm font-bold tracking-widest uppercase">
+                            Themes
+                            <span class="material-icons text-sm">expand_more</span>
+                        </button>
+                        <div
+                            class="absolute right-0 mt-2 w-48 bg-white dark:bg-stone-900 rounded-md shadow-lg py-1 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-50">
+                            <a href="../index.html"
+                                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-stone-800">Home
+                                1 (Green)</a>
+                            <a href="../Home2/index2.html"
+                                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-stone-800">Home
+                                2</a>
+                            <a href="../Home3/index3.html"
+                                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-stone-800">Home
+                                3</a>
+                            <a href="../Home4/index4.html"
+                                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-stone-800">Home
+                                4</a>
+                            <a href="../Home5/index5.html"
+                                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-stone-800">Home
+                                5</a>
+                            <a href="../Home6/index6-1.html"
+                                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-stone-800">Home
+                                6 (Orange)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <button
+                    class="bg-secondary text-white px-5 py-2 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-primary transition-colors dark:bg-white dark:text-secondary dark:hover:bg-primary dark:hover:text-white">
+                    Book a Table
+                </button>
+            </div>
+        </div>
+    </nav>
+    <header class="relative w-full h-[600px] lg:h-[750px] overflow-hidden group">
+        <div class="carousel-track h-full w-full" id="heroCarousel">
+            <div class="carousel-slide h-full w-full relative">
+                <!-- <img alt="Vintage Coffee &amp; Kitchen storefront in Tangier" class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuApwDwPxkGnx3Z6H9Fb2N8NCaDOfoIo9hkWpo_tsTcOYDioMOlt73qltjdgyWy5yeOBGGlMuOosA5W_M-Yfd9sC6QoI7lmyDpPbYOUpRK-fqYNTusb9h_5u59xiakPPILeMG3yLCatbTa97JDGLCyiSwNlCs6X_PFGZfjWyofuvIUIu55MXMuBOmjqzCvVe-h7cb-67r7Xz8EF9JYNSfYfFGY3Cz-oldUxQp8H_tSOzXqZGA5jiJvlmjHIbYpsedaeDDBzljXZrHWM" /> -->
+                <img alt="Vintage Coffee &amp; Kitchen storefront in Tangier" class="w-full h-full object-cover"
+                    src="../assets/images/out/vintage-outside.jpg" />
+
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent flex items-center">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                        <div class="max-w-2xl space-y-6 animate-slide-up">
+                            <span
+                                class="inline-block px-3 py-1 bg-primary/20 backdrop-blur-sm border border-primary/40 text-primary text-xs font-bold tracking-[0.2em] uppercase rounded-full">Tangier,
+                                Morocco</span>
+                            <h1
+                                class="text-5xl md:text-7xl font-serif text-white font-bold leading-tight drop-shadow-lg">
+                                A Taste of <br />
+                                <span class="text-primary italic font-light">Timeless Elegance</span>
+                            </h1>
+                            <p
+                                class="text-white/90 text-lg md:text-xl font-light max-w-lg leading-relaxed drop-shadow-md">
+                                Experience the perfect blend of vintage charm and modern culinary excellence in the
+                                heart of the city.
+                            </p>
+                            <div class="pt-4 flex gap-4">
+                                <button
+                                    class="bg-primary hover:bg-[#c29263] text-white px-8 py-3 rounded-md font-bold tracking-widest uppercase shadow-lg shadow-primary/30 transition-all transform hover:-translate-y-1">
+                                    View Menu
+                                </button>
+                                <button
+                                    class="bg-transparent border border-white text-white hover:bg-white hover:text-secondary px-8 py-3 rounded-md font-bold tracking-widest uppercase transition-all">
+                                    Locate Us
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="carousel-slide h-full w-full relative">
+                <img alt="Barista pouring latte art" class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQHymIigB0AYJja9VS0pNy4GcIPGyiUPcPvDs7YAPvGjolj1pXZ8n1H7j6QNbNcw52t_BlRV1NrQ-IJIaDL688CxI01dVjuxyPSStMb16siU38vulyINUuyc8yG4abNvRx74s5gfE2UfSV5lUedz_kT-NyBB_edxDzFvWBSHCWNzvUgnEl6pcwihSIA2kIDknTQTAJKQHtPRQZBXqIXCCLB2THwud2NiPuv-yw7p4H8EL7S2uHloCVoQJtZ4wN-YyieDufwNZTIkg" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent flex items-center">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                        <div class="max-w-2xl space-y-6">
+                            <span
+                                class="inline-block px-3 py-1 bg-primary/20 backdrop-blur-sm border border-primary/40 text-primary text-xs font-bold tracking-[0.2em] uppercase rounded-full">Artisanal
+                                Coffee</span>
+                            <h1
+                                class="text-5xl md:text-7xl font-serif text-white font-bold leading-tight drop-shadow-lg">
+                                Crafted with <br />
+                                <span class="text-primary italic font-light">Passion &amp; Precision</span>
+                            </h1>
+                            <p
+                                class="text-white/90 text-lg md:text-xl font-light max-w-lg leading-relaxed drop-shadow-md">
+                                Every cup is a masterpiece, brewed from the finest ethically sourced beans to start your
+                                day right.
+                            </p>
+                            <div class="pt-4 flex gap-4">
+                                <button
+                                    class="bg-primary hover:bg-[#c29263] text-white px-8 py-3 rounded-md font-bold tracking-widest uppercase shadow-lg shadow-primary/30 transition-all transform hover:-translate-y-1">
+                                    Our Blends
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div class="carousel-slide h-full w-full relative">
+                <img alt="Cozy vintage interior of the coffee shop" class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMeXlqOH6xGh33a6tO5KbcNPriWvO9mT7iH1I6Hocp2Ffx9vn6GMVlU-KhIagovfv2HynfXCPWnxdaZ7MnbzFjhtP_DmTeCtANZvyj8b16jRoIR1x_zM2XhERhVutSUzSEwv0yMc3bdp3T1JyZAqewFZFieoTSeh29st-tlwMaM7oUX4lcTu1iFMNugCUQxsgcE5HwNqqldey5OYUxeljZbHTXBeIr_dyTaXWLpnVEdrl5Eabxx_hzOp7vwPl4LmBl1QYTyPl4b8k" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent flex items-center">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                        <div class="max-w-2xl space-y-6">
+                            <span
+                                class="inline-block px-3 py-1 bg-primary/20 backdrop-blur-sm border border-primary/40 text-primary text-xs font-bold tracking-[0.2em] uppercase rounded-full">Ambiance</span>
+                            <h1
+                                class="text-5xl md:text-7xl font-serif text-white font-bold leading-tight drop-shadow-lg">
+                                Your Sanctuary <br />
+                                <span class="text-primary italic font-light">Away from Home</span>
+                            </h1>
+                            <p
+                                class="text-white/90 text-lg md:text-xl font-light max-w-lg leading-relaxed drop-shadow-md">
+                                Relax, work, or catch up with friends in an atmosphere designed for comfort and
+                                inspiration.
+                            </p>
+                            <div class="pt-4 flex gap-4">
+                                <button
+                                    class="bg-primary hover:bg-[#c29263] text-white px-8 py-3 rounded-md font-bold tracking-widest uppercase shadow-lg shadow-primary/30 transition-all transform hover:-translate-y-1">
+                                    Gallery
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="absolute bottom-8 left-0 right-0 z-10 flex justify-center gap-3">
+            <button aria-label="Go to slide 1"
+                class="carousel-indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300 active"
+                onclick="goToSlide(0)"></button>
+            <button aria-label="Go to slide 2"
+                class="carousel-indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300"
+                onclick="goToSlide(1)"></button>
+            <button aria-label="Go to slide 3"
+                class="carousel-indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300"
+                onclick="goToSlide(2)"></button>
+        </div>
+        <button aria-label="Previous slide"
+            class="absolute top-1/2 left-4 md:left-8 -translate-y-1/2 bg-black/20 hover:bg-primary/80 backdrop-blur-sm text-white w-12 h-12 rounded-full flex items-center justify-center transition-colors opacity-0 group-hover:opacity-100"
+            onclick="prevSlide()">
+            <span class="material-icons">chevron_left</span>
+        </button>
+        <button aria-label="Next slide"
+            class="absolute top-1/2 right-4 md:right-8 -translate-y-1/2 bg-black/20 hover:bg-primary/80 backdrop-blur-sm text-white w-12 h-12 rounded-full flex items-center justify-center transition-colors opacity-0 group-hover:opacity-100"
+            onclick="nextSlide()">
+            <span class="material-icons">chevron_right</span>
+        </button>
+    </header>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.carousel-indicator');
+        const track = document.getElementById('heroCarousel');
+        const totalSlides = slides.length;
+        function updateCarousel() {
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            indicators.forEach((ind, index) => {
+                if (index === currentSlide) {
+                    ind.classList.add('active');
+                    ind.classList.remove('bg-white/50');
+                } else {
+                    ind.classList.remove('active');
+                    ind.classList.add('bg-white/50');
+                }
+            });
+        }
+        function goToSlide(index) {
+            currentSlide = index;
+            updateCarousel();
+        }
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+        // Auto-advance
+        setInterval(nextSlide, 6000);
+    </script>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
+        <section class="py-6">
+            <div class="text-center mb-16">
+                <span class="font-script text-3xl text-accent block mb-2">Taste the Tradition</span>
+                <h2 class="font-serif text-4xl md:text-5xl text-secondary dark:text-white font-bold">Featured Delights
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Menu Item 1 -->
+                <div
+                    class="bg-white dark:bg-card-dark rounded-xl shadow-soft overflow-hidden group hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 overflow-hidden relative">
+                        <!-- <img alt="Moroccan Breakfast"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMgxdUI_D23gRM1goCkogfMcW1nCByTfZtFVG77s8H_Ui3r8fYjtoELv_M0SqucRJHpvee1ODz0UEnj8k9SxNRMC0xGDmn9nOH3Gti5LecKpF4UN9PzBpMcLHJdNg6IuDMyJ9Q9QRRVP731Amn_fRn_k9nlMiOqnJZFHsDJRua950LU2PXgF8M7jFrDX3GfHDrzUYKeHTROGiQu6KzewR4--z7lkyNjqLgm9rJBwaxIkLZhJwpsVxfg6HWEKCe47LSPoGnEKySmY4" /> -->
+                        <img alt="Moroccan Breakfast"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            src="../assets/images/food/food34.jpg" />
+
+
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="p-8 text-center space-y-4">
+                        <h3 class="font-serif text-2xl font-bold text-secondary dark:text-white">Traditional Breakfast
+                        </h3>
+                        <p class="text-text-muted-light dark:text-text-muted-dark text-sm leading-relaxed">Semolina
+                            pancakes, wild honey, organic goat cheese, and marinated olives.</p>
+                        <div class="pt-2">
+                            <span class="font-serif text-primary text-xl font-bold">$12.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 2 -->
+                <div
+                    class="bg-white dark:bg-card-dark rounded-xl shadow-soft overflow-hidden group hover:shadow-xl transition-shadow duration-300 transform md:-translate-y-4">
+                    <div class="h-64 overflow-hidden relative">
+                        <img alt="Lamb Tagine"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            src="../assets/images/food/food2.jpg" />
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="p-8 text-center space-y-4">
+                        <h3 class="font-serif text-2xl font-bold text-secondary dark:text-white">Salde Royale</h3>
+                        <p class="text-text-muted-light dark:text-text-muted-dark text-sm leading-relaxed">Slow-cooked
+                            lamb with caramelized prunes, roasted almonds, and sesame.</p>
+                        <div class="pt-2">
+                            <span class="font-serif text-primary text-xl font-bold">$18.50</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 3 -->
+                <div
+                    class="bg-white dark:bg-card-dark rounded-xl shadow-soft overflow-hidden group hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 overflow-hidden relative">
+                        <img alt="Mint Tea"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            src="../assets/images/food/food7.jpg" />
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="p-8 text-center space-y-4">
+                        <h3 class="font-serif text-2xl font-bold text-secondary dark:text-white">Mojito Time</h3>
+                        <p class="text-text-muted-light dark:text-text-muted-dark text-sm leading-relaxed">Fresh mint
+                            leaves, gunpowder green tea, and a subtle touch of orange blossom.</p>
+                        <div class="pt-2">
+                            <span class="font-serif text-primary text-xl font-bold">$4.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <button
+                    class="border-2 border-secondary dark:border-white text-secondary dark:text-white px-10 py-3 rounded-md font-bold tracking-widest uppercase hover:bg-secondary hover:text-white dark:hover:bg-white dark:hover:text-secondary transition-all duration-300">
+                    View Full Menu
+                </button>
+            </div>
+        </section>
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div class="order-2 lg:order-1 relative">
+                <div class="absolute -inset-4 bg-white dark:bg-card-dark rounded-3xl shadow-soft transform rotate-1">
+                </div>
+                <div class="relative rounded-2xl overflow-hidden shadow-lg aspect-[4/3] group">
+                    <img alt="Elegant cup of cappuccino with latte art and a pastry on the side"
+                        class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-700"
+                        src="../assets/images/int/interior.jpg" />
+                    <div class="absolute top-8 left-0 right-0 text-center pointer-events-none">
+                        <div
+                            class="inline-block backdrop-blur-sm bg-black/30 px-6 py-2 rounded-lg border border-white/20">
+                            <h3 class="text-white font-serif text-2xl tracking-widest">VINTAGE</h3>
+                            <p class="text-white/80 text-[10px] tracking-[0.3em] uppercase">Coffee &amp; Kitchen</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-1 lg:order-2">
+                <div
+                    class="bg-panel-dark dark:bg-[#231713] rounded-2xl p-8 md:p-12 shadow-2xl relative overflow-hidden border border-[#4A342E]">
+                    <div
+                        class="absolute top-4 bottom-4 left-4 right-4 border border-[#5D4037]/50 rounded-xl pointer-events-none">
+                    </div>
+                    <div class="relative z-10 space-y-10">
+                        <div class="flex gap-4 items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <span class="material-icons text-primary">schedule</span>
+                            </div>
+                            <div class="space-y-2">
+                                <h3 class="text-primary font-serif text-2xl font-bold tracking-wide">Breakfast &amp;
+                                    Lunch</h3>
+                                <div class="text-[#EFEBE9]/90 font-sans space-y-1">
+                                    <p class="font-bold">Daily: 8:00 AM - 4:00 PM</p>
+                                    <p class="text-sm opacity-80">Fresh pastries &amp; coffee all day. Kitchen closes at
+                                        3:30 PM.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-px bg-[#5D4037]/50"></div>
+                        <div class="flex gap-4 items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <span class="material-icons text-primary">dinner_dining</span>
+                            </div>
+                            <div class="space-y-2">
+                                <h3 class="text-primary font-serif text-2xl font-bold tracking-wide">Dinner Service</h3>
+                                <div class="text-[#EFEBE9]/90 font-sans space-y-1">
+                                    <p class="font-bold">Thursday - Sunday</p>
+                                    <p class="font-bold">6:00 PM - 10:00 PM</p>
+                                    <p class="text-sm opacity-80">Reservations recommended for dinner service.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            document.getElementById('scrollLeftPatrons').addEventListener('click', function () {
+                document.getElementById('patronsContainer').scrollBy({ left: -280, behavior: 'smooth' });
+            });
+            document.getElementById('scrollRightPatrons').addEventListener('click', function () {
+                document.getElementById('patronsContainer').scrollBy({ left: 280, behavior: 'smooth' });
+            });
+        </script>
+        <section class="py-16 bg-stone-50 dark:bg-[#1f1614] border-y border-stone-200 dark:border-stone-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="font-script text-3xl text-primary block mb-2">Our Community</span>
+                    <h2 class="font-serif text-4xl text-secondary dark:text-white font-bold">Vintage Moments</h2>
+                    <p class="mt-4 text-text-muted-light dark:text-text-muted-dark max-w-2xl mx-auto">From birthday
+                        celebrations to quiet afternoons, our coffee shop is the canvas for your memories.</p>
+                </div>
+                <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+                    <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-soft group relative">
+                        <img alt="Friends enjoying coffee"
+                            class="w-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                            src="../assets/images/fans/fans.jpg" />
+                        <div
+                            class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300">
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <span
+                                class="bg-white/90 dark:bg-black/80 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-secondary dark:text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">Friends
+                                &amp; Laughter</span>
+                        </div>
+                    </div>
+                    <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-soft group relative">
+                        <img alt="Customer reading a book"
+                            class="w-full aspect-square object-cover transform group-hover:scale-105 transition-transform duration-700"
+                            src="../assets/images/fans/fans3.jpg" />
+                        <div
+                            class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300">
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <span
+                                class="bg-white/90 dark:bg-black/80 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-secondary dark:text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">Quiet
+                                Corners</span>
+                        </div>
+                    </div>
+                    <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-soft group relative">
+                        <img alt="Celebration cake"
+                            class="w-full aspect-video object-cover transform group-hover:scale-105 transition-transform duration-700"
+                            src="../assets/images/fans/fans7.jpg" />
+                        <div
+                            class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300">
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <span
+                                class="bg-white/90 dark:bg-black/80 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-secondary dark:text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">Celebrations</span>
+                        </div>
+                    </div>
+                    <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-soft group relative">
+                        <img alt="Two men talking at coffee shop"
+                            class="w-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                            src="../assets/images/fans/fans9.jpg" />
+                        <div
+                            class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300">
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <span
+                                class="bg-white/90 dark:bg-black/80 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-secondary dark:text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">Daily
+                                Rituals</span>
+                        </div>
+                    </div>
+                    <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-soft group relative">
+                        <img alt="Laptop and coffee"
+                            class="w-full aspect-square object-cover transform group-hover:scale-105 transition-transform duration-700"
+                            src="../assets/images/fans/fans13.jpg" />
+                        <div
+                            class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300">
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <span
+                                class="bg-white/90 dark:bg-black/80 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-secondary dark:text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">Remote
+                                Work</span>
+                        </div>
+                    </div>
+                    <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-soft group relative">
+                        <img alt="Group watching TV"
+                            class="w-full aspect-video object-cover transform group-hover:scale-105 transition-transform duration-700"
+                            src="../assets/images/fans/fans33.jpg" />
+                        <div
+                            class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300">
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <span
+                                class="bg-white/90 dark:bg-black/80 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-secondary dark:text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">Game
+                                Night</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-20 border-t border-stone-200 dark:border-stone-800/50">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-4 space-y-6">
+                    <span class="font-script text-3xl text-primary">Hall of Fame</span>
+                    <h2 class="font-serif text-4xl text-secondary dark:text-white font-bold leading-tight">Vintage
+                        Patrons &amp; <br /><span class="text-primary italic font-light">Distinguished Guests</span>
+                    </h2>
+                    <p class="text-text-muted-light dark:text-text-muted-dark text-lg">Tangier has long been a refuge
+                        for artists, writers, and dreamers. Our walls whisper the stories of the legends who have sipped
+                        coffee in these very corners.</p>
+                    <div class="pt-4 flex gap-3">
+                        <button
+                            class="p-2 border border-stone-300 dark:border-stone-700 rounded-full hover:bg-primary hover:border-primary hover:text-white transition-all text-secondary dark:text-white"
+                            id="scrollLeftPatrons">
+                            <span class="material-icons">chevron_left</span>
+                        </button>
+                        <button
+                            class="p-2 border border-stone-300 dark:border-stone-700 rounded-full hover:bg-primary hover:border-primary hover:text-white transition-all text-secondary dark:text-white"
+                            id="scrollRightPatrons">
+                            <span class="material-icons">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="lg:col-span-8 overflow-hidden relative">
+                    <div class="patron-scroll-container flex gap-6 overflow-x-auto pb-4 px-1 snap-x snap-mandatory"
+                        id="patronsContainer">
+                        <div class="flex-shrink-0 w-64 snap-center">
+                            <div class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-stone-200 shadow-md">
+                                <img alt="Famous Writer Paul B."
+                                    class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
+                                    src="../assets/images/celeb/celeb1.jpg" />
+                                <div
+                                    class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <p class="text-white font-serif text-lg">Paul Bowles</p>
+                                    <p class="text-primary text-xs uppercase tracking-widest">Writer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-64 snap-center">
+                            <div class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-stone-200 shadow-md">
+                                <img alt="Famous Musician Mick J."
+                                    class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
+                                    src="../assets/images/celeb/celeb2.jpg" />
+                                <div
+                                    class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <p class="text-white font-serif text-lg">Mick Jagger</p>
+                                    <p class="text-primary text-xs uppercase tracking-widest">Musician</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-64 snap-center">
+                            <div class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-stone-200 shadow-md">
+                                <img alt="Famous Artist Henri M."
+                                    class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
+                                    src="../assets/images/celeb/celeb4.jpg" />
+                                <div
+                                    class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <p class="text-white font-serif text-lg">Henri Matisse</p>
+                                    <p class="text-primary text-xs uppercase tracking-widest">Painter</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-64 snap-center">
+                            <div class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-stone-200 shadow-md">
+                                <img alt="Famous Actress Talitha G."
+                                    class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
+                                    src="../assets/images/celeb/celeb5.jpg" />
+                                <div
+                                    class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <p class="text-white font-serif text-lg">Talitha Getty</p>
+                                    <p class="text-primary text-xs uppercase tracking-widest">Icon</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-64 snap-center">
+                            <div class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-stone-200 shadow-md">
+                                <img alt="New Celebrity Guest"
+                                    class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
+                                    src="../assets/images/celeb/celeb6.jpg" />
+                                <div
+                                    class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <p class="text-white font-serif text-lg">Visiting Star</p>
+                                    <p class="text-primary text-xs uppercase tracking-widest">Actress</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-12">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-10 px-2 gap-4">
+                <div class="text-center md:text-left w-full md:w-auto">
+                    <span class="font-script text-2xl text-primary block mb-1">Social Life</span>
+                    <h2 class="font-serif text-3xl text-secondary dark:text-white font-bold">@VintageTangier</h2>
+                </div>
+                <a class="bg-secondary text-white dark:bg-white dark:text-secondary px-6 py-3 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-primary hover:text-white transition-all shadow-lg flex items-center gap-2 mx-auto md:mx-0"
+                    href="#">
+                    <span class="material-icons text-sm">photo_camera</span> Follow Us
+                </a>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                <a class="group relative overflow-hidden aspect-square block rounded-xl shadow-md" href="#">
+                    <img alt="Instagram Post"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                        src="../assets/images/ig/image11.jpg" />
+                    <div
+                        class="absolute inset-0 bg-secondary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span
+                            class="material-icons text-white text-4xl transform scale-50 group-hover:scale-100 transition-transform duration-300">favorite</span>
+                    </div>
+                </a>
+                <a class="group relative overflow-hidden aspect-square block rounded-xl shadow-md" href="#">
+                    <video
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                        autoplay muted loop playsinline>
+                        <source src="../assets/videos/video1.mp4" type="video/mp4">
+                    </video>
+                    <div
+                        class="absolute top-2 right-2 bg-black/50 rounded-full p-1 backdrop-blur-sm z-10 pointer-events-none">
+                        <span class="material-icons text-white text-sm">smart_display</span>
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-secondary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span
+                            class="material-icons text-white text-4xl transform scale-50 group-hover:scale-100 transition-transform duration-300">play_arrow</span>
+                    </div>
+                </a>
+                <a class="group relative overflow-hidden aspect-square block rounded-xl shadow-md" href="#">
+                    <video
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                        autoplay muted loop playsinline>
+                        <source src="../assets/videos/video3.mp4" type="video/mp4">
+                    </video>
+                    <div
+                        class="absolute top-2 right-2 bg-black/50 rounded-full p-1 backdrop-blur-sm z-10 pointer-events-none">
+                        <span class="material-icons text-white text-sm">smart_display</span>
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-secondary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span
+                            class="material-icons text-white text-4xl transform scale-50 group-hover:scale-100 transition-transform duration-300">play_arrow</span>
+                    </div>
+                </a>
+                <a class="group relative overflow-hidden aspect-square block rounded-xl shadow-md" href="#">
+                    <img alt="Instagram Post"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                        src="../assets/images/ig/image2.jpg" />
+                    <div
+                        class="absolute inset-0 bg-secondary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span
+                            class="material-icons text-white text-4xl transform scale-50 group-hover:scale-100 transition-transform duration-300">favorite</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section class="py-16 bg-panel-dark text-white rounded-3xl relative overflow-hidden my-12 shadow-2xl">
+            <div
+                class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl pointer-events-none">
+            </div>
+            <div class="relative z-10 max-w-5xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <span class="font-script text-3xl text-primary block mb-2">Join the Atmosphere</span>
+                    <h2 class="font-serif text-4xl font-bold">Upcoming Events</h2>
+                </div>
+                <div class="space-y-6">
+                    <div
+                        class="flex flex-col md:flex-row gap-6 items-center bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors border border-white/5 group">
+                        <div
+                            class="flex-shrink-0 text-center bg-primary/10 p-4 rounded-lg min-w-[100px] border border-primary/20 group-hover:border-primary/50 transition-colors">
+                            <span class="block text-3xl font-serif font-bold text-primary">12</span>
+                            <span class="block text-xs uppercase tracking-widest opacity-80 text-primary">Nov</span>
+                        </div>
+                        <div class="flex-grow text-center md:text-left">
+                            <h3 class="font-serif text-2xl font-bold mb-2 text-primary">Jazz Night in Tangier</h3>
+                            <p class="text-white/80 text-sm mb-3">Live performance by the Ahmed Quartet featuring smooth
+                                saxophone and local rhythms.</p>
+                            <div
+                                class="flex items-center justify-center md:justify-start gap-6 text-xs tracking-widest uppercase text-white/60">
+                                <span class="flex items-center gap-1"><span
+                                        class="material-icons text-sm text-primary">schedule</span> 8:00 PM</span>
+                                <span class="flex items-center gap-1"><span
+                                        class="material-icons text-sm text-primary">local_activity</span> Free
+                                    Entry</span>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0">
+                            <button
+                                class="bg-transparent border border-white/30 hover:bg-white hover:text-secondary text-white text-xs font-bold uppercase px-8 py-3 rounded-full transition-all hover:scale-105">RSVP</button>
+                        </div>
+                    </div>
+                    <div
+                        class="flex flex-col md:flex-row gap-6 items-center bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors border border-white/5 group">
+                        <div
+                            class="flex-shrink-0 text-center bg-primary/10 p-4 rounded-lg min-w-[100px] border border-primary/20 group-hover:border-primary/50 transition-colors">
+                            <span class="block text-3xl font-serif font-bold text-primary">18</span>
+                            <span class="block text-xs uppercase tracking-widest opacity-80 text-primary">Nov</span>
+                        </div>
+                        <div class="flex-grow text-center md:text-left">
+                            <h3 class="font-serif text-2xl font-bold mb-2 text-primary">Poetry &amp; Pastries</h3>
+                            <p class="text-white/80 text-sm mb-3">An afternoon of spoken word poetry accompanied by our
+                                signature almond pastries.</p>
+                            <div
+                                class="flex items-center justify-center md:justify-start gap-6 text-xs tracking-widest uppercase text-white/60">
+                                <span class="flex items-center gap-1"><span
+                                        class="material-icons text-sm text-primary">schedule</span> 4:00 PM</span>
+                                <span class="flex items-center gap-1"><span
+                                        class="material-icons text-sm text-primary">local_activity</span> Limited
+                                    Seats</span>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0">
+                            <button
+                                class="bg-transparent border border-white/30 hover:bg-white hover:text-secondary text-white text-xs font-bold uppercase px-8 py-3 rounded-full transition-all hover:scale-105">RSVP</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <a class="inline-flex items-center gap-2 text-primary hover:text-white transition-colors text-sm font-bold tracking-widest uppercase group"
+                        href="#">
+                        View All Events <span
+                            class="material-icons text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+    <footer class="bg-secondary dark:bg-[#150f0d] text-white py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <h2 class="font-serif text-3xl">Vintage Coffee &amp; Kitchen</h2>
+            <p class="text-white/60 text-sm tracking-widest uppercase">Tangier, Morocco</p>
+            <div class="flex justify-center space-x-6 pt-4">
+                <a class="text-white/60 hover:text-primary transition-colors" href="#"><i
+                        class="material-icons text-xl">facebook</i></a>
+                <a class="text-white/60 hover:text-primary transition-colors" href="#"><i
+                        class="material-icons text-xl">photo_camera</i></a>
+            </div>
+            <p class="text-white/30 text-xs pt-8">© 2024 Vintage Coffee &amp; Kitchen. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

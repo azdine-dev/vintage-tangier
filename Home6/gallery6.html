@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Gallery &amp; Events - Vintage Coffee &amp; Kitchen</title>
+    <link rel="stylesheet" href="../assets/css/styles6.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="../assets/js/tailwind6.config.js"></script>
+    <script src="../assets/js/main.js" defer></script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-ink font-display overflow-x-hidden">
+    <div class="relative flex min-h-screen w-full flex-col group/design-root">
+        <!-- Navigation -->
+        <header
+            class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-stone-paper bg-white/95 backdrop-blur-sm px-6 py-4 md:px-10 lg:px-20 transition-all duration-300">
+            <div class="flex items-center gap-4 text-ink">
+                <div class="size-8 text-primary">
+                    <span class="material-symbols-outlined text-[32px]">coffee_maker</span>
+                </div>
+                <h2 class="text-ink text-xl font-black leading-tight tracking-[-0.015em] hidden sm:block">Vintage Coffee
+                    &amp; Kitchen</h2>
+            </div>
+            <div class="flex flex-1 justify-end gap-8">
+                <nav class="hidden lg:flex items-center gap-9">
+                    <a class="text-ink text-sm font-bold leading-normal hover:text-primary transition-colors"
+                        href="index6-1.html">Home</a>
+                    <a class="text-ink text-sm font-bold leading-normal hover:text-primary transition-colors"
+                        href="menu6.html">Menu</a>
+                    <a class="text-primary text-sm font-bold leading-normal border-b-2 border-primary"
+                        href="gallery6.html">Gallery</a>
+                    <a class="text-ink text-sm font-bold leading-normal hover:text-primary transition-colors"
+                        href="#events">Events</a>
+                    <a class="text-ink text-sm font-bold leading-normal hover:text-primary transition-colors"
+                        href="contact6.html">Contact</a>
+
+                    <!-- Themes Dropdown -->
+                    <div class="relative group">
+                        <button
+                            class="flex items-center gap-1 text-ink text-sm font-bold leading-normal hover:text-primary transition-colors">
+                            Themes
+                            <span class="material-symbols-outlined text-sm">expand_more</span>
+                        </button>
+                        <div
+                            class="absolute right-0 mt-2 w-48 bg-white dark:bg-[#181411] rounded-xl shadow-lg border border-[#e5e0dc] dark:border-[#3a3028] py-1 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-50">
+                            <a href="../index.html"
+                                class="block px-4 py-2 text-sm text-text-main dark:text-white hover:bg-primary/10 hover:text-primary transition-colors">Home
+                                1 (Green)</a>
+                            <a href="../Home2/index2.html"
+                                class="block px-4 py-2 text-sm text-text-main dark:text-white hover:bg-primary/10 hover:text-primary transition-colors">Home
+                                2</a>
+                            <a href="../Home3/index3.html"
+                                class="block px-4 py-2 text-sm text-text-main dark:text-white hover:bg-primary/10 hover:text-primary transition-colors">Home
+                                3</a>
+                            <a href="../Home4/index4.html"
+                                class="block px-4 py-2 text-sm text-text-main dark:text-white hover:bg-primary/10 hover:text-primary transition-colors">Home
+                                4</a>
+                            <a href="../Home5/index5.html"
+                                class="block px-4 py-2 text-sm text-text-main dark:text-white hover:bg-primary/10 hover:text-primary transition-colors">Home
+                                5</a>
+                            <a href="../Home6/index6-1.html"
+                                class="block px-4 py-2 text-sm text-text-main dark:text-white hover:bg-primary/10 hover:text-primary transition-colors">Home
+                                6 (Orange)</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button
+                        class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-6 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-orange-700 transition-colors shadow-sm">
+                        <span class="truncate">Reserve a Table</span>
+                    </button>
+                    <button class="lg:hidden text-ink">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1 flex flex-col items-center w-full">
+            <!-- Page Heading -->
+            <section class="w-full max-w-[1280px] px-6 py-12 md:px-20 md:py-20 flex flex-col items-center text-center">
+                <div class="w-16 h-1 bg-primary mb-6 rounded-full opacity-60"></div>
+                <h1 class="text-ink text-4xl md:text-6xl font-black leading-tight tracking-tight mb-4">Visual Stories
+                    &amp; Gatherings</h1>
+                <p class="text-ink-light text-lg md:text-xl font-normal leading-relaxed max-w-2xl font-body">Experience
+                    the soul of Tangier through our curated moments, architectural details, and upcoming cultural
+                    soirees.</p>
+            </section>
+            <!-- Gallery Grid (Masonry Style) -->
+            <section class="w-full max-w-[1280px] px-6 pb-20 md:px-20">
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[200px]">
+                    <!-- Large Feature Image -->
+                    <div class="group relative md:col-span-2 md:row-span-2 rounded-2xl overflow-hidden cursor-pointer">
+                        <div class="absolute inset-0 bg-cover bg-center vintage-filter"
+                            data-alt="Classic espresso machine pouring coffee into a cup"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCAbXVExf-jYjMgxZEXxQ3wtedZZFIyN9NcC2U_G-uRwjVeQweGzrijM77zXVMW6laE-yYHo4hg2vuJIHv7Shd4E8KOfuIU1sxHEPacF4vL-YrICSR1B6srKpIWJT-NTq15ywx7rjX70g5IiN-BX8YB10Z2YFqigczY6CK-tWEd01nUtxDsS8_ESx1ZQfjBYaDgWdJFOUjdH52oWaWFs90MxXCfl1LmY5dqTgLJFa4HoLoO0VF3mWb-HMYrQocBSJxgYs3TuGVKGU4');">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300">
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
+                            <span
+                                class="bg-white/90 text-ink text-xs font-bold px-2 py-1 rounded mb-2 inline-block">Craft</span>
+                            <p class="text-white font-bold text-lg">The Art of Espresso</p>
+                        </div>
+                    </div>
+                    <!-- Tall Portrait Image -->
+                    <div class="group relative md:col-span-1 md:row-span-2 rounded-2xl overflow-hidden cursor-pointer">
+                        <div class="absolute inset-0 bg-cover bg-center vintage-filter"
+                            data-alt="Close up of ornate Moroccan tiles on a wall"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuADwXwp8tBTqzKm1uV4zyRqHvvHp3XGlD1RJCpARm7hD_ndWcjW96Iy8MZyXL-iXoVuqmriHYuaIK57r5DyNGaSAmVjUY7A3djxIRav4_GHWyZzfAfy-Kjlzc77e31WwdvDKVVOapnyOIC6uHOXoYaNqkp9t7sEHRPx4lqS6xc6W2qBb5JDf2CMvYdaxwbrSlJAzx_xmqwWUBH1VcfaEKnIjq0LbSdFU1m-QWYD-RD_mQ6lnitDJKJPNT-XMhupDypbMPPds2L1ADU');">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300">
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
+                            <span
+                                class="bg-white/90 text-ink text-xs font-bold px-2 py-1 rounded mb-2 inline-block">Decor</span>
+                            <p class="text-white font-bold text-lg">Zellige Details</p>
+                        </div>
+                    </div>
+                    <!-- Square Image -->
+                    <div class="group relative md:col-span-1 md:row-span-1 rounded-2xl overflow-hidden cursor-pointer">
+                        <div class="absolute inset-0 bg-cover bg-center vintage-filter"
+                            data-alt="Freshly baked croissant on a vintage plate"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDir6RfJCZjBhsnUbTHhiNu6pJV0kXiHsGavpbJwLpVM8kaqPbeH8QJet6p7QBlx9aH-czAR9J5Vv5vuDmmWPqAhuqlOBNBF7xD0XkQN6pL-bW9uf5Gj2qe4jCT1_8NxrwzKhdtl5qIPMS2dnb2unjICDY9BNdtrkQ2fPNDN9QNTKTjpK9bHEwmBEyz_Lud3RIp6XkD2IW23ZLtv444J8f5qNF3YINqBNw58s0F_UxCg1PfyyuwXnWAaGmUZ0YGZisJOYh4KJTWVqw');">
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white font-bold text-sm drop-shadow-md">Morning Pastries</p>
+                        </div>
+                    </div>
+                    <!-- Square Image -->
+                    <div class="group relative md:col-span-1 md:row-span-1 rounded-2xl overflow-hidden cursor-pointer">
+                        <div class="absolute inset-0 bg-cover bg-center vintage-filter"
+                            data-alt="Two latte coffees on a wooden table top view"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBWM7SYaCLd-rT7zNp2WfquZPHszePyPRz9kennxOVS0vWeuCmA3qx5VKf409fC2eBn3obQNafEDYKovSrnP6p5N-I3XIZ6NLbtUny_bJGb0icfkhY_xPPwm4-DKctK5zBD6IiVYeAMWaAlIZ_bLAbQgNfIYuiac901uaahzJ_WIlPapJd7-dqPSjJdinUpOFu55K1E4asTwmrNjpGOK44ipnFOztyPLodusmAXRyR6dao64LoL0MWhuxGr1BR-OJ_bskv-1HhCJdk');">
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white font-bold text-sm drop-shadow-md">Coffee Date</p>
+                        </div>
+                    </div>
+                    <!-- Wide Image -->
+                    <div class="group relative md:col-span-2 md:row-span-1 rounded-2xl overflow-hidden cursor-pointer">
+                        <div class="absolute inset-0 bg-cover bg-center vintage-filter"
+                            data-alt="Cozy interior of a cafe with people talking"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC_A_w0gL5Llkbufdo7ocFgjvxwVfYGBjboe1lP0vKuN77IFnv5C_yORhVRAYZu2AbXJ5DDNypVIwmfpYYwcr8w5oAITmPbkEOr1Wp8r-WbOH0yaFS9IjeBrsV_vutQt51T9_tmngdX7lMe5crVvd75qw19lq4LZzvAh8_xxMElC9m3TrsaTk7ncbo4vtQ4EbbDNql3p8vdc4dD4FEP7b0vg_pPM9RQVuRIR86o9HUUb8pxUfqxgRWywub66n5wWdeqIOL7agWNxm4');">
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
+                            <span
+                                class="bg-white/90 text-ink text-xs font-bold px-2 py-1 rounded mb-2 inline-block">Atmosphere</span>
+                            <p class="text-white font-bold text-lg">The Main Hall</p>
+                        </div>
+                    </div>
+                    <!-- Tall Portrait Image -->
+                    <div class="group relative md:col-span-1 md:row-span-2 rounded-2xl overflow-hidden cursor-pointer">
+                        <div class="absolute inset-0 bg-cover bg-center vintage-filter"
+                            data-alt="Jazz musician playing saxophone in dim light"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5N_QAPPHroLdgjBbkxCjZNhfb6W2H3ad4UnfYpX9XPxq-iSxQtPigtzKjzx-rfbruPTNQoQN7eTyLzC2k6lxFoCDS6erGWpPsXgQzvcyKNzTW13DxhFE1AfzGLKafvqa4SJz4iU6XagsIl22o7Kk3KzyaCQTiMGFRYPQhSuYi49g60LtePVZSVWINzMrBnCmBWaJQG6LzrJ-0bWOY05kKsqE48u6Nnk-OdDbaBFmhen64Utj0GmwnQ09oGrBlk47Pkg8wqZzMDPk');">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300">
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
+                            <span
+                                class="bg-white/90 text-ink text-xs font-bold px-2 py-1 rounded mb-2 inline-block">Events</span>
+                            <p class="text-white font-bold text-lg">Jazz Nights</p>
+                        </div>
+                    </div>
+                    <!-- Square Image -->
+                    <div class="group relative md:col-span-1 md:row-span-1 rounded-2xl overflow-hidden cursor-pointer">
+                        <div class="absolute inset-0 bg-cover bg-center vintage-filter"
+                            data-alt="Waiter pouring mint tea in traditional glass"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDJ3AfWFUnW8AxeuYhvrHDTgQzBmQalf3QX83cIptNDPu7CFpTNEB8_oMzWRH7XnO-6z8LIVk-LqYaTlBG2ByyHqsaVKYoqa2goVvy3dfRX5I2pFdDcP2_8aRc73PD00FBne0-UzdOyV1txuMYXoUer4fDzksAuu_2vZ2ERUb1tS8BeR2WdKq9qpN8_UPrTLPH9XTs1KbRnmzvrG3iJD7FCAiYdkS-plPGrfcqhOgX0iJaAjhqyhv3oq16RcSKrMtIjiYAwiPNOJFc');">
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white font-bold text-sm drop-shadow-md">Mint Tea Service</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full flex justify-center mt-12">
+                    <button
+                        class="flex items-center gap-2 text-ink hover:text-primary transition-colors font-bold text-sm border-b border-ink hover:border-primary pb-1">
+                        View Full Gallery
+                        <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                    </button>
+                </div>
+            </section>
+            <!-- Upcoming Happenings Header -->
+            <section id="events" class="w-full max-w-[1280px] px-6 md:px-20 pt-10 pb-6">
+                <div class="flex items-center gap-4">
+                    <h2 class="text-ink text-3xl font-black leading-tight tracking-[-0.015em]">Upcoming Happenings</h2>
+                    <div class="h-px bg-stone-300 flex-1"></div>
+                    <span class="text-ink-light text-sm font-body">Join the community</span>
+                </div>
+            </section>
+            <!-- Events List (Ticket Style) -->
+            <section class="w-full max-w-[1280px] px-6 pb-24 md:px-20 flex flex-col gap-6">
+                <!-- Event Card 1 -->
+                <div
+                    class="group flex flex-col md:flex-row bg-white rounded-xl shadow-sm hover:shadow-md border border-stone-200 overflow-hidden transition-all duration-300">
+                    <!-- Date Stub -->
+                    <div
+                        class="hidden md:flex flex-col items-center justify-center min-w-[120px] bg-stone-100 border-r-2 border-dashed border-stone-300 p-4 text-center">
+                        <span class="text-primary font-bold text-sm uppercase tracking-wider">OCT</span>
+                        <span class="text-ink text-4xl font-black my-1">14</span>
+                        <span class="text-ink-light text-sm">2023</span>
+                    </div>
+                    <!-- Content -->
+                    <div class="flex-1 p-6 md:p-8 flex flex-col justify-center">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span
+                                class="bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded uppercase tracking-wide">Live
+                                Music</span>
+                            <span class="text-ink-light text-xs font-body flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-[14px]">schedule</span> 8:00 PM - 11:00
+                                PM</span>
+                        </div>
+                        <h3
+                            class="text-xl md:text-2xl font-bold text-ink mb-2 group-hover:text-primary transition-colors">
+                            Jazz Night: Saxophone &amp; Coffee</h3>
+                        <p class="text-ink-light font-body text-sm md:text-base mb-4 line-clamp-2">Immerse yourself in
+                            the smooth sounds of local jazz legends. Enjoy our signature brews while the saxophone sets
+                            the mood for a perfect Tangier evening.</p>
+                        <!-- Mobile Date (visible only on mobile) -->
+                        <div class="md:hidden flex items-center gap-2 mb-4 text-sm font-bold text-ink">
+                            <span class="material-symbols-outlined text-primary">calendar_month</span> Oct 14, 2023
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <button
+                                class="flex items-center justify-center gap-2 px-5 h-10 bg-stone-100 text-ink text-sm font-bold rounded-lg hover:bg-stone-200 transition-colors">
+                                <span class="material-symbols-outlined text-[18px]">confirmation_number</span>
+                                Get Tickets
+                            </button>
+                            <span class="text-xs text-ink-light font-body">$15 Entry • Limited Seating</span>
+                        </div>
+                    </div>
+                    <!-- Image -->
+                    <div class="w-full md:w-[300px] h-48 md:h-auto bg-cover bg-center vintage-filter"
+                        data-alt="Musician playing a double bass in a jazz club"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5gXKMRn2plWLkfsOC08nt0ovygcHUd2cFF8zOhZKdyxIq0KdHHQvLiMoz0s6enROLVBwVWBwoDpw8wDotfUvotXbMXZEKs9sGaWn7rgIIDXiJCTVMsDTfw9qyf5FbHNKZev-757iOeRueR0sp8HJStgbsAIjyzZACtAriLZtR_74paKcx8aU694-0t0ob2NJzQKzmsRLT-0GTGVhDznOL6DxSoBm4hcbdnRey9T0752vnpc6gmlMq9ZPQ6ev1uYgzVl6jV6SiOQE');">
+                    </div>
+                </div>
+                <!-- Event Card 2 -->
+                <div
+                    class="group flex flex-col md:flex-row bg-white rounded-xl shadow-sm hover:shadow-md border border-stone-200 overflow-hidden transition-all duration-300">
+                    <div
+                        class="hidden md:flex flex-col items-center justify-center min-w-[120px] bg-stone-100 border-r-2 border-dashed border-stone-300 p-4 text-center">
+                        <span class="text-primary font-bold text-sm uppercase tracking-wider">OCT</span>
+                        <span class="text-ink text-4xl font-black my-1">21</span>
+                        <span class="text-ink-light text-sm">2023</span>
+                    </div>
+                    <div class="flex-1 p-6 md:p-8 flex flex-col justify-center">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span
+                                class="bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded uppercase tracking-wide">Literature</span>
+                            <span class="text-ink-light text-xs font-body flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-[14px]">schedule</span> 6:30 PM - 8:30
+                                PM</span>
+                        </div>
+                        <h3
+                            class="text-xl md:text-2xl font-bold text-ink mb-2 group-hover:text-primary transition-colors">
+                            Poetry Reading: Tangier Tales</h3>
+                        <p class="text-ink-light font-body text-sm md:text-base mb-4 line-clamp-2">A gathering of poets
+                            and storytellers sharing narratives inspired by the rich history of the Maghreb. Open mic
+                            session to follow.</p>
+                        <div class="md:hidden flex items-center gap-2 mb-4 text-sm font-bold text-ink">
+                            <span class="material-symbols-outlined text-primary">calendar_month</span> Oct 21, 2023
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <button
+                                class="flex items-center justify-center gap-2 px-5 h-10 bg-stone-100 text-ink text-sm font-bold rounded-lg hover:bg-stone-200 transition-colors">
+                                <span class="material-symbols-outlined text-[18px]">confirmation_number</span>
+                                RSVP Free
+                            </button>
+                            <span class="text-xs text-ink-light font-body">Free Entry • Drinks Available</span>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-[300px] h-48 md:h-auto bg-cover bg-center vintage-filter"
+                        data-alt="Open book on a table with warm lighting"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDjtNALnKAZHui22CH5znmCZHU3UuOY0UHr7LrTFwyc6W0BE9C5evPG2cyRyS-T69o_usxaiRr34rR6iHazueCzCmVXEwKCg1dpLKTsLmHjpYiERF2kDfnVxp-DnGULIwEG5jysNa4orTp2c6mvaACuzpKC-C2Pk-XG4h_H1EdgjRgzlYLc4zF_cUhjGpjZIDQtHM9PsRmiSmdiJcLXavAzpdneiI04_kQZwkFLUfMIstGjTQMMB8dNL_LSUYqIL7jQNdzxpHnzJxQ');">
+                    </div>
+                </div>
+                <!-- Event Card 3 -->
+                <div
+                    class="group flex flex-col md:flex-row bg-white rounded-xl shadow-sm hover:shadow-md border border-stone-200 overflow-hidden transition-all duration-300">
+                    <div
+                        class="hidden md:flex flex-col items-center justify-center min-w-[120px] bg-stone-100 border-r-2 border-dashed border-stone-300 p-4 text-center">
+                        <span class="text-primary font-bold text-sm uppercase tracking-wider">NOV</span>
+                        <span class="text-ink text-4xl font-black my-1">05</span>
+                        <span class="text-ink-light text-sm">2023</span>
+                    </div>
+                    <div class="flex-1 p-6 md:p-8 flex flex-col justify-center">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span
+                                class="bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded uppercase tracking-wide">Workshop</span>
+                            <span class="text-ink-light text-xs font-body flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-[14px]">schedule</span> 10:00 AM - 1:00
+                                PM</span>
+                        </div>
+                        <h3
+                            class="text-xl md:text-2xl font-bold text-ink mb-2 group-hover:text-primary transition-colors">
+                            Barista Basics Workshop</h3>
+                        <p class="text-ink-light font-body text-sm md:text-base mb-4 line-clamp-2">Learn the
+                            fundamentals of pulling the perfect espresso shot and frothing milk from our head barista.
+                            Includes tasting session.</p>
+                        <div class="md:hidden flex items-center gap-2 mb-4 text-sm font-bold text-ink">
+                            <span class="material-symbols-outlined text-primary">calendar_month</span> Nov 05, 2023
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <button
+                                class="flex items-center justify-center gap-2 px-5 h-10 bg-stone-100 text-ink text-sm font-bold rounded-lg hover:bg-stone-200 transition-colors">
+                                <span class="material-symbols-outlined text-[18px]">confirmation_number</span>
+                                Join Waitlist
+                            </button>
+                            <span class="text-xs text-ink-light font-body">$45 Entry • Materials Included</span>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-[300px] h-48 md:h-auto bg-cover bg-center vintage-filter"
+                        data-alt="Barista pouring latte art into a coffee cup"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBbIcdZqRTGgxk9_WypOYf1-xlaqCPmfggwRv7ZFWdQ1zLRz0zUlHKUmp24us1-ZciX4wvX4MReTqi5AqASiwtpoh8N5r_BbXCAHxpexOz9zuXiAsPGzMEr-B8kcoFXCodWcw4Es5hAc10z1hL73aKk8OgQUZeqV8OIVL2zIg8mhiISEPuOTlCPeReyck2ebbYCUobnfQOt2KSxJZVqbeLIsS8w_KZoXd7yMEXgmO87X3MC9TnSCJMGQL6TJZ2DSrG2GHPiDJX48i8');">
+                    </div>
+                </div>
+            </section>
+            <!-- Private Events CTA -->
+            <section class="w-full bg-ink text-white py-20 px-6 md:px-20 relative overflow-hidden">
+                <div class="absolute inset-0 bg-cover bg-center opacity-20"
+                    data-alt="Dark blurred background of a cafe interior"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD8YA5kP-sza7k7eqMaU-8M_gx_uVp7f6VBp4Ksx-q-vBfNlKxqXRIVgzpGufF_FJiAZip6SLS7TkcgnqLHUuYhfBfqhltzW8hJ5wlE-2R91C0UrtUPxeYg2hCPp68InvuFbzqolhYS0BsiUVyTmoLiMA0z8_aFtBqVBqgvV1RYmLxiHgWfilmDI_9LR7mDLlQ7YtSeEFOHZlhyG74anVDgktfw4MKoR-HASm0JjEeFqeKe8k-dFBQCO3gDqwNe7o6BvuXbx-4Rxw8');">
+                </div>
+                <div
+                    class="relative max-w-[1280px] mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+                    <div class="flex flex-col gap-4 max-w-2xl text-center md:text-left">
+                        <h2 class="text-3xl md:text-4xl font-black">Host Your Private Event</h2>
+                        <p class="text-stone-300 font-body text-lg leading-relaxed">From intimate birthday gatherings to
+                            corporate coffee tastings, our vintage space provides a unique backdrop for your special
+                            occasions.</p>
+                    </div>
+                    <button
+                        class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-xl h-14 px-8 bg-primary text-white text-base font-bold tracking-wide hover:bg-white hover:text-ink transition-all duration-300 shadow-lg">
+                        Inquire Now
+                    </button>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="bg-background-light pt-16 pb-8 border-t border-stone-200">
+            <div class="w-full max-w-[1280px] mx-auto px-6 md:px-20 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-2 text-ink">
+                        <span class="material-symbols-outlined text-[24px] text-primary">coffee_maker</span>
+                        <span class="font-bold text-lg">Vintage Coffee</span>
+                    </div>
+                    <p class="text-ink-light text-sm font-body leading-relaxed">Preserving the culture of conversation
+                        and good coffee in the heart of Tangier.</p>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h4 class="text-ink font-bold text-sm uppercase tracking-wider">Visit Us</h4>
+                    <p class="text-ink-light text-sm font-body">Rue de la Liberté, 45<br />Tangier, Morocco</p>
+                    <a class="text-primary text-sm font-bold hover:underline" href="#">Get Directions</a>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h4 class="text-ink font-bold text-sm uppercase tracking-wider">Hours</h4>
+                    <div class="text-ink-light text-sm font-body flex justify-between max-w-[150px]">
+                        <span>Mon - Fri</span>
+                        <span>7am - 9pm</span>
+                    </div>
+                    <div class="text-ink-light text-sm font-body flex justify-between max-w-[150px]">
+                        <span>Sat - Sun</span>
+                        <span>8am - 10pm</span>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h4 class="text-ink font-bold text-sm uppercase tracking-wider">Social</h4>
+                    <div class="flex gap-4">
+                        <a class="w-10 h-10 rounded-full bg-stone-200 flex items-center justify-center text-ink hover:bg-primary hover:text-white transition-colors"
+                            href="#">
+                            <!-- Instagram generic icon replacement using text -->
+                            <span class="font-bold text-xs">IG</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-stone-200 flex items-center justify-center text-ink hover:bg-primary hover:text-white transition-colors"
+                            href="#">
+                            <span class="font-bold text-xs">FB</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-stone-200 flex items-center justify-center text-ink hover:bg-primary hover:text-white transition-colors"
+                            href="#">
+                            <span class="font-bold text-xs">TW</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full text-center border-t border-stone-200 pt-8">
+                <p class="text-ink-light text-xs font-body">© 2023 Vintage Coffee &amp; Kitchen. All rights reserved.
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

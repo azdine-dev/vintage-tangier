@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Vintage Coffee &amp; Kitchen - Tangier</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="assets/js/tailwind.config.js"></script>
+    <script src="assets/js/main.js" defer></script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-[#111813] dark:text-white font-display overflow-x-hidden antialiased selection:bg-primary selection:text-[#111813]">
+    <div class="relative flex min-h-screen w-full flex-col group/design-root">
+        <!-- Header -->
+        <header
+            class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e5e7eb] dark:border-b-[#29382d] px-6 py-4 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md">
+            <div class="flex items-center gap-3">
+                <div class="flex items-center justify-center text-primary">
+                    <span class="material-symbols-outlined text-[32px]">coffee</span>
+                </div>
+                <h2 class="text-[#111813] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Vintage
+                    Coffee &amp; Kitchen</h2>
+            </div>
+            <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+                <nav class="flex items-center gap-8">
+                    <a class="text-[#111813] dark:text-white text-sm font-medium hover:text-primary transition-colors"
+                        href="index.html">Home</a>
+                    <a class="text-[#111813] dark:text-white text-sm font-medium hover:text-primary transition-colors"
+                        href="Home1/menu.html">Menu</a>
+                    <a class="text-[#111813] dark:text-white text-sm font-medium hover:text-primary transition-colors"
+                        href="Home1/about-us.html">Our Story</a>
+                    <a class="text-[#111813] dark:text-white text-sm font-medium hover:text-primary transition-colors"
+                        href="Home1/contact.html">Contact</a>
+                    <!-- Themes Dropdown -->
+                    <div class="nav-dropdown">
+                        <span
+                            class="text-[#111813] dark:text-white text-sm font-medium hover:text-primary transition-colors cursor-pointer flex items-center gap-1">
+                            Themes
+                            <span class="material-symbols-outlined text-[16px]">expand_more</span>
+                        </span>
+                        <div class="nav-dropdown-menu">
+                            <a href="index.html">Home 1 (Green)</a>
+                            <a href="Home2/index2.html">Home 2</a>
+                            <a href="Home3/index3.html">Home 3</a>
+                            <a href="Home4/index4.html">Home 4</a>
+                            <a href="Home5/index5.html">Home 5</a>
+                            <a href="Home6/index6-1.html">Home 6 (Orange)</a>
+                        </div>
+                    </div>
+                </nav>
+                <button
+                    class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-primary hover:bg-opacity-90 transition-opacity text-[#111813] text-sm font-bold leading-normal tracking-[0.015em]">
+                    <span class="truncate">Order Now</span>
+                </button>
+            </div>
+            <!-- Mobile Menu Icon -->
+            <button class="md:hidden text-[#111813] dark:text-white">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu"
+                class="hidden md:hidden absolute top-full left-0 w-full bg-background-light dark:bg-background-dark border-b border-[#e5e7eb] dark:border-[#29382d]">
+                <nav class="flex flex-col p-4 gap-4">
+                    <a class="text-[#111813] dark:text-white text-sm font-medium hover:text-primary transition-colors"
+                        href="index.html">Home</a>
+                    <a class="text-[#111813] dark:text-white text-sm font-medium hover:text-primary transition-colors"
+                        href="Home1/menu.html">Menu</a>
+                    <a class="text-[#111813] dark:text-white text-sm font-medium hover:text-primary transition-colors"
+                        href="Home1/about-us.html">Our Story</a>
+                    <a class="text-[#111813] dark:text-white text-sm font-medium hover:text-primary transition-colors"
+                        href="Home1/contact.html">Contact</a>
+                    <hr class="border-[#29382d]">
+                    <span class="text-xs text-gray-500 uppercase">Themes</span>
+                    <a class="text-[#111813] dark:text-white text-sm font-medium hover:text-primary transition-colors"
+                        href="index.html">Home 1</a>
+                    <a class="text-[#111813] dark:text-white text-sm font-medium hover:text-primary transition-colors"
+                        href="Home2/index2.html">Home 2</a>
+                    <a class="text-[#111813] dark:text-white text-sm font-medium hover:text-primary transition-colors"
+                        href="Home3/index3.html">Home 3</a>
+                    <a class="text-[#111813] dark:text-white text-sm font-medium hover:text-primary transition-colors"
+                        href="Home4/index4.html">Home 4</a>
+                    <a class="text-[#111813] dark:text-white text-sm font-medium hover:text-primary transition-colors"
+                        href="Home5/index5.html">Home 5</a>
+                    <a class="text-[#111813] dark:text-white text-sm font-medium hover:text-primary transition-colors"
+                        href="Home6/index6-1.html">Home 6</a>
+                </nav>
+            </div>
+        </header>
+        <main class="flex-1">
+            <!-- Hero Section -->
+            <section class="relative flex flex-col justify-center overflow-hidden min-h-[600px] lg:min-h-[700px]">
+                <div class="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
+                    data-alt="Barista pouring latte art in a vintage warm coffee shop interior"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC1fIzXmB93Ir0TW9Zmlx3T4HC-PHUWUD1Y6qQFWsuCAt5JUItpkTRqBG_-QctOel8svaci1cTOVW_qFbFh_PhUPqu3hBbxrr03ce3I4LH5vyL4W-MKQIgjKCW4zmK4GdMcc958s_eAxGzXa0p2UteuRBbVYCwS-ZMY7xjKPRZx3VCWGLEVhpK_Fazgyg3gjZGs_EZoDUigK76I4G_5n7kpctYPmqplQSvbvQ_zx7iYvpfmMhfkzWYU05g7DVxQYkqlDLMIrDskqRA");'>
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-background-dark/95 z-10"></div>
+                <div class="relative z-20 layout-container flex h-full grow flex-col justify-center px-4 md:px-40 py-5">
+                    <div
+                        class="layout-content-container flex flex-col max-w-[960px] items-center text-center mx-auto gap-6">
+                        <span
+                            class="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-medium text-primary uppercase tracking-wide">
+                            Est. 2024 • Tangier, Morocco
+                        </span>
+                        <h1 class="text-white text-5xl md:text-7xl font-black leading-[1.1] tracking-[-0.033em]">
+                            Taste the History of Tangier in Every Cup.
+                        </h1>
+                        <h2 class="text-gray-200 text-lg md:text-xl font-normal max-w-2xl leading-relaxed">
+                            Vintage vibes, modern brews, and the best brunch in town. Experience a blend of Moroccan
+                            heritage and specialty coffee.
+                        </h2>
+                        <div class="flex gap-4 pt-4">
+                            <button
+                                class="flex min-w-[140px] cursor-pointer items-center justify-center rounded-full h-12 px-6 bg-primary hover:bg-[#15bd3f] text-[#111813] text-base font-bold transition-all">
+                                <span>View Menu</span>
+                            </button>
+                            <button
+                                class="flex min-w-[140px] cursor-pointer items-center justify-center rounded-full h-12 px-6 bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur-sm text-base font-bold transition-all">
+                                <span>Book a Table</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Features Grid -->
+            <section class="px-4 md:px-40 py-12 bg-background-light dark:bg-background-dark">
+                <div class="max-w-[960px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div
+                        class="flex flex-col items-center text-center gap-3 p-6 rounded-xl bg-white dark:bg-[#1a261d] border border-gray-100 dark:border-[#29382d] shadow-sm">
+                        <div
+                            class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+                            <span class="material-symbols-outlined">coffee_maker</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-[#111813] dark:text-white">Artisan Roasts</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Small-batch beans roasted locally to
+                            preserve the richest flavors.</p>
+                    </div>
+                    <div
+                        class="flex flex-col items-center text-center gap-3 p-6 rounded-xl bg-white dark:bg-[#1a261d] border border-gray-100 dark:border-[#29382d] shadow-sm">
+                        <div
+                            class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+                            <span class="material-symbols-outlined">bakery_dining</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-[#111813] dark:text-white">Fresh Pastries</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Baked fresh every morning using traditional
+                            Moroccan recipes.</p>
+                    </div>
+                    <div
+                        class="flex flex-col items-center text-center gap-3 p-6 rounded-xl bg-white dark:bg-[#1a261d] border border-gray-100 dark:border-[#29382d] shadow-sm">
+                        <div
+                            class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+                            <span class="material-symbols-outlined">wifi</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-[#111813] dark:text-white">Cozy Workspace</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">High-speed fiber internet and comfortable
+                            seating for digital nomads.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- Best Sellers Carousel -->
+            <section class="px-4 md:px-40 py-12">
+                <div class="layout-content-container flex flex-col max-w-[960px] mx-auto flex-1 gap-6">
+                    <div class="flex items-center justify-between px-4">
+                        <h2
+                            class="text-[#111813] dark:text-white text-2xl md:text-3xl font-bold leading-tight tracking-[-0.015em]">
+                            Customer Favorites</h2>
+                        <div class="flex gap-2">
+                            <button
+                                class="size-10 rounded-full border border-[#e5e7eb] dark:border-[#29382d] flex items-center justify-center text-[#111813] dark:text-white hover:bg-gray-100 dark:hover:bg-[#29382d] transition-colors">
+                                <span class="material-symbols-outlined">arrow_back</span>
+                            </button>
+                            <button
+                                class="size-10 rounded-full bg-primary text-[#111813] flex items-center justify-center hover:bg-[#15bd3f] transition-colors">
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div
+                        class="flex overflow-x-auto pb-4 snap-x snap-mandatory gap-4 [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+                        <!-- Card 1 -->
+                        <div
+                            class="flex-none snap-start w-[280px] md:w-[300px] flex flex-col gap-4 rounded-xl p-3 bg-white dark:bg-[#1a261d] border border-gray-100 dark:border-[#29382d] hover:border-primary/50 transition-colors cursor-pointer group">
+                            <div class="w-full aspect-square bg-cover bg-center rounded-lg overflow-hidden relative"
+                                data-alt="Latte art in a ceramic cup on wooden table"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDzEkW0a89O--442M3d4V6SPdEmJNjFyi40mwUZm3f8RcbeLZ2CSP-pKqEWfJ7vYjHfKnm78oev9z-U2IWdqj92GPoJMReEulQAg0d69noYpDLpnaKDZma2m3vy3wNfUDXnTBnzMND1Vq3cwaQdMOyXCcUjT4zc8UsN1ElSfQwuJrpQRUbnjb4b7euF7KajNiT4PLxwLU40jwbPvP8VTZbVPoZDkfwdd02akN1KGrv4s3wYMgYD6OlrsoFprt0OBjDBAM56Uj8zjJo");'>
+                                <div
+                                    class="absolute top-2 right-2 bg-black/60 backdrop-blur-md px-2 py-1 rounded-md text-white text-xs font-bold">
+                                    Best Seller</div>
+                            </div>
+                            <div class="px-1 pb-1">
+                                <div class="flex justify-between items-start mb-1">
+                                    <p
+                                        class="text-[#111813] dark:text-white text-lg font-bold group-hover:text-primary transition-colors">
+                                        Tangier Spiced Latte</p>
+                                    <p class="text-primary text-base font-bold">$5.00</p>
+                                </div>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm">Espresso with cinnamon, cardamom,
+                                    and steamed milk.</p>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div
+                            class="flex-none snap-start w-[280px] md:w-[300px] flex flex-col gap-4 rounded-xl p-3 bg-white dark:bg-[#1a261d] border border-gray-100 dark:border-[#29382d] hover:border-primary/50 transition-colors cursor-pointer group">
+                            <div class="w-full aspect-square bg-cover bg-center rounded-lg overflow-hidden"
+                                data-alt="Avocado toast with poached egg on plate"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA32U53aLSDQDocCWes3PY3hL07xP0R6XMHcYmOfBcZFdq_2Oq7_ZLqcY4XSTWhZ3HXXmir_gxQ8NHqozYBVEd7Jld7dt7gloCUxwST7Y9JVi7E985tLBZ329PHecLOdDsNlOficmDIHFzKwsmim5KT1uQMfG6eLSOwv_gCayA9q4a5AAMecqJPJRMrGu8FNExdTh1Le98ijXkPZx76Ga8VAm771IpPWvDZbfpaYBsULqeZPT_TGgjuV0xGCtdAvmmOKt-iCWM8sq0");'>
+                            </div>
+                            <div class="px-1 pb-1">
+                                <div class="flex justify-between items-start mb-1">
+                                    <p
+                                        class="text-[#111813] dark:text-white text-lg font-bold group-hover:text-primary transition-colors">
+                                        Avocado Toast</p>
+                                    <p class="text-primary text-base font-bold">$12.00</p>
+                                </div>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm">Sourdough, smashed avocado, radish,
+                                    and poached egg.</p>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div
+                            class="flex-none snap-start w-[280px] md:w-[300px] flex flex-col gap-4 rounded-xl p-3 bg-white dark:bg-[#1a261d] border border-gray-100 dark:border-[#29382d] hover:border-primary/50 transition-colors cursor-pointer group">
+                            <div class="w-full aspect-square bg-cover bg-center rounded-lg overflow-hidden"
+                                data-alt="Traditional Moroccan Mint Tea in glass"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC0YfdCmBHTtPcLLIav8aJxc_t88G0Etzh6gIDjaEjWzTwwdltZuM4e3vCkm7JxyslAbW2B27ICBiSMRHPuSDwwcjIbBXdThXE-QfN6gqQ9LsnXRuxo9DX_iLnROpzMCoGwITYJAOVjRqp3uQ5OlAGqlI_j55hM2ceTcpNEkC6F8BuFGye8T25Yga11hvH0KtVD79Z_2pS0U20SaNUV694NnkPVfoSBmn8YfjRzKDhJE3hsb92qX06tH5BvvKTLDAWAtNKA3aBGYh0");'>
+                            </div>
+                            <div class="px-1 pb-1">
+                                <div class="flex justify-between items-start mb-1">
+                                    <p
+                                        class="text-[#111813] dark:text-white text-lg font-bold group-hover:text-primary transition-colors">
+                                        Moroccan Mint Tea</p>
+                                    <p class="text-primary text-base font-bold">$3.50</p>
+                                </div>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm">Fresh mint leaves, gunpowder tea,
+                                    and sugar.</p>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div
+                            class="flex-none snap-start w-[280px] md:w-[300px] flex flex-col gap-4 rounded-xl p-3 bg-white dark:bg-[#1a261d] border border-gray-100 dark:border-[#29382d] hover:border-primary/50 transition-colors cursor-pointer group">
+                            <div class="w-full aspect-square bg-cover bg-center rounded-lg overflow-hidden"
+                                data-alt="Fresh homemade bagels stacked"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBzOATFHhPKVzYP3EjwR54-E9pjvdt9T2wI14ExVmk_fWcNkXCJLLmDbh_Zgeuus4Y_BSJx3n_MxT4gSbqqegRlbD9TQPF8kzM7-TzYM8VOEsO500kNzyqm5BGDYPkS7geuZ7t6ubfXIWK5bO6Zs8thVM-FcGMu3GBU7usaw8mGy5u76c7YEnn6GPPPNS4EBxYqcBt8pgRDZtfx3j98fQCA6iCmxnTblngX78rY9AdbfUuBDj38tAGxuyqMzafKwJoxM94kzQ7eAkQ");'>
+                            </div>
+                            <div class="px-1 pb-1">
+                                <div class="flex justify-between items-start mb-1">
+                                    <p
+                                        class="text-[#111813] dark:text-white text-lg font-bold group-hover:text-primary transition-colors">
+                                        Homemade Bagels</p>
+                                    <p class="text-primary text-base font-bold">$6.00</p>
+                                </div>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm">Sesame, poppy seed, or plain with
+                                    cream cheese.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Story Section -->
+            <section class="px-4 md:px-40 py-12 bg-white dark:bg-[#161f18]">
+                <div class="layout-content-container flex flex-col max-w-[960px] mx-auto">
+                    <div class="flex flex-col-reverse lg:flex-row gap-12 items-center">
+                        <div class="w-full lg:w-1/2 flex flex-col gap-6">
+                            <div class="flex flex-col gap-4">
+                                <h2 class="text-primary font-bold tracking-wider uppercase text-sm">About Us</h2>
+                                <h1
+                                    class="text-[#111813] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">
+                                    Our Story
+                                </h1>
+                                <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
+                                    Born from a love of vintage aesthetics and the vibrant culture of Tangier, Vintage
+                                    Coffee &amp; Kitchen is more than just a cafe. It's a bridge between the old-world
+                                    charm of Morocco and the new wave of specialty coffee.
+                                </p>
+                                <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
+                                    We source our beans ethically, bake our bread daily, and serve every cup with the
+                                    warmth of traditional Moroccan hospitality.
+                                </p>
+                            </div>
+                            <button
+                                class="flex w-fit cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-transparent border-2 border-[#111813] dark:border-white text-[#111813] dark:text-white hover:bg-[#111813] hover:text-white dark:hover:bg-white dark:hover:text-[#111813] text-sm font-bold transition-colors">
+                                <span class="truncate">Read Full Story</span>
+                            </button>
+                        </div>
+                        <div class="w-full lg:w-1/2 relative">
+                            <!-- Decorative background blob -->
+                            <div
+                                class="absolute -top-4 -right-4 w-full h-full bg-primary/20 rounded-2xl transform rotate-3">
+                            </div>
+                            <div class="relative w-full aspect-[4/3] bg-center bg-no-repeat bg-cover rounded-2xl shadow-xl"
+                                data-alt="Cozy corner in the coffee shop with vintage furniture and plants"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuASd4orO38JzG-dT7CMkQJK3H1Jpf2e8dKbkAcCLSMRLcsCtqXuDQ-NuOdsacLem_XSoawh5gtZ6ECNH2nLqz5CHh4nvAW8bZwqSeU-KipZiatvO_XwowmkzM3YB2cwAeUxWx4HnJhEd1LMLoxnh2wNzyYa77RFqU0Flx9ERwHh1NkicZxsT4PJZ50lxb3vP0NQeqHtjAulIeS3ykMAp8XmqLhMqw2r7AJ5Z-CuK0EUR-OCJqnJon_paPaWxsq9CSuuLL0vbQ7tcJI");'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Menu Preview List -->
+            <section class="px-4 md:px-40 py-16 bg-background-light dark:bg-background-dark">
+                <div class="max-w-[960px] mx-auto flex flex-col gap-10">
+                    <div class="text-center flex flex-col gap-2">
+                        <h2 class="text-[#111813] dark:text-white text-3xl font-bold">On The Menu</h2>
+                        <p class="text-gray-500 dark:text-gray-400">A small selection of our daily offerings</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
+                        <!-- Left Column: Coffee -->
+                        <div class="flex flex-col gap-6">
+                            <div
+                                class="flex items-center gap-3 border-b border-dashed border-gray-300 dark:border-gray-700 pb-2">
+                                <span class="material-symbols-outlined text-primary">local_cafe</span>
+                                <h3 class="text-xl font-bold text-[#111813] dark:text-white">Coffee &amp; Tea</h3>
+                            </div>
+                            <div class="space-y-6">
+                                <div class="flex justify-between items-end group">
+                                    <div class="flex flex-col">
+                                        <span
+                                            class="text-[#111813] dark:text-white font-bold text-lg group-hover:text-primary transition-colors">Espresso</span>
+                                        <span class="text-gray-500 dark:text-gray-400 text-sm">Single origin, rich
+                                            crema</span>
+                                    </div>
+                                    <span class="text-primary font-bold">$2.50</span>
+                                </div>
+                                <div class="flex justify-between items-end group">
+                                    <div class="flex flex-col">
+                                        <span
+                                            class="text-[#111813] dark:text-white font-bold text-lg group-hover:text-primary transition-colors">Cortado</span>
+                                        <span class="text-gray-500 dark:text-gray-400 text-sm">Equal parts espresso and
+                                            milk</span>
+                                    </div>
+                                    <span class="text-primary font-bold">$3.50</span>
+                                </div>
+                                <div class="flex justify-between items-end group">
+                                    <div class="flex flex-col">
+                                        <span
+                                            class="text-[#111813] dark:text-white font-bold text-lg group-hover:text-primary transition-colors">V60
+                                            Pour Over</span>
+                                        <span class="text-gray-500 dark:text-gray-400 text-sm">Hand brewed, delicate
+                                            flavor</span>
+                                    </div>
+                                    <span class="text-primary font-bold">$5.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Right Column: Food -->
+                        <div class="flex flex-col gap-6">
+                            <div
+                                class="flex items-center gap-3 border-b border-dashed border-gray-300 dark:border-gray-700 pb-2">
+                                <span class="material-symbols-outlined text-primary">lunch_dining</span>
+                                <h3 class="text-xl font-bold text-[#111813] dark:text-white">Brunch &amp; Bites</h3>
+                            </div>
+                            <div class="space-y-6">
+                                <div class="flex justify-between items-end group">
+                                    <div class="flex flex-col">
+                                        <span
+                                            class="text-[#111813] dark:text-white font-bold text-lg group-hover:text-primary transition-colors">Eggs
+                                            Benedict</span>
+                                        <span class="text-gray-500 dark:text-gray-400 text-sm">With smoked salmon or
+                                            turkey bacon</span>
+                                    </div>
+                                    <span class="text-primary font-bold">$11.00</span>
+                                </div>
+                                <div class="flex justify-between items-end group">
+                                    <div class="flex flex-col">
+                                        <span
+                                            class="text-[#111813] dark:text-white font-bold text-lg group-hover:text-primary transition-colors">Granola
+                                            Bowl</span>
+                                        <span class="text-gray-500 dark:text-gray-400 text-sm">Greek yogurt, honey,
+                                            seasonal fruit</span>
+                                    </div>
+                                    <span class="text-primary font-bold">$8.50</span>
+                                </div>
+                                <div class="flex justify-between items-end group">
+                                    <div class="flex flex-col">
+                                        <span
+                                            class="text-[#111813] dark:text-white font-bold text-lg group-hover:text-primary transition-colors">Club
+                                            Sandwich</span>
+                                        <span class="text-gray-500 dark:text-gray-400 text-sm">Chicken, egg, lettuce,
+                                            tomato</span>
+                                    </div>
+                                    <span class="text-primary font-bold">$10.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-6">
+                        <button
+                            class="flex cursor-pointer items-center justify-center rounded-lg h-12 px-8 bg-primary hover:bg-[#15bd3f] text-[#111813] text-base font-bold transition-all shadow-lg shadow-primary/20">
+                            <span>See Full Menu</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <!-- Testimonials -->
+            <section class="py-16 bg-white dark:bg-[#161f18]">
+                <div class="px-4 md:px-40 layout-content-container flex flex-col max-w-[960px] mx-auto gap-8">
+                    <h2 class="text-center text-[#111813] dark:text-white text-2xl font-bold">What People Are Saying
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div
+                            class="p-6 bg-background-light dark:bg-background-dark rounded-xl border border-gray-100 dark:border-[#29382d]">
+                            <div class="flex text-primary mb-3">
+                                <span class="material-symbols-outlined text-[20px]">star</span>
+                                <span class="material-symbols-outlined text-[20px]">star</span>
+                                <span class="material-symbols-outlined text-[20px]">star</span>
+                                <span class="material-symbols-outlined text-[20px]">star</span>
+                                <span class="material-symbols-outlined text-[20px]">star</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">"Hands down the
+                                best coffee in Tangier. The atmosphere is so nostalgic yet fresh. I could sit here for
+                                hours."</p>
+                            <div class="flex items-center gap-3">
+                                <div class="size-8 rounded-full bg-gray-300 bg-cover bg-center"
+                                    data-alt="Avatar of user Sarah"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuALwtbyvtq62Sd-IQ-xq5Zgdx_u-wytKYMd5VaSlxkGvvHvDPO8BOto9xyz1FUPwyZ_i68WqGCoZJ3Qc_VVk44Uv7dmZIUuXSVLQM5iCTPMvRuWMg28pfh4EooOPf5slImxQvXtgLNGvj-q-uW2rGZbGovxeoZS9J_YwuN3XE7yj6NLqWfAcI1SLsXPC2vRJbCNaBC0OVribb4jr5U7k3J7KjbfLWZBGTpL_4AYAaYIV-ZBbh6yWStifb_yL44AbYZkD7cx_uoiTNw");'>
+                                </div>
+                                <span class="text-sm font-bold text-[#111813] dark:text-white">Sarah M.</span>
+                            </div>
+                        </div>
+                        <div
+                            class="p-6 bg-background-light dark:bg-background-dark rounded-xl border border-gray-100 dark:border-[#29382d]">
+                            <div class="flex text-primary mb-3">
+                                <span class="material-symbols-outlined text-[20px]">star</span>
+                                <span class="material-symbols-outlined text-[20px]">star</span>
+                                <span class="material-symbols-outlined text-[20px]">star</span>
+                                <span class="material-symbols-outlined text-[20px]">star</span>
+                                <span class="material-symbols-outlined text-[20px]">star_half</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">"The spiced latte
+                                is a revelation. I love how they kept the vintage decor but everything feels clean and
+                                modern."</p>
+                            <div class="flex items-center gap-3">
+                                <div class="size-8 rounded-full bg-gray-300 bg-cover bg-center"
+                                    data-alt="Avatar of user Ahmed"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDxU05fghbJuydjutkFfIP28cYHzkp1_1P33MRNGWWdfnXHjU3BdazHVFPHl1Oi8wFkKGzx5km91nlaJmFH4KrhBCi8qH9waOT3IKuXTZR6PkEnhFY1jHhC4rZmyEAH70406Qx-Akw_MV2qmUO1aAPPwsYmomhe9HrFD0-tMqGTWlLDaMN-RjJPyGbQrSjnAGuNW3kymM7uh4eeYgEKy0wpc-l5irLOAB10cr7BIDNLb3BbZlIYrGHml90_9EzJVFuC2Sgpdtv6Pn0");'>
+                                </div>
+                                <span class="text-sm font-bold text-[#111813] dark:text-white">Ahmed K.</span>
+                            </div>
+                        </div>
+                        <div
+                            class="p-6 bg-background-light dark:bg-background-dark rounded-xl border border-gray-100 dark:border-[#29382d]">
+                            <div class="flex text-primary mb-3">
+                                <span class="material-symbols-outlined text-[20px]">star</span>
+                                <span class="material-symbols-outlined text-[20px]">star</span>
+                                <span class="material-symbols-outlined text-[20px]">star</span>
+                                <span class="material-symbols-outlined text-[20px]">star</span>
+                                <span class="material-symbols-outlined text-[20px]">star</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">"Great place for
+                                brunch. The avocado toast is generous and the staff is incredibly friendly."</p>
+                            <div class="flex items-center gap-3">
+                                <div class="size-8 rounded-full bg-gray-300 bg-cover bg-center"
+                                    data-alt="Avatar of user Elena"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD-Put-yfnh9dIgqqJ59bL-rWn4--zCUJHh5wli_tKy7HDyVwgfjTreXS7Ek5uSLvejlss--BImSjzMwqHw7VfDwm528GNNNLinvW5Lv5hiRVawdsmiBPuYjwHyfKC3CrOx0zF2bli2T1Jz9eMa2XYC1Fw3Vz3znzxyKBXrob5DzkmnqgavrIAYhB2XDHU74VstMxcS4GEPONHqEyc4hDFSBrdQWgKAxL3mcFTCQo32D7iXeKSoehAHfa0HxN1z6ZKVtncnRIoTY1U");'>
+                                </div>
+                                <span class="text-sm font-bold text-[#111813] dark:text-white">Elena R.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="bg-[#0b100d] border-t border-[#29382d] pt-16 pb-8">
+            <div class="px-4 md:px-40 max-w-[960px] mx-auto flex flex-col gap-12">
+                <div class="flex flex-col md:flex-row gap-10 justify-between">
+                    <!-- Brand -->
+                    <div class="flex flex-col gap-4 max-w-xs">
+                        <div class="flex items-center gap-2 text-white">
+                            <span class="material-symbols-outlined text-primary text-2xl">coffee</span>
+                            <span class="font-bold text-lg">Vintage Coffee &amp; Kitchen</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">
+                            Bringing people together over exceptional coffee and timeless vintage vibes in the heart of
+                            Tangier.
+                        </p>
+                        <div class="flex gap-4 mt-2">
+                            <!-- Social Placeholders -->
+                            <a class="text-gray-400 hover:text-primary transition-colors" href="#"><span
+                                    class="material-symbols-outlined">public</span></a>
+                            <a class="text-gray-400 hover:text-primary transition-colors" href="#"><span
+                                    class="material-symbols-outlined">photo_camera</span></a>
+                        </div>
+                    </div>
+                    <!-- Links -->
+                    <div class="flex flex-col gap-4">
+                        <h4 class="text-white font-bold text-sm uppercase tracking-wider">Explore</h4>
+                        <div class="flex flex-col gap-2">
+                            <a class="text-gray-400 hover:text-primary text-sm transition-colors" href="#">Menu</a>
+                            <a class="text-gray-400 hover:text-primary text-sm transition-colors" href="#">Our Story</a>
+                            <a class="text-gray-400 hover:text-primary text-sm transition-colors" href="#">Careers</a>
+                            <a class="text-gray-400 hover:text-primary text-sm transition-colors" href="#">Privacy
+                                Policy</a>
+                        </div>
+                    </div>
+                    <!-- Location -->
+                    <div class="flex flex-col gap-4">
+                        <h4 class="text-white font-bold text-sm uppercase tracking-wider">Visit Us</h4>
+                        <div class="flex flex-col gap-2 text-sm text-gray-400">
+                            <div class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm mt-0.5">location_on</span>
+                                <p>123 Blvd Pasteur,<br />Tangier, Morocco 90000</p>
+                            </div>
+                            <div class="flex items-center gap-2 mt-2">
+                                <span class="material-symbols-outlined text-primary text-sm">schedule</span>
+                                <p>Daily: 7:00 AM - 10:00 PM</p>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm">call</span>
+                                <p>+212 555 0123</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Copyright -->
+                <div
+                    class="border-t border-[#29382d] pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+                    <p>© 2024 Vintage Coffee &amp; Kitchen. All rights reserved.</p>
+                    <p>Designed with love in Morocco.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

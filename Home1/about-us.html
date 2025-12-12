@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About Us - Vintage Coffee &amp; Kitchen</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="../assets/js/tailwind.config.js"></script>
+    <script src="../assets/js/main.js" defer></script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-[#111813] dark:text-white font-display overflow-x-hidden antialiased transition-colors duration-300">
+    <div class="flex flex-col min-h-screen">
+        <!-- Navigation -->
+        <header
+            class="sticky top-0 z-50 w-full border-b border-[#e5e7eb] dark:border-[#29382d] bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm">
+            <div class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+                <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary text-3xl">local_cafe</span>
+                    <h2 class="text-lg font-bold tracking-tight">Vintage Coffee &amp; Kitchen</h2>
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="../index.html">Home</a>
+                    <a class="text-sm font-medium text-primary" href="about-us.html">About Us</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="menu.html">Menu</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Shop</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="contact.html">Contact</a>
+                    <!-- Themes Dropdown -->
+                    <div class="nav-dropdown">
+                        <span
+                            class="text-sm font-medium hover:text-primary transition-colors cursor-pointer flex items-center gap-1">
+                            Themes
+                            <span class="material-symbols-outlined text-[16px]">expand_more</span>
+                        </span>
+                        <div class="nav-dropdown-menu">
+                            <a href="../index.html">Home 1 (Green)</a>
+                            <a href="../Home2/index2.html">Home 2</a>
+                            <a href="../Home3/index3.html">Home 3</a>
+                            <a href="../Home4/index4.html">Home 4</a>
+                            <a href="../Home5/index5.html">Home 5</a>
+                            <a href="../Home6/index6-1.html">Home 6 (Orange)</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button
+                        class="hidden sm:flex h-10 px-5 items-center justify-center rounded-lg bg-primary text-[#111813] text-sm font-bold hover:bg-green-400 transition-colors">
+                        Reserve a Table
+                    </button>
+                    <button class="md:hidden p-2 text-current">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+                <!-- Mobile Menu -->
+                <div id="mobile-menu"
+                    class="hidden md:hidden absolute top-full left-0 w-full bg-background-light dark:bg-background-dark border-b border-[#e5e7eb] dark:border-[#29382d]">
+                    <nav class="flex flex-col p-4 gap-4">
+                        <a class="text-[#111813] dark:text-white text-sm font-medium hover:text-primary transition-colors"
+                            href="index.html">Home</a>
+                        <a class="text-[#111813] dark:text-white text-sm font-medium hover:text-primary transition-colors"
+                            href="about-us.html">About Us</a>
+                        <a class="text-[#111813] dark:text-white text-sm font-medium hover:text-primary transition-colors"
+                            href="menu.html">Menu</a>
+                        <a class="text-[#111813] dark:text-white text-sm font-medium hover:text-primary transition-colors"
+                            href="contact.html">Contact</a>
+                    </nav>
+                </div>
+            </div>
+    </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="relative w-full">
+        <div class="relative w-full min-h-[60vh] flex items-center justify-center px-4 overflow-hidden">
+            <!-- Background with Overlay -->
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-background-dark/90 z-10"></div>
+                <div class="w-full h-full bg-cover bg-center bg-no-repeat transform scale-105 hover:scale-100 transition-transform duration-[20s]"
+                    data-alt="Interior of a dimly lit vintage coffee shop with warm lighting"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC3Jdnf3VVzQl2P_g58hlAcqp5VbNkWyvOK16xhWbwepTCKZWhAOC7w-syOKpU3LgPuFVp-27piB5UtKta6UxqToXXfdfdZQMlYnunVfzOwOVBff2JrO2IzhkSKJuQ7s5HrwLWtU4rztBZUCvb7cEM9VT2OAfmAFzfmh8Au3O__7_UvVuI5iEIONiwliEzr8QYEQcY4taqtGAfEgHnsNysdiy8GWoFMQWKzeNiC1ishpTEK5fbK6vuVJJaxt0FsG91srs42Q2NJL7g");'>
+                </div>
+            </div>
+            <!-- Content -->
+            <div class="relative z-20 text-center max-w-4xl mx-auto flex flex-col items-center gap-6 py-20">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 border border-primary/30 backdrop-blur-md mb-2">
+                    <span class="material-symbols-outlined text-primary text-sm">history_edu</span>
+                    <span class="text-primary text-xs font-bold uppercase tracking-wider">Est. 2010</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tight">
+                    Brewing History in the <br /><span class="text-primary">Heart of Tangier</span>
+                </h1>
+                <p class="text-gray-200 text-lg md:text-xl max-w-2xl font-light leading-relaxed">
+                    A blend of vintage charm and modern brewing excellence, inspired by the Interzone era and the
+                    enduring spirit of Morocco.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Origin Story Section -->
+    <section class="py-20 px-4 md:px-10 lg:px-40 bg-background-light dark:bg-background-dark">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div class="flex flex-col gap-8">
+                <div class="flex flex-col gap-4">
+                    <h2 class="text-3xl md:text-4xl font-bold leading-tight">The Origin Story</h2>
+                    <div class="h-1 w-20 bg-primary rounded-full"></div>
+                </div>
+                <div class="space-y-6 text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                    <p>
+                        Inspired by Tangier's legendary "Interzone" era, where artists, writers, and spies mingled
+                        over strong coffee, our kitchen brings together an international legacy with local
+                        authenticity.
+                    </p>
+                    <p>
+                        We honor the past while crafting the future of coffee culture in Morocco. Every bean is
+                        selected with care, every cup brewed to perfection, and every corner of our space designed
+                        to transport you to a time when conversation was an art form.
+                    </p>
+                </div>
+                <div class="flex gap-4 pt-4">
+                    <div class="flex flex-col gap-1">
+                        <span class="text-3xl font-black text-primary">15+</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400 font-medium">Years Brewing</span>
+                    </div>
+                    <div class="w-px bg-gray-300 dark:bg-gray-700 mx-4"></div>
+                    <div class="flex flex-col gap-1">
+                        <span class="text-3xl font-black text-primary">3</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400 font-medium">Locations</span>
+                    </div>
+                    <div class="w-px bg-gray-300 dark:bg-gray-700 mx-4"></div>
+                    <div class="flex flex-col gap-1">
+                        <span class="text-3xl font-black text-primary">100%</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400 font-medium">Fair Trade</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="aspect-[4/5] w-full rounded-2xl overflow-hidden shadow-2xl">
+                    <div class="w-full h-full bg-cover bg-center"
+                        data-alt="Traditional Moroccan tea pouring into a glass on a zellige tile table"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIWThuXHLE6ScbetR2MWbXi-Z78Cie6W4t14qJLt5fNwjezTz-znqfk8Yjc6wW-3lFrkQzyP4AdT1dtPPHBke1tUfOt3QOyDDCFlSEqfBw-1mBEfSYl25_bH6jIYl2fBP59LDeWsj5bOW085W0ku3TnzVUm5s8qHlb20yH03VCPL2JimtyhE7-n_HUYJ53UxPsrnEfGC4aH5pFYFnnVf6-c7wK39GegmBnPY0aBlDh2UunExNLBkNdBgKnNVlL2OYcuXf9Q-L1Xmo");'>
+                    </div>
+                </div>
+                <!-- Decor element -->
+                <div class="absolute -bottom-6 -left-6 w-48 h-48 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+            </div>
+        </div>
+    </section>
+    <!-- Philosophy Quote -->
+    <section class="py-16 bg-[#1a2e20] dark:bg-[#0d160f] border-y border-[#29382d]">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <span class="material-symbols-outlined text-primary/50 text-5xl mb-6">format_quote</span>
+            <h3 class="text-3xl md:text-5xl font-black text-white leading-tight tracking-tight mb-6">
+                "Old Soul, <span class="text-primary italic font-serif">New Brew</span>."
+            </h3>
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                We believe that the best coffee isn't just about the beans—it's about the feeling of timelessness in
+                every sip.
+            </p>
+        </div>
+    </section>
+    <!-- Visual Gallery -->
+    <section class="py-20 px-4 md:px-10 bg-background-light dark:bg-background-dark">
+        <div class="max-w-7xl mx-auto mb-12 flex flex-col items-center text-center">
+            <h2 class="text-3xl font-bold mb-4">Capturing the Vibe</h2>
+            <p class="text-gray-500 dark:text-gray-400">Glimpses into our daily ritual.</p>
+        </div>
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+            <!-- Item 1: Large Square -->
+            <div class="col-span-2 row-span-2 relative group overflow-hidden rounded-xl">
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                    data-alt="Close up of espresso coffee beans being roasted dark"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCAMyiYYQiGI69oo7O2yu4BtJoTxQbJuBr0hDZb62YfXd63NcWjFTMCy8iUWkV2id9y8MqiegLTGKZCOdWAud7uK7lKza3vRt6lelSj6r9lxrx9TfWRoQpv6zY6Mjs4H0o4JAdtpw57ORJbcUKOInGsP126AF8RN7cx8xPKaxEDG7U0EiJ961sWHBEDWk-y8w2xAlwzYFeF4NocqDdrnlT7KihxSw4mCjb198X7S7kUUKJgvauyks5l4fLAZGQDejphF3cTxRbIe7o");'>
+                </div>
+                <div
+                    class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="text-white font-bold tracking-widest uppercase">Our Roast</span>
+                </div>
+            </div>
+            <!-- Item 2: Portrait -->
+            <div class="col-span-1 row-span-2 relative group overflow-hidden rounded-xl">
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                    data-alt="Barista pouring latte art into a ceramic cup"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDZRC_nS4MFDC6ukcPU21cwG1wci0Pg83dt0TnAD5tiOOafakQ3h6Fk4nB07gwAknXc9eLyITcRHIp4g1o8aYgx4kqyTv1dVdl_R7_lPRAGeXIyPu7w4sVJd_eJ74iEeiOmzysM4TP-eTPEF8Q_CyFHCpr0AraoyehMFT8rRW6LzuMHw0M0vkVZDE6ol9uZ3-Yo5LK_4BAum0pcqTKT5kjREkgPv3FkAesOmDEM4BRpcAjWMnnahp7CyP8cgXoa2wG1hy66hN001N0");'>
+                </div>
+                <div
+                    class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="text-white font-bold tracking-widest uppercase">Craft</span>
+                </div>
+            </div>
+            <!-- Item 3: Landscape -->
+            <div class="col-span-1 row-span-1 relative group overflow-hidden rounded-xl">
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                    data-alt="Traditional Moroccan Zellige tile pattern detail"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBuPNIVq2Yn37eeHH-Jptb2SA_2J1xSOLIPFvRG0baYSzqdW-ZgtXUG5i2Nwx_DfNJjSy2urOiARqCh0K6zfTmb-S3-MrC-kZj3x58qyLXARKxjgnh0mjL47ILMZ53pgaYuYhgM2qHx6T9vTmL3FCT-TJg2bZ0gW7TPlt6jRbYMkBD4vuvA8CwS-gVsvsP8OvTHduncxhq5i57Ruzr6xC8rlcC5GDY8o7fShozT1Vu4szTLJ3QronvYFqnjNlLA37xDenIrkyyZxH0");'>
+                </div>
+            </div>
+            <!-- Item 4: Landscape -->
+            <div class="col-span-1 row-span-1 relative group overflow-hidden rounded-xl">
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                    data-alt="Vintage coffee grinder on wooden shelf"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA0MUfY14utbON8IisRUeOyaRhsnxeqi7Av4HW8V-g1vlmx1ajgd9vQNXUzBD89oOxj84jwZL1bSJBUgC_Lf9j_ithnRp2epsq-fnVjSIo2DbS1DB0XnvKTcsnW-wJIwLz4fBzpvUd-dDp3LzDFfgTgHspWQitpyP2EBguCgLIdPuSb0u-IkxO_3NjLxloX3LQNzy_t7x-y555Sc0B6-rkDEO7NdWO6TqsKzrGDYMvGBReBaazg1acxGtwJIS-67rX5km92n8xHmKI");'>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Timeline Section -->
+    <section class="py-20 px-4 md:px-10 lg:px-40 bg-background-light dark:bg-background-dark relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div
+            class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none">
+        </div>
+        <div class="max-w-4xl mx-auto">
+            <div class="flex flex-col gap-4 mb-16">
+                <h2 class="text-3xl font-bold">A Journey Through Time</h2>
+                <p class="text-gray-500 dark:text-gray-400">From the first spark of inspiration to our grand
+                    opening.</p>
+            </div>
+            <div class="grid grid-cols-[60px_1fr] md:grid-cols-[100px_1fr] gap-x-6 md:gap-x-12 px-4">
+                <!-- 1920 -->
+                <div class="flex flex-col items-center gap-1 pt-2">
+                    <div class="text-primary font-bold text-lg md:text-xl">1920</div>
+                    <div class="w-[2px] bg-[#3c5342] h-full grow my-2"></div>
+                </div>
+                <div class="flex flex-col pb-12">
+                    <div
+                        class="p-6 rounded-2xl bg-white dark:bg-[#1a251d] border border-gray-100 dark:border-[#29382d] shadow-sm">
+                        <h3 class="text-xl font-bold mb-2">The Inspiration</h3>
+                        <p class="text-gray-600 dark:text-[#9db8a4] leading-relaxed">
+                            The seed is planted during the height of the International Zone era in Tangier. The
+                            cosmopolitan spirit of the city inspires a vision of a gathering place for all cultures.
+                        </p>
+                    </div>
+                </div>
+                <!-- 1955 -->
+                <div class="flex flex-col items-center gap-1">
+                    <div class="text-primary font-bold text-lg md:text-xl">1955</div>
+                    <div class="w-[2px] bg-[#3c5342] h-full grow my-2"></div>
+                </div>
+                <div class="flex flex-col pb-12">
+                    <div
+                        class="p-6 rounded-2xl bg-white dark:bg-[#1a251d] border border-gray-100 dark:border-[#29382d] shadow-sm">
+                        <h3 class="text-xl font-bold mb-2">The Golden Era</h3>
+                        <p class="text-gray-600 dark:text-[#9db8a4] leading-relaxed">
+                            Tangier reaches its cultural peak. Our family acquires the historic building in the
+                            Kasbah, preserving its architectural integrity for future generations.
+                        </p>
+                    </div>
+                </div>
+                <!-- 2010 -->
+                <div class="flex flex-col items-center gap-1">
+                    <div class="text-primary font-bold text-lg md:text-xl">2010</div>
+                    <div class="w-[2px] bg-[#3c5342] h-full grow my-2"></div>
+                </div>
+                <div class="flex flex-col pb-12">
+                    <div
+                        class="p-6 rounded-2xl bg-white dark:bg-[#1a251d] border border-gray-100 dark:border-[#29382d] shadow-sm">
+                        <h3 class="text-xl font-bold mb-2">The Concept</h3>
+                        <p class="text-gray-600 dark:text-[#9db8a4] leading-relaxed">
+                            Drafting the vision. We begin sourcing vintage equipment from Italy and establishing
+                            direct trade relationships with local coffee farmers.
+                        </p>
+                    </div>
+                </div>
+                <!-- 2023 -->
+                <div class="flex flex-col items-center gap-1 pb-2">
+                    <div class="text-primary font-bold text-lg md:text-xl">2023</div>
+                </div>
+                <div class="flex flex-col">
+                    <div
+                        class="p-6 rounded-2xl bg-white dark:bg-[#1a251d] border border-gray-100 dark:border-[#29382d] shadow-sm border-l-4 border-l-primary">
+                        <h3 class="text-xl font-bold mb-2">Grand Opening</h3>
+                        <p class="text-gray-600 dark:text-[#9db8a4] leading-relaxed">
+                            Doors open. "Vintage Coffee &amp; Kitchen" welcomes its first guests, blending historic
+                            ambiance with modern culinary techniques.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Team Section -->
+    <section class="py-20 px-4 md:px-10 bg-gray-50 dark:bg-[#0f1a12]">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col gap-4 mb-12 text-center">
+                <h2 class="text-3xl font-bold">Meet the Makers</h2>
+                <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">The passionate individuals behind
+                    every cup and plate.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="group flex flex-col items-center text-center gap-4">
+                    <div
+                        class="w-48 h-48 rounded-full overflow-hidden border-4 border-white dark:border-[#29382d] shadow-lg">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            data-alt="Portrait of a young man with a beard smiling"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAn7hLiE95hp4fl8k2reBxAhB_20X7TlqZ9yLfl1EjwmthRfm0WrlAVD0EI-lOWS2Z5dTtZ0a9IBeI31djOGlA3S8vnuJ-mvg3lUE3GqC2nErm7hE-QVKzA3JCmhaJ9VJUFxWHdYs8w1mU4pnBZZrEb9Pwdw8e0svaNOivCmvuAyr4ur0e-Bc_OXiXUTwQvJW6LUrsGejrwrSDz9WwFFhXsXYXzCxOXMtJN9YppQKPXc_aq4PFJtwWpD9vK-YcpZkQrWn-GGMOWCK8");'>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold">Omar Benali</h4>
+                        <p class="text-primary font-medium text-sm">Head Barista</p>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mt-2 px-4">Master of the perfect
+                            pour-over and latte art champion.</p>
+                    </div>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="group flex flex-col items-center text-center gap-4">
+                    <div
+                        class="w-48 h-48 rounded-full overflow-hidden border-4 border-white dark:border-[#29382d] shadow-lg">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            data-alt="Portrait of a woman with curly hair smiling warmly"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBK6M9whxjTJhiRfoLAWfduk23KBJjYFB3kzBrWk60DoL9imgAFbQRagGezu87vqDnmIg5XqYSKE4hFk91dTO5_coWoQKzMBRke6rRZXMQShPD-On6Iw5MAAuSfjjhmGVl34CleiKbnPixSVWPRj7FRP9XRiPjyCtwsYlHE8r5MEsbVCfFKJkD7WZoJZNRGAbUQn5pvi8zMinItanrxwY5QtZ4ULLkRuH3qPjo1CeQ79yauMrj-hh8TNTcYkSwc2bzShWDPACy8LZc");'>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold">Sarah Tazi</h4>
+                        <p class="text-primary font-medium text-sm">Executive Chef</p>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mt-2 px-4">Bringing a modern twist to
+                            traditional Moroccan pastries.</p>
+                    </div>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="group flex flex-col items-center text-center gap-4">
+                    <div
+                        class="w-48 h-48 rounded-full overflow-hidden border-4 border-white dark:border-[#29382d] shadow-lg">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            data-alt="Portrait of a middle aged man with glasses smiling"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCrsJCvfUH8yQH3AzqcUDFwH-wiLl4YUeWcmtROaBgVk1YyaCXo9kN2-VLiwwlURUjpyKAEyp11zWBhhBsQCwZtT2xd0XY9WAVnrWt-3j5UjBrI8DVT7C0N7PGemYP57qTBsJTaowSXjwepyiVroexhBrNjfsK6XG8gzUXn7kT6EJr9JApqh40ZT2Fku8kvArau431FrRDjFTJ2h9YezxjGUf7BvrEgEMPZP7BnO4G9wLuVeRYKB9M60CkiU1-ZZSoLWGzkR1GENRA");'>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold">Youssef El-Fassi</h4>
+                        <p class="text-primary font-medium text-sm">Roaster</p>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mt-2 px-4">Sourcing and roasting beans
+                            with over 20 years of experience.</p>
+                    </div>
+                </div>
+                <!-- Team Member 4 -->
+                <div class="group flex flex-col items-center text-center gap-4">
+                    <div
+                        class="w-48 h-48 rounded-full overflow-hidden border-4 border-white dark:border-[#29382d] shadow-lg">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            data-alt="Portrait of a young woman in an apron smiling"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAbdbRzqhN1YYki0iKJD9Q5ttCeLxPtqlMpHBtyh8QRVmCVYm3Bd0hUysrJ5ySRBsdTgER8W-wVo8-V5CWUR-GmXPKRlU2ndqnsPh3fGVIrcSa0SfCZbJ-KQMGmInVgr5025CqcLA64lJ_CSoz5BuLK-HRcyCQDu9WrU3GPMVcEfjb-OXtc_wTKFw1hiMaL5v5mFW5SxZ279OKoTPOT5KoHDUxOLYwm6zVlTtjCoG_icSL50Vx3o6uIBiBlsnAAD3qrkeEPVxmLi6U");'>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold">Amina Kabbaj</h4>
+                        <p class="text-primary font-medium text-sm">Manager</p>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mt-2 px-4">Ensuring every guest feels the
+                            warmth of Tangier hospitality.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-[#111813] text-white pt-20 pb-10 border-t border-[#29382d]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-3xl">local_cafe</span>
+                        <h3 class="text-xl font-bold">Vintage Coffee</h3>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        A tribute to the past, brewed for the present. Experience the authentic taste of Tangier in
+                        every cup.
+                    </p>
+                </div>
+                <!-- Links -->
+                <div class="flex flex-col gap-4">
+                    <h4 class="font-bold text-lg mb-2">Explore</h4>
+                    <a class="text-gray-400 hover:text-primary transition-colors text-sm" href="#">Our Story</a>
+                    <a class="text-gray-400 hover:text-primary transition-colors text-sm" href="#">Menu</a>
+                    <a class="text-gray-400 hover:text-primary transition-colors text-sm" href="#">Shop Coffee</a>
+                    <a class="text-gray-400 hover:text-primary transition-colors text-sm" href="#">Reservations</a>
+                </div>
+                <!-- Contact -->
+                <div class="flex flex-col gap-4">
+                    <h4 class="font-bold text-lg mb-2">Visit Us</h4>
+                    <div class="flex items-start gap-3 text-gray-400 text-sm">
+                        <span class="material-symbols-outlined text-primary text-lg mt-0.5">location_on</span>
+                        <span>15 Rue de la Liberté,<br />Tangier 90000, Morocco</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-gray-400 text-sm">
+                        <span class="material-symbols-outlined text-primary text-lg">call</span>
+                        <span>+212 539-123456</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-gray-400 text-sm">
+                        <span class="material-symbols-outlined text-primary text-lg">mail</span>
+                        <span>hello@vintagecoffee.ma</span>
+                    </div>
+                </div>
+                <!-- Hours -->
+                <div class="flex flex-col gap-4">
+                    <h4 class="font-bold text-lg mb-2">Opening Hours</h4>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li class="flex justify-between">
+                            <span>Mon - Fri</span>
+                            <span class="text-white">7:00 AM - 9:00 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Saturday</span>
+                            <span class="text-white">8:00 AM - 10:00 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Sunday</span>
+                            <span class="text-white">8:00 AM - 8:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-[#29382d] flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-xs">© 2023 Vintage Coffee &amp; Kitchen. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a class="text-gray-500 hover:text-primary transition-colors" href="#">
+                        <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+                            <path
+                                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a class="text-gray-500 hover:text-primary transition-colors" href="#">
+                        <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+
+</html>

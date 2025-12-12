@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&family=Dancing+Script:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/* Custom Scrollbar (Orange Theme) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f4f2f0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d6cfc7;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e68019;
+}
+
+/* Base Styles */
+body {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Vintage Photo Filter Effect (for gallery) */
+.vintage-filter {
+    filter: sepia(0.2) contrast(1.05);
+    transition: filter 0.3s ease, transform 0.5s ease;
+}
+
+.group:hover .vintage-filter {
+    filter: sepia(0) contrast(1);
+    transform: scale(1.02);
+}
+
+/* Text Shadow Utility */
+.text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Hidden Scrollbar for horizontal scroll areas */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Vintage Border for forms */
+.vintage-border-bottom {
+    border-bottom-width: 2px;
+    border-style: solid;
+    border-color: #e5e0dc;
+}
+
+.dark .vintage-border-bottom {
+    border-color: #4a3b2f;
+}
+
+/* Carousel Styles */
+.carousel-track {
+    display: flex;
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.carousel-indicator.active {
+    background-color: #D4A373;
+    width: 2rem;
+}
+
+/* Navbar Dropdown Styles */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background: rgba(44, 24, 16, 0.95);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(230, 128, 25, 0.2);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu {
+    display: block;
+}
+
+.nav-dropdown-menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    font-size: 0.875rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-dropdown-menu a:hover {
+    background-color: rgba(230, 128, 25, 0.1);
+    color: #e68019;
+}

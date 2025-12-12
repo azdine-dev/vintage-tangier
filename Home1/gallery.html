@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Gallery &amp; Events - Vintage Coffee &amp; Kitchen</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="../assets/js/tailwind.config.js"></script>
+    <script src="../assets/js/main.js" defer></script>
+</head>
+
+<body
+    class="font-display bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 antialiased overflow-x-hidden">
+    <div class="relative flex min-h-screen w-full flex-col group/design-root vintage-grain">
+        <!-- Top Navigation -->
+        <header
+            class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e5e7eb] dark:border-b-[#29382d] bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md px-4 sm:px-10 py-3">
+            <div class="flex items-center gap-4 text-gray-900 dark:text-white">
+                <div class="size-8 text-primary">
+                    <span class="material-symbols-outlined !text-3xl">coffee</span>
+                </div>
+                <h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Vintage Coffee &amp; Kitchen</h2>
+            </div>
+            <div class="hidden lg:flex flex-1 justify-end gap-8">
+                <nav class="flex items-center gap-9">
+                    <a class="text-sm font-medium leading-normal hover:text-primary transition-colors"
+                        href="../index.html">Home</a>
+                    <a class="text-sm font-medium leading-normal hover:text-primary transition-colors"
+                        href="menu.html">Menu</a>
+                    <a class="text-sm font-bold leading-normal text-primary" href="gallery.html">Gallery</a>
+                    <a class="text-sm font-medium leading-normal hover:text-primary transition-colors"
+                        href="#events">Events</a>
+                    <a class="text-sm font-medium leading-normal hover:text-primary transition-colors"
+                        href="contact.html">Contact</a>
+                    <!-- Themes Dropdown -->
+                    <div class="nav-dropdown">
+                        <span
+                            class="text-sm font-medium hover:text-primary transition-colors cursor-pointer flex items-center gap-1">
+                            Themes
+                            <span class="material-symbols-outlined text-[16px]">expand_more</span>
+                        </span>
+                        <div class="nav-dropdown-menu">
+                            <a href="../index.html">Home 1 (Green)</a>
+                            <a href="../Home2/index2.html">Home 2</a>
+                            <a href="../Home3/index3.html">Home 3</a>
+                            <a href="../Home4/index4.html">Home 4</a>
+                            <a href="../Home5/index5.html">Home 5</a>
+                            <a href="../Home6/index6-1.html">Home 6 (Orange)</a>
+                        </div>
+                    </div>
+                </nav>
+                <button
+                    class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-[#111813] text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                    <span class="truncate">Book a Table</span>
+                </button>
+            </div>
+            <!-- Mobile Menu Icon -->
+            <button class="lg:hidden text-gray-900 dark:text-white">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu"
+                class="hidden lg:hidden absolute top-full left-0 w-full bg-background-light dark:bg-background-dark border-b border-[#e5e7eb] dark:border-[#29382d]">
+                <nav class="flex flex-col p-4 gap-4">
+                    <a class="text-[#111813] dark:text-white text-sm font-medium hover:text-primary transition-colors"
+                        href="index.html">Home</a>
+                    <a class="text-[#111813] dark:text-white text-sm font-medium hover:text-primary transition-colors"
+                        href="menu.html">Menu</a>
+                    <a class="text-[#111813] dark:text-white text-sm font-medium hover:text-primary transition-colors"
+                        href="gallery.html">Gallery</a>
+                    <a class="text-[#111813] dark:text-white text-sm font-medium hover:text-primary transition-colors"
+                        href="#events">Events</a>
+                    <a class="text-[#111813] dark:text-white text-sm font-medium hover:text-primary transition-colors"
+                        href="contact.html">Contact</a>
+                </nav>
+            </div>
+        </header>
+        <!-- Hero Section -->
+        <div class="relative w-full">
+            <div class="flex min-h-[560px] flex-col gap-6 bg-cover bg-center bg-no-repeat items-center justify-center p-4 relative"
+                data-alt="Cinematic shot of a vintage coffee shop interior in Tangier, Morocco with warm lighting and people enjoying coffee"
+                style='background-image: linear-gradient(rgba(17, 33, 21, 0.7) 0%, rgba(17, 33, 21, 0.5) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDwwTxnSLhoxldEYOsjEPgC4qHjo5tjWCmAWus2_YOJDtxArAxmFAvBRBY34G7sHd7oX5xpNMD0miBmHevHT4ICizZ-2Xr5hI26O9FwAqW7cVDny9tDFPy49yoiegrm3nwRagqPDt7F29pEOXBphP-6uGh-lBHmwGEMTk2EsT-FGF1MWNUwksKivSKow77Avp1g2u33fWWszJSOp63bqPNBTQ6E0RFw1dsy3ETL5QOzFcCmqE9CPWEZDU0TVI_rR_PomqSDV88RU4Q");'>
+                <div class="flex flex-col gap-4 text-center max-w-[800px] z-10">
+                    <h1
+                        class="text-white text-5xl md:text-7xl font-black leading-tight tracking-[-0.033em] uppercase drop-shadow-lg">
+                        Moments &amp; Memories
+                    </h1>
+                    <h2
+                        class="text-gray-200 text-lg md:text-xl font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-md">
+                        Experience the soul of Tangier in every cup. A visual journey through our space, our brews, and
+                        our community.
+                    </h2>
+                </div>
+                <div class="flex gap-4 mt-4 z-10">
+                    <a class="flex items-center justify-center rounded-lg h-12 px-6 bg-primary text-[#111813] text-base font-bold transition-transform hover:scale-105"
+                        href="#gallery">
+                        Browse Gallery
+                    </a>
+                    <a class="flex items-center justify-center rounded-lg h-12 px-6 bg-white/10 backdrop-blur-sm text-white border border-white/20 text-base font-bold hover:bg-white/20 transition-all"
+                        href="#events">
+                        Upcoming Events
+                    </a>
+                </div>
+                <!-- Scroll indicator -->
+                <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-white/70">
+                    <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                </div>
+            </div>
+        </div>
+        <main class="flex-1 flex flex-col items-center w-full" id="gallery">
+            <div class="w-full max-w-[1280px] px-4 md:px-8 py-12 md:py-20">
+                <!-- Gallery Header & Filters -->
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-6">
+                    <div>
+                        <span class="text-primary font-bold tracking-widest uppercase text-xs mb-2 block">Our Visual
+                            Story</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white leading-tight">The
+                            Gallery</h2>
+                    </div>
+                    <!-- Filter Chips -->
+                    <div class="flex gap-2 overflow-x-auto pb-2 hide-scrollbar w-full md:w-auto">
+                        <button
+                            class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-6 transition-all shadow-lg shadow-primary/20">
+                            <p class="text-[#111813] text-sm font-bold leading-normal">All</p>
+                        </button>
+                        <button
+                            class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-[#29382d] px-6 hover:border-primary/50 transition-all group">
+                            <p
+                                class="text-gray-600 dark:text-gray-300 text-sm font-medium leading-normal group-hover:text-primary transition-colors">
+                                The Space</p>
+                        </button>
+                        <button
+                            class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-[#29382d] px-6 hover:border-primary/50 transition-all group">
+                            <p
+                                class="text-gray-600 dark:text-gray-300 text-sm font-medium leading-normal group-hover:text-primary transition-colors">
+                                The Brews</p>
+                        </button>
+                        <button
+                            class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-[#29382d] px-6 hover:border-primary/50 transition-all group">
+                            <p
+                                class="text-gray-600 dark:text-gray-300 text-sm font-medium leading-normal group-hover:text-primary transition-colors">
+                                People</p>
+                        </button>
+                        <button
+                            class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-[#29382d] px-6 hover:border-primary/50 transition-all group">
+                            <p
+                                class="text-gray-600 dark:text-gray-300 text-sm font-medium leading-normal group-hover:text-primary transition-colors">
+                                Events</p>
+                        </button>
+                    </div>
+                </div>
+                <!-- Masonry Gallery Grid -->
+                <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+                    <!-- Item 1 -->
+                    <div class="break-inside-avoid group cursor-pointer relative overflow-hidden rounded-xl">
+                        <img alt="Latte Art"
+                            class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-110"
+                            data-alt="Barista pouring latte art into a ceramic cup"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3TtzO37bxGS89yMxMI_trAKLvFwY2a2ykmR6FrZaZgzhwbg0-e6v4XPpeND9yNvjMWrn0f61F4c0x135hBZxQ2wGmbeNevUaEARhIbisPlVxJ1bOFZE2WMt-IN7AIZpcDpOHVSrvUkSoGhY8GMVbUII2GxW45mo0XHwDIQbhYh5IcVzJAY3Opll1wWIZS6UzejxaiuUx74wVh6OD3x3S4hGQIdIMFDezrPLyf8W0K9wFx1Tj2gkbOZASaeBsr_5vBEwTUDNun6Tk" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">The Brews</span>
+                            <h3 class="text-white text-lg font-bold">Morning Rituals</h3>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="break-inside-avoid group cursor-pointer relative overflow-hidden rounded-xl">
+                        <img alt="Interior Vibes"
+                            class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-110"
+                            data-alt="Interior of a vintage cafe with wooden furniture and warm lighting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrXtg69Gq8pQVMmYskvK8FxXODtyZMA0fcX28xkUKdF8w1Lgw991AvArcJ8iMkvMDode0ZD6ai0OemgH_RinjVS16PickInxnzqMgViLw10blK1KGaq_6R9JaexbSBMR6ypB07CKtLwJI2gtuiE5z3M7OGPXjAwRUA20XCp1pG8HaRujqrUohGh-A-Hnghu_rgoKxI0s7KPlNR2irEBMOGoNCPzavuaKhLW5X3S5itv3qTpkQUfrqCDXBPp3ERemQ42TTbOJ9V1J4" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">The Space</span>
+                            <h3 class="text-white text-lg font-bold">Cozy Corners</h3>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="break-inside-avoid group cursor-pointer relative overflow-hidden rounded-xl">
+                        <img alt="People laughing"
+                            class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-110"
+                            data-alt="Group of friends laughing and talking at a cafe table"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOkAJ2oHDX951qq8Ve32CQ4v8RvMzg3c84srmY9SqKrJS5ilYdmcndZnEBSpaMsK-eaiNaPgZDOsNg6GGBPKGfrECxSsC4EjXfqNKdGrYAzGQapiDN3UxorB9xWkuyFs6IAVWTp6WkLARVbFbDStCIc1f3AxPPX31DSlNYtPRLhDXTVFPPstkvTNTGlZ_gsHesKOxZyxv_Q2u6CxQizYrHKFEWQMVWya6su3rcAOPTL3oSy_m8iy8bgJBrkdxdEFc1ajpNKlcxj4E" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">People</span>
+                            <h3 class="text-white text-lg font-bold">Community Gatherings</h3>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="break-inside-avoid group cursor-pointer relative overflow-hidden rounded-xl">
+                        <img alt="Coffee Beans"
+                            class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-110"
+                            data-alt="Close up of coffee beans and a grinder"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO3MIWqgSHEZAmXnJHKsTzV8UBDIMggko2lRZVibRTX4f1MRK5MqjThxpsYunlpHhfs8j7F7M-k8Nku-_unJVU4pMtm5_rPxRdpbYsls4lnCqRFDiVvTJLdm70qP4f54XnoJYwoPnBWZ6sRshdMpIKEvfwxvpip46ljU0aG9_Dd7wfxXCVBe4RDxfRYxqv4bxQf7qfiS5twUqytpVOro8OItgRVzoPYYMTkixLU4mmwn8ltgn5MPAKOr_vnOhHBJ_C2Ulgg8Lb-uk" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">The Brews</span>
+                            <h3 class="text-white text-lg font-bold">Freshly Roasted</h3>
+                        </div>
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="break-inside-avoid group cursor-pointer relative overflow-hidden rounded-xl">
+                        <img alt="Evening Drinks"
+                            class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-110"
+                            data-alt="Cocktail drink on a table with moody lighting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM2QDepiWO2scgW7Rd4K9f-Jwy2kzIoVFgEDelG2pC02HjVw2xVzreaZyaXpok9XMmHrSl211cv0ZEjrYVFiGSJThIDrnx6qUNeRD00AF33_b7Fm3V4PQU2HBBLhylEb1EZi7i78SF9zgfIfNWviMnjsDWjBe7kK-49NDMSCpZ7KZFHMEbeb8Ti_oE6ToDmukIoov0fNA0b_GwPAJbnvfD9bU0YAmAJaXLvYLZbEFfAaF3zNamHA-MmllCx6cWGBk1eXCOBzD-EtE" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Menu</span>
+                            <h3 class="text-white text-lg font-bold">Signature Drinks</h3>
+                        </div>
+                    </div>
+                    <!-- Item 6 -->
+                    <div class="break-inside-avoid group cursor-pointer relative overflow-hidden rounded-xl">
+                        <img alt="Outdoor Terrace"
+                            class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-110"
+                            data-alt="Outdoor seating area with string lights at night"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYxGqO7P7o9xz3_qvee5qpDPW93s-Mfaqv-57VPNbtjGdPMwc1rGbP5YpPGxdznwQZ3Stv6XF2npjoh1e8RHhS-FuRe8zJ7Cpuj-dbfZNp7BbFZJfR9ifXwUzvi6FbDSjn65mZk0J80JYo36ye6glK6kK-CM9dFg3zAH1-VECTPN2SUuQp713lMGhoTq9P4PT7NjV8z5QWl2rXOBD3JKvezf3_C3dzD3BK8DUiAhoWkAAasDuRiKRM9Ltc4xHKHSmCNvtRzNtkMlU" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">The Space</span>
+                            <h3 class="text-white text-lg font-bold">Summer Nights</h3>
+                        </div>
+                    </div>
+                    <!-- Item 7 -->
+                    <div class="break-inside-avoid group cursor-pointer relative overflow-hidden rounded-xl">
+                        <img alt="Live Music"
+                            class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-110"
+                            data-alt="Musician playing guitar in a dimly lit cafe setting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVtTkk5ErWKS7l-1re8EHRihOsFopMLW7HA17zbXR6VR1hXe4nxSujH8QnRE9bTQIg9dpH1BUkcmy8BwZRYpPmabDegn7hN_LyTZvQmaMcNTYxSc0O__-bx8QNFsm7z--XZCr7h_UNne03vdxXfrEApkumnJKC01qpmXwwiat6rnJ3ExUfJokWUL5g7q0WETKG2ZggS76nsKRwKbvCppgC1cj8CWBMF53HA20_g28gad1y2vmRgVihZ0eZhAlIZexgwFuS9rklfLo" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Events</span>
+                            <h3 class="text-white text-lg font-bold">Live Jazz Sessions</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 flex justify-center">
+                    <button
+                        class="group flex items-center gap-2 text-gray-500 dark:text-gray-400 font-medium hover:text-primary transition-colors">
+                        <span class="material-symbols-outlined">add_circle</span>
+                        <span>Load More Photos</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Divider -->
+            <div
+                class="w-full h-px bg-gradient-to-r from-transparent via-gray-200 dark:via-[#29382d] to-transparent my-4">
+            </div>
+            <!-- Events Section -->
+            <div class="w-full max-w-[1280px] px-4 md:px-8 py-16 md:py-24" id="events">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
+                    <div>
+                        <span class="text-primary font-bold tracking-widest uppercase text-xs mb-2 block">What's
+                            Happening</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white leading-tight">Upcoming
+                            Events</h2>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 max-w-md text-sm md:text-base">
+                        From live Gnawa music to intimate poetry readings, join us for cultural evenings in the heart of
+                        Tangier.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Featured Event (Large) -->
+                    <div
+                        class="lg:col-span-2 relative group rounded-2xl overflow-hidden min-h-[400px] flex flex-col justify-end">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                            data-alt="Crowd enjoying a concert at night with stage lights"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCiPSEUGwEvMj95w_EiKczcWinI_CUlkcR4-aqie9s4WX-AxP2uYZYEomOrmAyfRHqd9o3rVj8FXDBR-eHGGt29mNQzCTdeMaECgEPFQRgIBy5chYhcsdQm-1i9sYlaUpGAizCUAQWTzENBW1wPpJo3fSErSvXX7KvlCfr2uE4YI2OGRNpj88adq6aF5bI1ld6d7SRpU0bVa67SYeQH8zFCRPRydaHRgGNElJLStngucJ_kMVhgUJ51rFGTbh18ziKQZlTSQ1aCmPo");'>
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/60 to-transparent">
+                        </div>
+                        <div class="relative z-10 p-8 md:p-10">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span
+                                    class="bg-primary text-[#111813] text-xs font-bold px-3 py-1 rounded uppercase tracking-wider">Featured</span>
+                                <span class="text-white/80 text-sm font-medium flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[18px]">calendar_month</span> Oct 24,
+                                    2023
+                                </span>
+                            </div>
+                            <h3 class="text-white text-3xl md:text-4xl font-bold mb-3 leading-tight">Gnawa Night: Spirit
+                                of Morocco</h3>
+                            <p class="text-gray-300 mb-6 max-w-xl line-clamp-2 md:line-clamp-none">
+                                An enchanting evening of traditional Gnawa music featuring local master musicians.
+                                Experience the hypnotic rhythms and spiritual chants that define Moroccan heritage.
+                            </p>
+                            <button
+                                class="inline-flex items-center justify-center h-12 px-6 rounded-lg bg-primary text-[#111813] font-bold hover:bg-primary/90 transition-colors">
+                                Reserve a Spot
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Upcoming List -->
+                    <div class="flex flex-col gap-6">
+                        <!-- Event Card 1 -->
+                        <div
+                            class="bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-[#29382d] rounded-xl p-5 hover:border-primary/40 transition-all cursor-pointer group">
+                            <div class="flex gap-4 items-start">
+                                <div
+                                    class="shrink-0 flex flex-col items-center justify-center bg-background-light dark:bg-background-dark w-16 h-16 rounded-lg border border-gray-200 dark:border-[#29382d] group-hover:border-primary/50 transition-colors">
+                                    <span
+                                        class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase">Oct</span>
+                                    <span class="text-xl font-black text-gray-900 dark:text-white">28</span>
+                                </div>
+                                <div class="flex-1">
+                                    <h4
+                                        class="text-gray-900 dark:text-white font-bold text-lg leading-tight mb-1 group-hover:text-primary transition-colors">
+                                        Vintage Jazz Trio</h4>
+                                    <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mb-2">
+                                        <span class="flex items-center gap-1"><span
+                                                class="material-symbols-outlined text-[14px]">schedule</span> 8:00
+                                            PM</span>
+                                        <span>•</span>
+                                        <span>Live Music</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
+                                        Smooth jazz classics to accompany your evening brew. No cover charge.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Event Card 2 -->
+                        <div
+                            class="bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-[#29382d] rounded-xl p-5 hover:border-primary/40 transition-all cursor-pointer group">
+                            <div class="flex gap-4 items-start">
+                                <div
+                                    class="shrink-0 flex flex-col items-center justify-center bg-background-light dark:bg-background-dark w-16 h-16 rounded-lg border border-gray-200 dark:border-[#29382d] group-hover:border-primary/50 transition-colors">
+                                    <span
+                                        class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase">Nov</span>
+                                    <span class="text-xl font-black text-gray-900 dark:text-white">02</span>
+                                </div>
+                                <div class="flex-1">
+                                    <h4
+                                        class="text-gray-900 dark:text-white font-bold text-lg leading-tight mb-1 group-hover:text-primary transition-colors">
+                                        Poetry &amp; Pastries</h4>
+                                    <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mb-2">
+                                        <span class="flex items-center gap-1"><span
+                                                class="material-symbols-outlined text-[14px]">schedule</span> 4:00
+                                            PM</span>
+                                        <span>•</span>
+                                        <span>Community</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
+                                        Local poets share their latest works. Open mic available for brave souls.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Event Card 3 -->
+                        <div
+                            class="bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-[#29382d] rounded-xl p-5 hover:border-primary/40 transition-all cursor-pointer group">
+                            <div class="flex gap-4 items-start">
+                                <div
+                                    class="shrink-0 flex flex-col items-center justify-center bg-background-light dark:bg-background-dark w-16 h-16 rounded-lg border border-gray-200 dark:border-[#29382d] group-hover:border-primary/50 transition-colors">
+                                    <span
+                                        class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase">Nov</span>
+                                    <span class="text-xl font-black text-gray-900 dark:text-white">15</span>
+                                </div>
+                                <div class="flex-1">
+                                    <h4
+                                        class="text-gray-900 dark:text-white font-bold text-lg leading-tight mb-1 group-hover:text-primary transition-colors">
+                                        Barista Workshop</h4>
+                                    <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mb-2">
+                                        <span class="flex items-center gap-1"><span
+                                                class="material-symbols-outlined text-[14px]">schedule</span> 10:00
+                                            AM</span>
+                                        <span>•</span>
+                                        <span>Workshop</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
+                                        Learn the art of the perfect pour-over with our head barista. Limited spots.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Instagram Feed Strip -->
+            <div
+                class="w-full bg-surface-light dark:bg-surface-dark py-12 border-y border-gray-200 dark:border-[#29382d]">
+                <div class="max-w-[1280px] mx-auto px-4 md:px-8">
+                    <div class="flex justify-between items-center mb-6">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">photo_camera</span>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">@VintageTangier</h3>
+                        </div>
+                        <a class="text-sm font-medium text-primary hover:underline" href="#">Follow Us</a>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2">
+                        <div class="aspect-square bg-gray-200 rounded-md overflow-hidden relative group">
+                            <img alt="Instagram Post" class="w-full h-full object-cover"
+                                data-alt="Latte on wooden table"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvkj3nbbM2lwjuhJf-CRjP9aGXKiMC_e9uhEHorrFm6IpnrjcEmoWF-Hl9CPiVIPc4GEic498Js3vEYSZ8q3LoHOwH4imJ4gqjCshPbDb_2cb-GGGS0GHAXEg8lFrtCuCxbpve_ZfN3wkAHntM-HtjYR3vzWMuA_InUjyDBX7y54WlmF_ARjf3N8zDovxI6ch3BYR27dwGbpe4_HG6xgFg-VjhmQadyiC5zj7ctQms1fiKR6W06OSgGh3XvXL3buF5hZaff2zxnvE" />
+                            <div
+                                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                                <span class="material-symbols-outlined">favorite</span>
+                            </div>
+                        </div>
+                        <div class="aspect-square bg-gray-200 rounded-md overflow-hidden relative group">
+                            <img alt="Instagram Post" class="w-full h-full object-cover"
+                                data-alt="Coffee beans close up"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvCp2ODXIXt1M3EmqzN5sAGvNJ-iUaW3Rd28qeQZYGcwK0jgMIg7rocG32o6Ju_s1x8Nz6g9LCfS2eSBZPCTEnkSYWY6Xmh3Pa3FsjlWmp759G-ma6bdby7AB6jhHMRPzcEGRUv1sNnOJuevg0jfTt2kekKQpjD5IVGQUG63W_r-79ChjHk3DRJmuM5fRXUCnb0XZ3lzSwh6aBK_LNUmy5A-EnZbQgtdIZ99lIPJ-Yg2TgPr4vdiYnlWKiNutk2Mde93hKzvSvplo" />
+                            <div
+                                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                                <span class="material-symbols-outlined">favorite</span>
+                            </div>
+                        </div>
+                        <div class="aspect-square bg-gray-200 rounded-md overflow-hidden relative group">
+                            <img alt="Instagram Post" class="w-full h-full object-cover" data-alt="Inside of cafe"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFzj3pvEALdNz9RTer5tjne4zXvC3zvMkZujDZpLlHxyvFH9IYAo4Ku6akDlPnG6udlUUUsWdQwDeB-OidIPLpgfp2bQnqBNvZG4Yy1vDnnbmCtFIkro28WfB458ZWMISY5KryhLcgpqso-2RZTyMreNFZ0cK1CCufwANY1h-Lm3cSc1aLi4qT9mfIA2wF_RRkpx_DZj5wQvZhLXNWD3Ls1huA20PvXW2bIOIgej6DlCXsQWUUCN9ojEuSZnrilbh0fBbw_EN-xs0" />
+                            <div
+                                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                                <span class="material-symbols-outlined">favorite</span>
+                            </div>
+                        </div>
+                        <div class="aspect-square bg-gray-200 rounded-md overflow-hidden relative group">
+                            <img alt="Instagram Post" class="w-full h-full object-cover" data-alt="Latte art heart"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0u6HnTWyV8UDacdAs2tLlU7D72NvtEYXZ1hnuL0h-6UzjMOwpK9YIUVAoGE5U9vMvy__jyxuUUTCmFpNDu8h303wpoIaUPDUB0VtxSdz52b_fRqGH7hPy2dVF8X__8iMqPf_JqfQaS5ZCbtMMvr24A_SIiNhXTTfyZRhiPt9e2vq9F0wkX0i2jyyPB6QDg1KTAyPctylOSY7LHuSr_o6Pt0ryedpKyQVMsSZS6KP9dYfvx8leljoXFcUZ6a2bLdgTZXeDuIeVSPY" />
+                            <div
+                                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                                <span class="material-symbols-outlined">favorite</span>
+                            </div>
+                        </div>
+                        <div
+                            class="aspect-square bg-gray-200 rounded-md overflow-hidden relative group hidden lg:block">
+                            <img alt="Instagram Post" class="w-full h-full object-cover" data-alt="People chatting"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc0Bsehqzr25CJcsZgvC88-CSgc2BevU2EKf4313XyQBlzopWmM5Xi5SyDzZdKSrk2ojGJ9CgZzBDQJuZHfBnLGaAcwvgBuHISRJeO-vnjXiU80vQuGCyQCylNENk2BsN2P-TDQgfkHGVSAJW711toZS3ywaG7_Xy_E2T_sxTYlrkKeVlXQZP_hJqUDQ_lvm_NXlTjdcJMgsPzkGdZhXvHNvRTRVq_jDJHAdQSlDXFgnEmhdh8Ob9aGWjHX4fof-GGcWJVl707vXg" />
+                            <div
+                                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                                <span class="material-symbols-outlined">favorite</span>
+                            </div>
+                        </div>
+                        <div
+                            class="aspect-square bg-gray-200 rounded-md overflow-hidden relative group hidden lg:block">
+                            <img alt="Instagram Post" class="w-full h-full object-cover" data-alt="Iced coffee"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNYB67mz1LrR9eciMOr0bZ7k60jjwO3PD1nriLm5WTZdC1_fil9Pw7k98RdCQL_rqES5VWLfE3UlAQ_bvUoMVqrSO269TpB0DNnjJG5AYbHbqcf_qfBDwx2F5zXDd7Ec7R0eyjkQUGepBezvE_FECAlp8xagpvWR_11Y4lOX9vE0ArMw43gwbYYwIwqsHawJvzlFe4QAkGZSPNWkLdhPU3fleH7qbMTD83Cbhecw9-YknLtUpzDDcqmEjzUaiHVGGIqYT7O-X0dPI" />
+                            <div
+                                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                                <span class="material-symbols-outlined">favorite</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer
+            class="w-full bg-background-light dark:bg-background-dark py-12 px-4 md:px-8 border-t border-gray-200 dark:border-[#29382d]">
+            <div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between gap-10">
+                <div class="flex flex-col gap-4 max-w-sm">
+                    <div class="flex items-center gap-2 text-gray-900 dark:text-white">
+                        <span class="material-symbols-outlined !text-3xl text-primary">coffee</span>
+                        <h2 class="text-xl font-bold">Vintage Coffee &amp; Kitchen</h2>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        A cozy retreat in the heart of Tangier. We serve memories, music, and the finest brews. Come for
+                        the coffee, stay for the soul.
+                    </p>
+                    <div class="flex gap-4 mt-2">
+                        <a class="w-10 h-10 rounded-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-[#29382d] flex items-center justify-center hover:border-primary text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
+                            href="#">
+                            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+                                <path clip-rule="evenodd"
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-[#29382d] flex items-center justify-center hover:border-primary text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
+                            href="#">
+                            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+                                <path clip-rule="evenodd"
+                                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.047-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.468 2.373c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-8 md:gap-16">
+                    <div class="flex flex-col gap-3">
+                        <h3 class="text-gray-900 dark:text-white font-bold uppercase text-sm tracking-wider">Quick Links
+                        </h3>
+                        <a class="text-gray-600 dark:text-gray-400 hover:text-primary text-sm transition-colors"
+                            href="#">Home</a>
+                        <a class="text-gray-600 dark:text-gray-400 hover:text-primary text-sm transition-colors"
+                            href="#">Gallery</a>
+                        <a class="text-gray-600 dark:text-gray-400 hover:text-primary text-sm transition-colors"
+                            href="#">Events</a>
+                        <a class="text-gray-600 dark:text-gray-400 hover:text-primary text-sm transition-colors"
+                            href="#">Book a Table</a>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <h3 class="text-gray-900 dark:text-white font-bold uppercase text-sm tracking-wider">Contact
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Rue de la Liberté, Tangier 90000</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">+212 539 000 000</p>
+                        <a class="text-primary hover:underline text-sm"
+                            href="mailto:hello@vintagecoffee.ma">hello@vintagecoffee.ma</a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="max-w-[1280px] mx-auto mt-12 pt-8 border-t border-gray-200 dark:border-[#29382d] flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+                <p>© 2023 Vintage Coffee &amp; Kitchen. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a class="hover:text-gray-900 dark:hover:text-white" href="#">Privacy Policy</a>
+                    <a class="hover:text-gray-900 dark:hover:text-white" href="#">Terms of Service</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
