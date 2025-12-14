@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Vintage Coffee &amp; Kitchen Menu</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
-<script>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Vintage Coffee &amp; Kitchen Menu</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Lato:wght@300;400;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <script>
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -41,231 +45,279 @@
             },
         };
     </script>
-<style>.hide-scroll::-webkit-scrollbar {
+    <style>
+        .hide-scroll::-webkit-scrollbar {
             display: none;
         }
+
         .hide-scroll {
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
-<body class="bg-background-light dark:bg-background-dark font-body antialiased transition-colors duration-300 min-h-screen pb-20">
-<header class="relative h-64 w-full overflow-hidden rounded-b-2xl shadow-lg">
-<div class="absolute inset-0">
-<img alt="Coffee aesthetics" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfj5GpIIPZPC5zE21L0qfU0GvpbJBWvn-xS_2VJsjQ3gxKdNz_QEliX0MG-kf9LA_QVESr52XW39cXRuuGHur_eaMrYa8eanh3TrZ4SKlr40ezp0AXaX5R64o-wcGpfZe92_BfBGKALCLxIrrICcsAxK7Ras4r0RFaN3uY4jUh7v0UHrnWYMpr5PvRzmdxv0lwd9PMu2-Ojo7um03CP5lUZT2oZ8ZtaOkv7GsqdS6dq9EEnFeWNZZpNit9-0kHcQCiD-W-s7_wNg"/>
-</div>
-<div class="absolute inset-0 bg-hero-pattern"></div>
-<div class="absolute top-0 left-0 right-0 p-4 flex justify-between items-center z-10">
-<button class="text-white p-2 rounded-full bg-black/20 backdrop-blur-sm hover:bg-black/40 transition">
-<span class="material-icons-outlined">menu</span>
-</button>
-<div class="flex gap-3">
-<button class="text-white p-2 rounded-full bg-black/20 backdrop-blur-sm hover:bg-black/40 transition" onclick="document.documentElement.classList.toggle('dark')">
-<span class="material-icons-outlined">dark_mode</span>
-</button>
-<button class="text-white p-2 rounded-full bg-black/20 backdrop-blur-sm hover:bg-black/40 transition">
-<span class="material-icons-outlined">search</span>
-</button>
-</div>
-</div>
-<div class="absolute bottom-0 left-0 w-full p-6 text-center z-10">
-<h1 class="text-white font-display font-bold text-3xl tracking-wider uppercase mb-1 drop-shadow-md">Vintage</h1>
-<p class="text-white/90 text-xs font-light tracking-[0.2em] uppercase">Coffee &amp; Kitchen</p>
-</div>
-</header>
-<section class="px-6 py-6 text-center">
-<h2 class="text-text-main-light dark:text-text-main-dark text-xl font-display italic">
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-body antialiased transition-colors duration-300 min-h-screen pb-20">
+    <header class="relative h-64 w-full overflow-hidden rounded-b-2xl shadow-lg">
+        <div class="absolute inset-0">
+            <img alt="Coffee aesthetics" class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfj5GpIIPZPC5zE21L0qfU0GvpbJBWvn-xS_2VJsjQ3gxKdNz_QEliX0MG-kf9LA_QVESr52XW39cXRuuGHur_eaMrYa8eanh3TrZ4SKlr40ezp0AXaX5R64o-wcGpfZe92_BfBGKALCLxIrrICcsAxK7Ras4r0RFaN3uY4jUh7v0UHrnWYMpr5PvRzmdxv0lwd9PMu2-Ojo7um03CP5lUZT2oZ8ZtaOkv7GsqdS6dq9EEnFeWNZZpNit9-0kHcQCiD-W-s7_wNg" />
+        </div>
+        <div class="absolute inset-0 bg-hero-pattern"></div>
+        <div class="absolute top-0 left-0 right-0 p-4 flex justify-between items-center z-10">
+            <button class="text-white p-2 rounded-full bg-black/20 backdrop-blur-sm hover:bg-black/40 transition">
+                <span class="material-icons-outlined">menu</span>
+            </button>
+            <div class="flex gap-3">
+                <button class="text-white p-2 rounded-full bg-black/20 backdrop-blur-sm hover:bg-black/40 transition"
+                    onclick="document.documentElement.classList.toggle('dark')">
+                    <span class="material-icons-outlined">dark_mode</span>
+                </button>
+                <button class="text-white p-2 rounded-full bg-black/20 backdrop-blur-sm hover:bg-black/40 transition">
+                    <span class="material-icons-outlined">search</span>
+                </button>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full p-6 text-center z-10">
+            <h1 class="text-white font-display font-bold text-3xl tracking-wider uppercase mb-1 drop-shadow-md">Vintage
+            </h1>
+            <p class="text-white/90 text-xs font-light tracking-[0.2em] uppercase">Coffee &amp; Kitchen</p>
+        </div>
+    </header>
+    <section class="px-6 py-6 text-center">
+        <h2 class="text-text-main-light dark:text-text-main-dark text-xl font-display italic">
             "Commencez votre journée par un bon petit-déjeuner"
         </h2>
-<p class="text-text-muted-light dark:text-text-muted-dark text-sm mt-2">
+        <p class="text-text-muted-light dark:text-text-muted-dark text-sm mt-2">
             Authentic flavors in the heart of Tangier.
         </p>
-</section>
-<section class="pl-6 mb-6">
-<div class="flex gap-4 overflow-x-auto hide-scroll pr-6 pb-2">
-<button class="flex flex-col items-center gap-2 group min-w-[70px]">
-<div class="w-16 h-16 rounded-2xl bg-primary text-white flex items-center justify-center shadow-lg shadow-primary/30 ring-2 ring-offset-2 ring-primary ring-offset-background-light dark:ring-offset-background-dark transition-all">
-<span class="material-icons-outlined text-2xl">coffee</span>
-</div>
-<span class="text-xs font-bold text-primary">Coffee</span>
-</button>
-<button class="flex flex-col items-center gap-2 group min-w-[70px]">
-<div class="w-16 h-16 rounded-2xl bg-surface-light dark:bg-surface-dark text-text-muted-light dark:text-text-muted-dark flex items-center justify-center shadow-sm group-hover:bg-gray-100 dark:group-hover:bg-neutral-800 transition-all border border-gray-100 dark:border-neutral-800">
-<span class="material-icons-outlined text-2xl">bakery_dining</span>
-</div>
-<span class="text-xs font-medium text-text-muted-light dark:text-text-muted-dark">Breakfast</span>
-</button>
-<button class="flex flex-col items-center gap-2 group min-w-[70px]">
-<div class="w-16 h-16 rounded-2xl bg-surface-light dark:bg-surface-dark text-text-muted-light dark:text-text-muted-dark flex items-center justify-center shadow-sm group-hover:bg-gray-100 dark:group-hover:bg-neutral-800 transition-all border border-gray-100 dark:border-neutral-800">
-<span class="material-icons-outlined text-2xl">lunch_dining</span>
-</div>
-<span class="text-xs font-medium text-text-muted-light dark:text-text-muted-dark">Lunch</span>
-</button>
-<button class="flex flex-col items-center gap-2 group min-w-[70px]">
-<div class="w-16 h-16 rounded-2xl bg-surface-light dark:bg-surface-dark text-text-muted-light dark:text-text-muted-dark flex items-center justify-center shadow-sm group-hover:bg-gray-100 dark:group-hover:bg-neutral-800 transition-all border border-gray-100 dark:border-neutral-800">
-<span class="material-icons-outlined text-2xl">icecream</span>
-</div>
-<span class="text-xs font-medium text-text-muted-light dark:text-text-muted-dark">Desserts</span>
-</button>
-<button class="flex flex-col items-center gap-2 group min-w-[70px]">
-<div class="w-16 h-16 rounded-2xl bg-surface-light dark:bg-surface-dark text-text-muted-light dark:text-text-muted-dark flex items-center justify-center shadow-sm group-hover:bg-gray-100 dark:group-hover:bg-neutral-800 transition-all border border-gray-100 dark:border-neutral-800">
-<span class="material-icons-outlined text-2xl">local_bar</span>
-</div>
-<span class="text-xs font-medium text-text-muted-light dark:text-text-muted-dark">Drinks</span>
-</button>
-</div>
-</section>
-<main class="px-4 pb-24 space-y-8">
-<div class="space-y-4">
-<div class="flex items-baseline justify-between px-2">
-<h3 class="text-xl font-display font-bold text-text-main-light dark:text-text-main-dark">Espresso Bar</h3>
-<span class="text-xs text-primary font-bold uppercase tracking-wide">Popular</span>
-</div>
-<div class="bg-surface-light dark:bg-surface-dark rounded-xl p-3 flex gap-4 shadow-sm border border-gray-100 dark:border-neutral-800">
-<div class="w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden relative">
-<img alt="Cappuccino Art" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfGiQSWZ5mAQbz2-lpm3CBNtGGcOTNG86ldJvqSEABeJtBF_luDCHZlcCZN0M9agRNxLpr6iLdUGWzZ8QZZDI5U5c6VP3yTaA980n-MD9K0jcm1MLyrM0n9Bk8z1-vNiuAbdHzFpHoNFN4ub6Cv8AJQkdzoVR4UF4lh49wA-pKEs5pTKNelqWoqwWqllw0NNbydxUOKyEASsC6ND8DF41gwwZqEHyi0iIW0M0FkZ6Tn1bNyzleKnrN0cb_r9S1jIdFbSHQeFxcNg"/>
-<span class="absolute top-1 left-1 bg-white/90 dark:bg-black/80 backdrop-blur px-1.5 py-0.5 rounded text-[10px] font-bold text-text-main-light dark:text-white shadow-sm">Hot</span>
-</div>
-<div class="flex-1 flex flex-col justify-between py-1">
-<div>
-<div class="flex justify-between items-start">
-<h4 class="font-bold text-text-main-light dark:text-text-main-dark text-lg">Cappuccino</h4>
-<span class="text-primary font-bold text-lg">25 DH</span>
-</div>
-<p class="text-xs text-text-muted-light dark:text-text-muted-dark mt-1 line-clamp-2">Rich espresso with steamed milk and a deep layer of foam.</p>
-</div>
-<div class="flex justify-end mt-2">
-<button class="bg-primary hover:bg-primary-dark text-white p-1.5 rounded-lg shadow-md transition-colors">
-<span class="material-icons-outlined text-sm">add</span>
-</button>
-</div>
-</div>
-</div>
-<div class="bg-surface-light dark:bg-surface-dark rounded-xl p-3 flex gap-4 shadow-sm border border-gray-100 dark:border-neutral-800">
-<div class="w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden">
-<img alt="Latte Macchiato" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAghy2C-qWF10YxOPZ3aflQgrFdX2j1PMxQJvhmhwgxJfe29AVhImTFw0yjAsN8RFxqWTuIAm1eLpH9ziyq7bc05_xCheHLcuay8pJOoRcPrYMBs4vlAS0ll5p24qrXNlZIlrbzBYG5sQWRgNcFiUWVYs7TDtPiJ3RfhF1K38-SDL4GbB09Juy04yA2ywtoclPBto-pUQc0iZ2Fgn10cNOOmBwhsZqn-ATRFejV9Ij2XYKKBTbZwawAEyr4BjVr5VSJc2h0jrAzlQ"/>
-</div>
-<div class="flex-1 flex flex-col justify-between py-1">
-<div>
-<div class="flex justify-between items-start">
-<h4 class="font-bold text-text-main-light dark:text-text-main-dark text-lg">Latte Macchiato</h4>
-<span class="text-primary font-bold text-lg">28 DH</span>
-</div>
-<p class="text-xs text-text-muted-light dark:text-text-muted-dark mt-1 line-clamp-2">Espresso stained with a spot of foamed milk.</p>
-</div>
-<div class="flex justify-end mt-2">
-<button class="bg-surface-light dark:bg-neutral-700 text-text-main-light dark:text-white p-1.5 rounded-lg border border-gray-200 dark:border-neutral-600 hover:border-primary hover:text-primary transition-colors">
-<span class="material-icons-outlined text-sm">add</span>
-</button>
-</div>
-</div>
-</div>
-<div class="bg-surface-light dark:bg-surface-dark rounded-xl p-3 flex gap-4 shadow-sm border border-gray-100 dark:border-neutral-800">
-<div class="w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden">
-<img alt="Moroccan Mint Tea" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSrIckovh4vq97hnBVmsAhIlxVq3z4dlsCHxbW-4BR9gAHLVhxuTqLtXFWynfCBwBknbs1zv2pVXz_2w5p8-Lebfl2rSImD-bUoipnbyiGjfBbYOlD6irRbh2zUZr_TPVW9HH6y-BoMdTBhwfi_oCZP4YC-7h4nVEV_X_j5ET9_2L1yc4c-q-wwoaksbVvikhfxuPa1plL-ag_lpSjo8KFINrarDhkPPsIQLI-wVkZ5F5dUVuLkH98ZHP7II1RClWz_uBLL14ObQ"/>
-</div>
-<div class="flex-1 flex flex-col justify-between py-1">
-<div>
-<div class="flex justify-between items-start">
-<h4 class="font-bold text-text-main-light dark:text-text-main-dark text-lg">Moroccan Tea</h4>
-<span class="text-primary font-bold text-lg">20 DH</span>
-</div>
-<p class="text-xs text-text-muted-light dark:text-text-muted-dark mt-1 line-clamp-2">Authentic mint tea served with local herbs.</p>
-</div>
-<div class="flex justify-end mt-2">
-<button class="bg-surface-light dark:bg-neutral-700 text-text-main-light dark:text-white p-1.5 rounded-lg border border-gray-200 dark:border-neutral-600 hover:border-primary hover:text-primary transition-colors">
-<span class="material-icons-outlined text-sm">add</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-<div class="space-y-4 pt-2">
-<div class="flex items-baseline justify-between px-2">
-<h3 class="text-xl font-display font-bold text-text-main-light dark:text-text-main-dark">Petit-Déjeuner</h3>
-<span class="text-xs text-text-muted-light dark:text-text-muted-dark">Served until 12PM</span>
-</div>
-<div class="bg-surface-light dark:bg-surface-dark rounded-2xl overflow-hidden shadow-sm border border-gray-100 dark:border-neutral-800 relative group">
-<div class="h-40 w-full relative">
-<img alt="Vintage Breakfast Set" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9MdCUPz66WB62KmEtAvJ9RyUjDKkBXj8_fj6DgKVaSEPdlQ3lnPmRfS3Qo7FFyuyi9qaRhw4Aqlp6dSl-MJEKdrl3EG0yI_RBZM-MD6bSIQQj2NK4xLn7RT0j2gZW3pp2_ZZTi_FUvq_VyvGndq24fLOZAjvXLV_knB0uGmqKyQrSuI92T_Fy_FkbpMnFyjl_ixAH3tuc2Y1Ox_2fxvQP0jLGRGrSmTwaL-oanXqATivawnCW6wchIUJ4n4m-m4QI0LuHXWD4Sw"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-<div class="absolute bottom-3 left-3 right-3 flex justify-between items-end">
-<div>
-<h4 class="text-white font-bold text-lg font-display">Vintage Special</h4>
-<p class="text-white/80 text-xs">Eggs, croissant, juice &amp; coffee</p>
-</div>
-<span class="bg-primary text-white text-sm font-bold px-3 py-1 rounded-full shadow-lg">65 DH</span>
-</div>
-</div>
-<div class="p-3">
-<p class="text-sm text-text-muted-light dark:text-text-muted-dark line-clamp-2 mb-3">Our signature breakfast platter featuring farm-fresh eggs, artisanal bread, fresh orange juice, and your choice of coffee.</p>
-<button class="w-full py-2 rounded-lg border border-primary text-primary font-bold text-sm uppercase tracking-wide hover:bg-primary hover:text-white transition-colors">
+    </section>
+    <section class="pl-6 mb-6">
+        <div class="flex gap-4 overflow-x-auto hide-scroll pr-6 pb-2">
+            <button class="flex flex-col items-center gap-2 group min-w-[70px]">
+                <div
+                    class="w-16 h-16 rounded-2xl bg-primary text-white flex items-center justify-center shadow-lg shadow-primary/30 ring-2 ring-offset-2 ring-primary ring-offset-background-light dark:ring-offset-background-dark transition-all">
+                    <span class="material-icons-outlined text-2xl">coffee</span>
+                </div>
+                <span class="text-xs font-bold text-primary">Coffee</span>
+            </button>
+            <button class="flex flex-col items-center gap-2 group min-w-[70px]">
+                <div
+                    class="w-16 h-16 rounded-2xl bg-surface-light dark:bg-surface-dark text-text-muted-light dark:text-text-muted-dark flex items-center justify-center shadow-sm group-hover:bg-gray-100 dark:group-hover:bg-neutral-800 transition-all border border-gray-100 dark:border-neutral-800">
+                    <span class="material-icons-outlined text-2xl">bakery_dining</span>
+                </div>
+                <span class="text-xs font-medium text-text-muted-light dark:text-text-muted-dark">Breakfast</span>
+            </button>
+            <button class="flex flex-col items-center gap-2 group min-w-[70px]">
+                <div
+                    class="w-16 h-16 rounded-2xl bg-surface-light dark:bg-surface-dark text-text-muted-light dark:text-text-muted-dark flex items-center justify-center shadow-sm group-hover:bg-gray-100 dark:group-hover:bg-neutral-800 transition-all border border-gray-100 dark:border-neutral-800">
+                    <span class="material-icons-outlined text-2xl">lunch_dining</span>
+                </div>
+                <span class="text-xs font-medium text-text-muted-light dark:text-text-muted-dark">Lunch</span>
+            </button>
+            <button class="flex flex-col items-center gap-2 group min-w-[70px]">
+                <div
+                    class="w-16 h-16 rounded-2xl bg-surface-light dark:bg-surface-dark text-text-muted-light dark:text-text-muted-dark flex items-center justify-center shadow-sm group-hover:bg-gray-100 dark:group-hover:bg-neutral-800 transition-all border border-gray-100 dark:border-neutral-800">
+                    <span class="material-icons-outlined text-2xl">icecream</span>
+                </div>
+                <span class="text-xs font-medium text-text-muted-light dark:text-text-muted-dark">Desserts</span>
+            </button>
+            <button class="flex flex-col items-center gap-2 group min-w-[70px]">
+                <div
+                    class="w-16 h-16 rounded-2xl bg-surface-light dark:bg-surface-dark text-text-muted-light dark:text-text-muted-dark flex items-center justify-center shadow-sm group-hover:bg-gray-100 dark:group-hover:bg-neutral-800 transition-all border border-gray-100 dark:border-neutral-800">
+                    <span class="material-icons-outlined text-2xl">local_bar</span>
+                </div>
+                <span class="text-xs font-medium text-text-muted-light dark:text-text-muted-dark">Drinks</span>
+            </button>
+        </div>
+    </section>
+    <main class="px-4 pb-24 space-y-8">
+        <div class="space-y-4">
+            <div class="flex items-baseline justify-between px-2">
+                <h3 class="text-xl font-display font-bold text-text-main-light dark:text-text-main-dark">Espresso Bar
+                </h3>
+                <span class="text-xs text-primary font-bold uppercase tracking-wide">Popular</span>
+            </div>
+            <div
+                class="bg-surface-light dark:bg-surface-dark rounded-xl p-3 flex gap-4 shadow-sm border border-gray-100 dark:border-neutral-800">
+                <div class="w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden relative">
+                    <img alt="Cappuccino Art" class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfGiQSWZ5mAQbz2-lpm3CBNtGGcOTNG86ldJvqSEABeJtBF_luDCHZlcCZN0M9agRNxLpr6iLdUGWzZ8QZZDI5U5c6VP3yTaA980n-MD9K0jcm1MLyrM0n9Bk8z1-vNiuAbdHzFpHoNFN4ub6Cv8AJQkdzoVR4UF4lh49wA-pKEs5pTKNelqWoqwWqllw0NNbydxUOKyEASsC6ND8DF41gwwZqEHyi0iIW0M0FkZ6Tn1bNyzleKnrN0cb_r9S1jIdFbSHQeFxcNg" />
+                    <span
+                        class="absolute top-1 left-1 bg-white/90 dark:bg-black/80 backdrop-blur px-1.5 py-0.5 rounded text-[10px] font-bold text-text-main-light dark:text-white shadow-sm">Hot</span>
+                </div>
+                <div class="flex-1 flex flex-col justify-between py-1">
+                    <div>
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-bold text-text-main-light dark:text-text-main-dark text-lg">Cappuccino</h4>
+                            <span class="text-primary font-bold text-lg">25 DH</span>
+                        </div>
+                        <p class="text-xs text-text-muted-light dark:text-text-muted-dark mt-1 line-clamp-2">Rich
+                            espresso with steamed milk and a deep layer of foam.</p>
+                    </div>
+                    <div class="flex justify-end mt-2">
+                        <button
+                            class="bg-primary hover:bg-primary-dark text-white p-1.5 rounded-lg shadow-md transition-colors">
+                            <span class="material-icons-outlined text-sm">add</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-surface-light dark:bg-surface-dark rounded-xl p-3 flex gap-4 shadow-sm border border-gray-100 dark:border-neutral-800">
+                <div class="w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden">
+                    <img alt="Latte Macchiato" class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAghy2C-qWF10YxOPZ3aflQgrFdX2j1PMxQJvhmhwgxJfe29AVhImTFw0yjAsN8RFxqWTuIAm1eLpH9ziyq7bc05_xCheHLcuay8pJOoRcPrYMBs4vlAS0ll5p24qrXNlZIlrbzBYG5sQWRgNcFiUWVYs7TDtPiJ3RfhF1K38-SDL4GbB09Juy04yA2ywtoclPBto-pUQc0iZ2Fgn10cNOOmBwhsZqn-ATRFejV9Ij2XYKKBTbZwawAEyr4BjVr5VSJc2h0jrAzlQ" />
+                </div>
+                <div class="flex-1 flex flex-col justify-between py-1">
+                    <div>
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-bold text-text-main-light dark:text-text-main-dark text-lg">Latte Macchiato
+                            </h4>
+                            <span class="text-primary font-bold text-lg">28 DH</span>
+                        </div>
+                        <p class="text-xs text-text-muted-light dark:text-text-muted-dark mt-1 line-clamp-2">Espresso
+                            stained with a spot of foamed milk.</p>
+                    </div>
+                    <div class="flex justify-end mt-2">
+                        <button
+                            class="bg-surface-light dark:bg-neutral-700 text-text-main-light dark:text-white p-1.5 rounded-lg border border-gray-200 dark:border-neutral-600 hover:border-primary hover:text-primary transition-colors">
+                            <span class="material-icons-outlined text-sm">add</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-surface-light dark:bg-surface-dark rounded-xl p-3 flex gap-4 shadow-sm border border-gray-100 dark:border-neutral-800">
+                <div class="w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden">
+                    <img alt="Moroccan Mint Tea" class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSrIckovh4vq97hnBVmsAhIlxVq3z4dlsCHxbW-4BR9gAHLVhxuTqLtXFWynfCBwBknbs1zv2pVXz_2w5p8-Lebfl2rSImD-bUoipnbyiGjfBbYOlD6irRbh2zUZr_TPVW9HH6y-BoMdTBhwfi_oCZP4YC-7h4nVEV_X_j5ET9_2L1yc4c-q-wwoaksbVvikhfxuPa1plL-ag_lpSjo8KFINrarDhkPPsIQLI-wVkZ5F5dUVuLkH98ZHP7II1RClWz_uBLL14ObQ" />
+                </div>
+                <div class="flex-1 flex flex-col justify-between py-1">
+                    <div>
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-bold text-text-main-light dark:text-text-main-dark text-lg">Moroccan Tea
+                            </h4>
+                            <span class="text-primary font-bold text-lg">20 DH</span>
+                        </div>
+                        <p class="text-xs text-text-muted-light dark:text-text-muted-dark mt-1 line-clamp-2">Authentic
+                            mint tea served with local herbs.</p>
+                    </div>
+                    <div class="flex justify-end mt-2">
+                        <button
+                            class="bg-surface-light dark:bg-neutral-700 text-text-main-light dark:text-white p-1.5 rounded-lg border border-gray-200 dark:border-neutral-600 hover:border-primary hover:text-primary transition-colors">
+                            <span class="material-icons-outlined text-sm">add</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="space-y-4 pt-2">
+            <div class="flex items-baseline justify-between px-2">
+                <h3 class="text-xl font-display font-bold text-text-main-light dark:text-text-main-dark">Petit-Déjeuner
+                </h3>
+                <span class="text-xs text-text-muted-light dark:text-text-muted-dark">Served until 12PM</span>
+            </div>
+            <div
+                class="bg-surface-light dark:bg-surface-dark rounded-2xl overflow-hidden shadow-sm border border-gray-100 dark:border-neutral-800 relative group">
+                <div class="h-40 w-full relative">
+                    <img alt="Vintage Breakfast Set" class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9MdCUPz66WB62KmEtAvJ9RyUjDKkBXj8_fj6DgKVaSEPdlQ3lnPmRfS3Qo7FFyuyi9qaRhw4Aqlp6dSl-MJEKdrl3EG0yI_RBZM-MD6bSIQQj2NK4xLn7RT0j2gZW3pp2_ZZTi_FUvq_VyvGndq24fLOZAjvXLV_knB0uGmqKyQrSuI92T_Fy_FkbpMnFyjl_ixAH3tuc2Y1Ox_2fxvQP0jLGRGrSmTwaL-oanXqATivawnCW6wchIUJ4n4m-m4QI0LuHXWD4Sw" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-3 left-3 right-3 flex justify-between items-end">
+                        <div>
+                            <h4 class="text-white font-bold text-lg font-display">Vintage Special</h4>
+                            <p class="text-white/80 text-xs">Eggs, croissant, juice &amp; coffee</p>
+                        </div>
+                        <span class="bg-primary text-white text-sm font-bold px-3 py-1 rounded-full shadow-lg">65
+                            DH</span>
+                    </div>
+                </div>
+                <div class="p-3">
+                    <p class="text-sm text-text-muted-light dark:text-text-muted-dark line-clamp-2 mb-3">Our signature
+                        breakfast platter featuring farm-fresh eggs, artisanal bread, fresh orange juice, and your
+                        choice of coffee.</p>
+                    <button
+                        class="w-full py-2 rounded-lg border border-primary text-primary font-bold text-sm uppercase tracking-wide hover:bg-primary hover:text-white transition-colors">
                         Add to Order
                     </button>
-</div>
-</div>
-<div class="bg-surface-light dark:bg-surface-dark rounded-xl p-3 flex gap-4 shadow-sm border border-gray-100 dark:border-neutral-800">
-<div class="w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden">
-<img alt="Beldi Breakfast" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEWtzrzNfZRTrzBXszpFaXtDkCU58nWaGH_-7O6UPrTplCNWheskbv47aLprTyAan_40drczkTOcXhO9v3y3QKrUHcRqLBRfYvKgeIdTAAoRcpk2-G-PZeg-pCdoE8BSfBjXEblGQNYK-na5TR0EVOzYpzr4dbvCX8-bgqK-7VvRP5a7fwkM7-diVzdKM06JjyTI_LVR-UrkgH7RUw3MSt-BxBSkCFan6EDZtAfcHz7ceSVfoIDFPhvP0_QCfBh8YWgsl1myByJQ"/>
-</div>
-<div class="flex-1 flex flex-col justify-between py-1">
-<div>
-<div class="flex justify-between items-start">
-<h4 class="font-bold text-text-main-light dark:text-text-main-dark text-lg">Beldi Breakfast</h4>
-<span class="text-primary font-bold text-lg">45 DH</span>
-</div>
-<p class="text-xs text-text-muted-light dark:text-text-muted-dark mt-1 line-clamp-2">Olive oil, olives, honey, khlii, and harcha.</p>
-</div>
-<div class="flex justify-end mt-2">
-<button class="bg-surface-light dark:bg-neutral-700 text-text-main-light dark:text-white p-1.5 rounded-lg border border-gray-200 dark:border-neutral-600 hover:border-primary hover:text-primary transition-colors">
-<span class="material-icons-outlined text-sm">add</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-</main>
-<nav class="fixed bottom-0 w-full bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-md border-t border-gray-200 dark:border-neutral-800 pb-safe pt-2 px-6 z-50">
-<div class="flex justify-between items-center h-16 max-w-md mx-auto">
-<button class="flex flex-col items-center gap-1 text-primary">
-<span class="material-icons-outlined text-2xl">restaurant_menu</span>
-<span class="text-[10px] font-bold">Menu</span>
-</button>
-<button class="flex flex-col items-center gap-1 text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors">
-<span class="material-icons-outlined text-2xl">favorite_border</span>
-<span class="text-[10px] font-medium">Favorites</span>
-</button>
-<div class="relative -top-6">
-<button class="w-14 h-14 bg-primary text-white rounded-full shadow-lg shadow-primary/40 flex items-center justify-center transform transition-transform hover:scale-105 active:scale-95">
-<span class="material-icons-outlined text-2xl">shopping_bag</span>
-<span class="absolute top-0 right-0 h-4 w-4 bg-red-500 rounded-full text-[9px] flex items-center justify-center border-2 border-surface-light dark:border-surface-dark">2</span>
-</button>
-</div>
-<button class="flex flex-col items-center gap-1 text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors">
-<span class="material-icons-outlined text-2xl">receipt_long</span>
-<span class="text-[10px] font-medium">Orders</span>
-</button>
-<button class="flex flex-col items-center gap-1 text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors">
-<span class="material-icons-outlined text-2xl">person_outline</span>
-<span class="text-[10px] font-medium">Profile</span>
-</button>
-</div>
-</nav>
-<footer class="text-center pb-32 px-6 text-text-muted-light dark:text-text-muted-dark">
-<div class="w-12 h-0.5 bg-gray-200 dark:bg-neutral-800 mx-auto mb-6"></div>
-<p class="text-xs font-semibold mb-2 uppercase tracking-widest">Vintage Coffee &amp; Kitchen</p>
-<p class="text-[10px] opacity-70">Info &amp; Résa: 05 39 30 01 54</p>
-<div class="flex justify-center gap-4 mt-4">
-<span class="w-2 h-2 rounded-full bg-gray-300 dark:bg-neutral-700"></span>
-<span class="w-2 h-2 rounded-full bg-gray-300 dark:bg-neutral-700"></span>
-<span class="w-2 h-2 rounded-full bg-gray-300 dark:bg-neutral-700"></span>
-</div>
-</footer>
+                </div>
+            </div>
+            <div
+                class="bg-surface-light dark:bg-surface-dark rounded-xl p-3 flex gap-4 shadow-sm border border-gray-100 dark:border-neutral-800">
+                <div class="w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden">
+                    <img alt="Beldi Breakfast" class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEWtzrzNfZRTrzBXszpFaXtDkCU58nWaGH_-7O6UPrTplCNWheskbv47aLprTyAan_40drczkTOcXhO9v3y3QKrUHcRqLBRfYvKgeIdTAAoRcpk2-G-PZeg-pCdoE8BSfBjXEblGQNYK-na5TR0EVOzYpzr4dbvCX8-bgqK-7VvRP5a7fwkM7-diVzdKM06JjyTI_LVR-UrkgH7RUw3MSt-BxBSkCFan6EDZtAfcHz7ceSVfoIDFPhvP0_QCfBh8YWgsl1myByJQ" />
+                </div>
+                <div class="flex-1 flex flex-col justify-between py-1">
+                    <div>
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-bold text-text-main-light dark:text-text-main-dark text-lg">Beldi Breakfast
+                            </h4>
+                            <span class="text-primary font-bold text-lg">45 DH</span>
+                        </div>
+                        <p class="text-xs text-text-muted-light dark:text-text-muted-dark mt-1 line-clamp-2">Olive oil,
+                            olives, honey, khlii, and harcha.</p>
+                    </div>
+                    <div class="flex justify-end mt-2">
+                        <button
+                            class="bg-surface-light dark:bg-neutral-700 text-text-main-light dark:text-white p-1.5 rounded-lg border border-gray-200 dark:border-neutral-600 hover:border-primary hover:text-primary transition-colors">
+                            <span class="material-icons-outlined text-sm">add</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <nav
+        class="fixed bottom-0 w-full bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-md border-t border-gray-200 dark:border-neutral-800 pb-safe pt-2 px-6 z-50">
+        <div class="flex justify-between items-center h-16 max-w-md mx-auto">
+            <button class="flex flex-col items-center gap-1 text-primary">
+                <span class="material-icons-outlined text-2xl">restaurant_menu</span>
+                <span class="text-[10px] font-bold">Menu</span>
+            </button>
+            <button
+                class="flex flex-col items-center gap-1 text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors">
+                <span class="material-icons-outlined text-2xl">favorite_border</span>
+                <span class="text-[10px] font-medium">Favorites</span>
+            </button>
+            <div class="relative -top-6">
+                <button
+                    class="w-14 h-14 bg-primary text-white rounded-full shadow-lg shadow-primary/40 flex items-center justify-center transform transition-transform hover:scale-105 active:scale-95">
+                    <span class="material-icons-outlined text-2xl">shopping_bag</span>
+                    <span
+                        class="absolute top-0 right-0 h-4 w-4 bg-red-500 rounded-full text-[9px] flex items-center justify-center border-2 border-surface-light dark:border-surface-dark">2</span>
+                </button>
+            </div>
+            <button
+                class="flex flex-col items-center gap-1 text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors">
+                <span class="material-icons-outlined text-2xl">receipt_long</span>
+                <span class="text-[10px] font-medium">Orders</span>
+            </button>
+            <button
+                class="flex flex-col items-center gap-1 text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors">
+                <span class="material-icons-outlined text-2xl">person_outline</span>
+                <span class="text-[10px] font-medium">Profile</span>
+            </button>
+        </div>
+    </nav>
+    <footer class="text-center pb-32 px-6 text-text-muted-light dark:text-text-muted-dark">
+        <div class="w-12 h-0.5 bg-gray-200 dark:bg-neutral-800 mx-auto mb-6"></div>
+        <p class="text-xs font-semibold mb-2 uppercase tracking-widest">Vintage Coffee &amp; Kitchen</p>
+        <p class="text-[10px] opacity-70">Info &amp; Résa: 05 39 30 01 54</p>
+        <div class="flex justify-center gap-4 mt-4">
+            <span class="w-2 h-2 rounded-full bg-gray-300 dark:bg-neutral-700"></span>
+            <span class="w-2 h-2 rounded-full bg-gray-300 dark:bg-neutral-700"></span>
+            <span class="w-2 h-2 rounded-full bg-gray-300 dark:bg-neutral-700"></span>
+        </div>
+    </footer>
 
-</body></html>
+</body>
+
+</html>

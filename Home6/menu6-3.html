@@ -1,418 +1,475 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Vintage Coffee &amp; Kitchen Menu</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#E67E22", // Vibrant orange/amber
-                        "primary-dark": "#D35400",
-                        "accent-brown": "#4E342E", // Deep espresso brown
-                        "background-light": "#F9F5F0", // Warm off-white paper tone
-                        "background-sidebar": "#FFFFFF",
-                        "surface-card": "#FFFFFF",
-                        "surface-dark": "#261C19", // Very dark coffee bean for contrast sections
-                        "surface-highlight": "#FFF3E0", // Light amber highlight
-                        "text-main": "#3E2723", // Dark brown
-                        "text-secondary": "#8D6E63", // Muted brown
-                        "price-color": "#E67E22", 
-                    },
-                    fontFamily: {
-                        display: ["'Playfair Display'", "serif"],
-                        body: ["'Lato'", "sans-serif"],
-                    },
-                    borderRadius: {
-                        DEFAULT: "0.5rem",
-                        'xl': '0.75rem',
-                        '2xl': '1rem',
-                        '3xl': '1.5rem',
-                    },
-                    boxShadow: {
-                        'soft': '0 8px 30px rgba(0,0,0,0.04)',
-                        'card': '0 4px 12px rgba(62, 39, 35, 0.05)',
-                        'floating': '0 10px 40px -10px rgba(230, 126, 34, 0.3)',
-                    }
-                },
-            },
-        };
-    </script>
-<style>
-        .hide-scroll::-webkit-scrollbar {
-            display: none;
-        }
-        .hide-scroll {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-        html {
-            scroll-behavior: smooth;
-        }::-webkit-scrollbar {
-            width: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: transparent; 
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #E0E0E0; 
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #BDBDBD; 
-        }
-    </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
-<body class="bg-background-light font-body text-text-main antialiased min-h-screen pb-20 md:pb-0">
-<div class="fixed top-0 left-0 right-0 z-50 bg-background-light/95 backdrop-blur-md border-b border-stone-200/60 px-5 py-3 flex justify-between items-center md:hidden shadow-sm transition-all duration-300">
-<div class="flex items-center gap-2 text-accent-brown font-display font-bold text-xl tracking-tight">
-<span class="material-symbols-outlined text-primary text-2xl filled">coffee</span>
-<span>Vintage</span>
-</div>
-<button class="bg-primary text-white text-xs font-bold px-5 py-2.5 rounded-full shadow-lg shadow-primary/20 hover:bg-primary-dark transition active:scale-95">
-        Book a Table
-    </button>
-</div>
-<div class="max-w-7xl mx-auto pt-20 md:pt-8 md:px-8 pb-8 flex flex-col md:flex-row gap-8 h-screen overflow-hidden">
-<aside class="hidden md:flex flex-col w-72 flex-shrink-0 bg-white rounded-3xl shadow-soft p-8 h-full overflow-hidden border border-stone-100">
-<div class="space-y-8 h-full flex flex-col">
-<div class="text-center pb-6 border-b border-stone-100">
-<div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-surface-highlight text-primary mb-3">
-<span class="material-symbols-outlined text-2xl">restaurant</span>
-</div>
-<h2 class="font-display font-bold text-2xl text-accent-brown">Menu Categories</h2>
-<p class="text-xs text-text-secondary mt-1">Select a section to view</p>
-</div>
-<nav class="space-y-2 overflow-y-auto hide-scroll flex-1 pr-2">
-<a class="flex items-center gap-4 p-4 rounded-xl bg-surface-highlight text-primary font-bold shadow-sm ring-1 ring-primary/10 transition-all hover:translate-x-1" href="#breakfast">
-<span class="material-symbols-outlined text-xl">bakery_dining</span>
-<span class="text-sm tracking-wide">Breakfast</span>
-</a>
-<a class="flex items-center gap-4 p-4 rounded-xl text-text-secondary hover:bg-stone-50 hover:text-accent-brown transition-all hover:translate-x-1 group" href="#lunch">
-<span class="material-symbols-outlined text-xl group-hover:text-primary transition-colors">lunch_dining</span>
-<span class="text-sm tracking-wide">Lunch</span>
-</a>
-<a class="flex items-center gap-4 p-4 rounded-xl text-text-secondary hover:bg-stone-50 hover:text-accent-brown transition-all hover:translate-x-1 group" href="#coffee">
-<span class="material-symbols-outlined text-xl group-hover:text-primary transition-colors">coffee</span>
-<span class="text-sm tracking-wide">Coffee &amp; Tea</span>
-</a>
-<a class="flex items-center gap-4 p-4 rounded-xl text-text-secondary hover:bg-stone-50 hover:text-accent-brown transition-all hover:translate-x-1 group" href="#desserts">
-<span class="material-symbols-outlined text-xl group-hover:text-primary transition-colors">icecream</span>
-<span class="text-sm tracking-wide">Desserts</span>
-</a>
-</nav>
-<div class="mt-auto pt-6 border-t border-stone-100">
-<button class="w-full bg-accent-brown text-white font-bold py-3.5 rounded-xl shadow-lg hover:bg-primary transition text-sm flex items-center justify-center gap-2 group">
-<span class="material-symbols-outlined text-lg group-hover:animate-bounce">download</span>
-                    Download Menu
-                </button>
-</div>
-</div>
-</aside>
-<div class="flex flex-1 h-full overflow-hidden md:gap-6 relative">
-<div class="w-[88px] flex-shrink-0 bg-white border-r border-stone-100 flex flex-col items-center py-6 space-y-8 overflow-y-auto hide-scroll z-10 pb-32 md:hidden h-full">
-<div class="px-2 w-full">
-<div class="text-[10px] uppercase tracking-widest text-center font-bold text-stone-400">Sections</div>
-</div>
-<a class="flex flex-col items-center gap-2 group w-full px-1" href="#breakfast">
-<div class="w-14 h-14 rounded-2xl bg-surface-highlight text-primary flex items-center justify-center shadow-sm ring-1 ring-primary/20 transition-transform active:scale-95">
-<span class="material-symbols-outlined text-2xl">bakery_dining</span>
-</div>
-<span class="text-[10px] font-bold text-primary text-center leading-tight">Matin</span>
-</a>
-<a class="flex flex-col items-center gap-2 group w-full px-1 opacity-70 hover:opacity-100 transition" href="#lunch">
-<div class="w-14 h-14 rounded-2xl bg-stone-50 text-stone-500 flex items-center justify-center border border-stone-100 group-hover:bg-white group-hover:shadow-sm active:scale-95 transition-all">
-<span class="material-symbols-outlined text-2xl">lunch_dining</span>
-</div>
-<span class="text-[10px] font-bold text-stone-500 text-center leading-tight">Déjeuner</span>
-</a>
-<a class="flex flex-col items-center gap-2 group w-full px-1 opacity-70 hover:opacity-100 transition" href="#coffee">
-<div class="w-14 h-14 rounded-2xl bg-stone-50 text-stone-500 flex items-center justify-center border border-stone-100 group-hover:bg-white group-hover:shadow-sm active:scale-95 transition-all">
-<span class="material-symbols-outlined text-2xl">coffee</span>
-</div>
-<span class="text-[10px] font-bold text-stone-500 text-center leading-tight">Café</span>
-</a>
-<a class="flex flex-col items-center gap-2 group w-full px-1 opacity-70 hover:opacity-100 transition" href="#desserts">
-<div class="w-14 h-14 rounded-2xl bg-stone-50 text-stone-500 flex items-center justify-center border border-stone-100 group-hover:bg-white group-hover:shadow-sm active:scale-95 transition-all">
-<span class="material-symbols-outlined text-2xl">icecream</span>
-</div>
-<span class="text-[10px] font-bold text-stone-500 text-center leading-tight">Dessert</span>
-</a>
-</div>
-<main class="flex-1 overflow-y-auto hide-scroll pb-32 md:pb-0 bg-background-light px-5 md:px-2 md:pr-4">
-<div class="sticky top-0 z-30 bg-background-light pt-2 pb-4 -mx-5 px-5 md:mx-0 md:px-0 transition-all duration-300">
-<div class="relative group max-w-2xl mx-auto md:mx-0">
-<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-<span class="material-symbols-outlined text-stone-400 group-focus-within:text-primary transition-colors">search</span>
-</div>
-<input class="block w-full pl-12 pr-12 py-3.5 bg-white border-none ring-1 ring-stone-200/80 rounded-2xl text-text-main placeholder:text-stone-400 focus:ring-2 focus:ring-primary/40 focus:outline-none shadow-card text-sm font-medium transition-all" placeholder="Search dishes, drinks..." type="text"/>
-<div class="absolute inset-y-0 right-0 pr-2 flex items-center">
-<button class="bg-surface-highlight hover:bg-orange-100 p-2 rounded-xl text-primary transition-colors">
-<span class="material-symbols-outlined text-xl">tune</span>
-</button>
-</div>
-</div>
-</div>
-<div class="relative w-full h-56 md:h-72 rounded-3xl overflow-hidden mb-10 shadow-lg group mx-auto max-w-4xl md:mx-0">
-<img alt="Coffee aesthetics" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfj5GpIIPZPC5zE21L0qfU0GvpbJBWvn-xS_2VJsjQ3gxKdNz_QEliX0MG-kf9LA_QVESr52XW39cXRuuGHur_eaMrYa8eanh3TrZ4SKlr40ezp0AXaX5R64o-wcGpfZe92_BfBGKALCLxIrrICcsAxK7Ras4r0RFaN3uY4jUh7v0UHrnWYMpr5PvRzmdxv0lwd9PMu2-Ojo7um03CP5lUZT2oZ8ZtaOkv7GsqdS6dq9EEnFeWNZZpNit9-0kHcQCiD-W-s7_wNg"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/10"></div>
-<div class="absolute bottom-0 left-0 right-0 p-8 text-center md:text-left flex flex-col items-center md:items-start">
-<div class="inline-block bg-primary/95 backdrop-blur-sm text-[10px] font-extrabold text-white px-3 py-1 rounded-full mb-3 uppercase tracking-widest shadow-sm">Est. 2024 Tangier</div>
-<h1 class="text-white font-display font-bold text-5xl drop-shadow-lg mb-2 tracking-tight">La Carte</h1>
-<p class="text-white/90 text-sm font-light italic tracking-wide">A culinary journey through Tangier's heritage.</p>
-</div>
-</div>
-<section class="mb-12 scroll-mt-28 max-w-4xl" id="breakfast">
-<div class="flex items-end justify-between mb-6 border-b border-stone-200/80 pb-3">
-<h2 class="text-3xl font-display font-bold text-accent-brown">Le Petit Déjeuner</h2>
-<span class="text-xs text-text-secondary italic font-medium bg-white px-2 py-1 rounded-md border border-stone-100 shadow-sm">Until 11:30 AM</span>
-</div>
-<div class="space-y-4">
-<div class="bg-surface-highlight border border-orange-100/50 rounded-2xl p-5 shadow-card relative overflow-hidden group hover:shadow-lg transition-all duration-300">
-<div class="flex gap-5 items-center">
-<div class="w-24 h-24 flex-shrink-0 rounded-full border-4 border-white shadow-md overflow-hidden bg-white relative">
-<img alt="Vintage Breakfast Set" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9MdCUPz66WB62KmEtAvJ9RyUjDKkBXj8_fj6DgKVaSEPdlQ3lnPmRfS3Qo7FFyuyi9qaRhw4Aqlp6dSl-MJEKdrl3EG0yI_RBZM-MD6bSIQQj2NK4xLn7RT0j2gZW3pp2_ZZTi_FUvq_VyvGndq24fLOZAjvXLV_knB0uGmqKyQrSuI92T_Fy_FkbpMnFyjl_ixAH3tuc2Y1Ox_2fxvQP0jLGRGrSmTwaL-oanXqATivawnCW6wchIUJ4n4m-m4QI0LuHXWD4Sw"/>
-</div>
-<div class="flex-1 min-w-0">
-<div class="flex flex-col">
-<span class="bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded-full w-fit mb-1.5 uppercase tracking-wide">Chef's Choice</span>
-<h3 class="font-display font-bold text-xl text-text-main truncate">Shakshuka Royal</h3>
-<p class="text-xs text-text-secondary mt-1.5 line-clamp-2 leading-relaxed">Eggs poached in tomatoes, chili peppers, onions &amp; cumin. Served with crusty baguette.</p>
-</div>
-</div>
-<div class="flex flex-col items-end justify-center pl-2">
-<span class="text-xl font-display font-bold text-price-color">65 <span class="text-xs font-sans font-medium text-text-secondary">MAD</span></span>
-</div>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-<div class="bg-white rounded-2xl p-5 shadow-card border border-stone-100/60 hover:border-primary/20 transition-colors group">
-<div class="flex justify-between items-start mb-2">
-<h3 class="font-display font-bold text-lg text-text-main group-hover:text-primary transition-colors">Moroccan Breakfast</h3>
-<span class="font-bold text-price-color text-base whitespace-nowrap">120 MAD</span>
-</div>
-<p class="text-xs text-text-secondary leading-relaxed">Traditional assortment of breads, organic olive oil, amlou, olives, and fresh mint tea.</p>
-</div>
-<div class="bg-white rounded-2xl p-5 shadow-card border border-stone-100/60 hover:border-primary/20 transition-colors group">
-<div class="flex justify-between items-start mb-2">
-<h3 class="font-display font-bold text-lg text-text-main group-hover:text-primary transition-colors">Beldi Breakfast</h3>
-<span class="font-bold text-price-color text-base whitespace-nowrap">45 MAD</span>
-</div>
-<p class="text-xs text-text-secondary leading-relaxed">Olive oil, olives, honey, khlii, and harcha. A classic start to the day.</p>
-</div>
-<div class="bg-white rounded-2xl p-5 shadow-card border border-stone-100/60 hover:border-primary/20 transition-colors group md:col-span-2">
-<div class="flex justify-between items-start mb-2">
-<h3 class="font-display font-bold text-lg text-text-main group-hover:text-primary transition-colors">Baghrir Trio</h3>
-<span class="font-bold text-price-color text-base whitespace-nowrap">80 MAD</span>
-</div>
-<p class="text-xs text-text-secondary leading-relaxed">Three "thousand hole" spongy pancakes served warm with honey and melted butter.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="mb-12 scroll-mt-28 max-w-4xl" id="lunch">
-<div class="flex items-end justify-between mb-6 border-b border-stone-200/80 pb-3">
-<h2 class="text-3xl font-display font-bold text-accent-brown">Déjeuner (Lunch)</h2>
-<span class="text-xs text-text-secondary italic font-medium bg-white px-2 py-1 rounded-md border border-stone-100 shadow-sm">From 12:00 PM</span>
-</div>
-<div class="space-y-6">
-<div class="bg-white rounded-2xl overflow-hidden shadow-card border border-stone-100 hover:shadow-lg transition-shadow duration-300">
-<div class="flex flex-row h-36">
-<div class="w-36 md:w-48 relative overflow-hidden">
-<img alt="Tagine" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEWtzrzNfZRTrzBXszpFaXtDkCU58nWaGH_-7O6UPrTplCNWheskbv47aLprTyAan_40drczkTOcXhO9v3y3QKrUHcRqLBRfYvKgeIdTAAoRcpk2-G-PZeg-pCdoE8BSfBjXEblGQNYK-na5TR0EVOzYpzr4dbvCX8-bgqK-7VvRP5a7fwkM7-diVzdKM06JjyTI_LVR-UrkgH7RUw3MSt-BxBSkCFan6EDZtAfcHz7ceSVfoIDFPhvP0_QCfBh8YWgsl1myByJQ"/>
-</div>
-<div class="flex-1 p-4 flex flex-col justify-between">
-<div>
-<div class="flex justify-between items-start gap-2">
-<h3 class="font-display font-bold text-lg text-text-main leading-tight">Lemon Chicken Tagine</h3>
-<span class="font-bold text-price-color text-base whitespace-nowrap">180 MAD</span>
-</div>
-<p class="text-xs text-text-secondary mt-2 line-clamp-2 leading-relaxed">Slow-cooked chicken with preserved lemons and olives, served in a traditional clay pot.</p>
-</div>
-<div class="flex gap-2 mt-2 flex-wrap">
-<span class="text-[9px] font-bold bg-stone-100 text-stone-500 px-2 py-1 rounded-md border border-stone-200 uppercase tracking-wider">Gluten-Free</span>
-<span class="text-[9px] font-bold bg-stone-100 text-stone-500 px-2 py-1 rounded-md border border-stone-200 uppercase tracking-wider">Classic</span>
-</div>
-</div>
-</div>
-</div>
-<div class="bg-white rounded-2xl overflow-hidden shadow-card border border-stone-100 hover:shadow-lg transition-shadow duration-300">
-<div class="flex flex-row h-36">
-<div class="w-36 md:w-48 relative overflow-hidden">
-<img alt="Couscous" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSrIckovh4vq97hnBVmsAhIlxVq3z4dlsCHxbW-4BR9gAHLVhxuTqLtXFWynfCBwBknbs1zv2pVXz_2w5p8-Lebfl2rSImD-bUoipnbyiGjfBbYOlD6irRbh2zUZr_TPVW9HH6y-BoMdTBhwfi_oCZP4YC-7h4nVEV_X_j5ET9_2L1yc4c-q-wwoaksbVvikhfxuPa1plL-ag_lpSjo8KFINrarDhkPPsIQLI-wVkZ5F5dUVuLkH98ZHP7II1RClWz_uBLL14ObQ"/>
-</div>
-<div class="flex-1 p-4 flex flex-col justify-between">
-<div>
-<div class="flex justify-between items-start gap-2">
-<h3 class="font-display font-bold text-lg text-text-main leading-tight">Couscous Friday</h3>
-<span class="font-bold text-price-color text-base whitespace-nowrap">160 MAD</span>
-</div>
-<p class="text-xs text-text-secondary mt-2 line-clamp-2 leading-relaxed">Available daily. Semolina wheat steamed to perfection, topped with seven vegetables.</p>
-</div>
-<div class="flex gap-2 mt-2">
-<span class="text-[9px] font-bold bg-green-50 text-green-700 px-2 py-1 rounded-md border border-green-100 uppercase tracking-wider">Vegetarian</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="mb-12 scroll-mt-28 max-w-4xl" id="coffee">
-<div class="flex items-end justify-between mb-6 border-b border-stone-200/80 pb-3">
-<h2 class="text-3xl font-display font-bold text-accent-brown">Café &amp; Thé</h2>
-<span class="text-xs text-text-secondary italic font-medium">The heart of Vintage</span>
-</div>
-<div class="bg-surface-dark rounded-3xl p-6 md:p-8 text-white shadow-xl relative overflow-hidden border border-white/5">
-<div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
-<div>
-<div class="flex items-center gap-3 mb-6">
-<span class="w-8 h-[1px] bg-primary"></span>
-<h3 class="text-primary font-bold uppercase tracking-[0.2em] text-sm">Coffee</h3>
-</div>
-<div class="space-y-4">
-<div class="bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl p-4 transition-all duration-300 group">
-<div class="flex justify-between items-start mb-1">
-<h4 class="font-display font-bold text-lg text-white group-hover:text-primary transition-colors">Nous-Nous</h4>
-<span class="text-primary font-bold text-base">25 MAD</span>
-</div>
-<p class="text-xs text-white/60 italic font-light">Half coffee, half milk, Tangier style</p>
-</div>
-<div class="bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl p-4 transition-all duration-300 group">
-<div class="flex justify-between items-start mb-1">
-<h4 class="font-display font-bold text-lg text-white group-hover:text-primary transition-colors">Café Noir</h4>
-<span class="text-primary font-bold text-base">20 MAD</span>
-</div>
-<p class="text-xs text-white/60 italic font-light">Strong espresso shot</p>
-</div>
-<div class="bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl p-4 transition-all duration-300 group">
-<div class="flex justify-between items-start mb-1">
-<h4 class="font-display font-bold text-lg text-white group-hover:text-primary transition-colors">Cappuccino Vintage</h4>
-<span class="text-primary font-bold text-base">35 MAD</span>
-</div>
-<p class="text-xs text-white/60 italic font-light">With chocolate dust</p>
-</div>
-</div>
-</div>
-<div>
-<div class="flex items-center gap-3 mb-6 md:mb-6 mt-4 md:mt-0">
-<span class="w-8 h-[1px] bg-primary"></span>
-<h3 class="text-primary font-bold uppercase tracking-[0.2em] text-sm">Tea &amp; Infusions</h3>
-</div>
-<div class="space-y-4">
-<div class="bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl p-4 transition-all duration-300 group">
-<div class="flex justify-between items-start mb-1">
-<h4 class="font-display font-bold text-lg text-white group-hover:text-primary transition-colors">Moroccan Mint Tea</h4>
-<span class="text-primary font-bold text-base">30 MAD</span>
-</div>
-<p class="text-xs text-white/60 italic font-light">Gunpowder tea with fresh mint leaves</p>
-</div>
-<div class="bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl p-4 transition-all duration-300 group">
-<div class="flex justify-between items-start mb-1">
-<h4 class="font-display font-bold text-lg text-white group-hover:text-primary transition-colors">Spiced Coffee</h4>
-<span class="text-primary font-bold text-base">30 MAD</span>
-</div>
-<p class="text-xs text-white/60 italic font-light">Brewed with cinnamon and nutmeg</p>
-</div>
-<div class="bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl p-4 transition-all duration-300 group">
-<div class="flex justify-between items-start mb-1">
-<h4 class="font-display font-bold text-lg text-white group-hover:text-primary transition-colors">Verbena Infusion</h4>
-<span class="text-primary font-bold text-base">25 MAD</span>
-</div>
-<p class="text-xs text-white/60 italic font-light">Calming Louisa leaves</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="mb-10 scroll-mt-28 max-w-4xl" id="desserts">
-<div class="flex items-end justify-between mb-6 border-b border-stone-200/80 pb-3">
-<h2 class="text-3xl font-display font-bold text-accent-brown">Desserts</h2>
-<span class="text-xs text-text-secondary italic font-medium">Sweet endings</span>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-<div class="group bg-white p-3 rounded-2xl shadow-sm border border-stone-100 hover:shadow-md transition-all">
-<div class="aspect-square rounded-xl overflow-hidden mb-3 relative">
-<img alt="Gazelle Horns" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfGiQSWZ5mAQbz2-lpm3CBNtGGcOTNG86ldJvqSEABeJtBF_luDCHZlcCZN0M9agRNxLpr6iLdUGWzZ8QZZDI5U5c6VP3yTaA980n-MD9K0jcm1MLyrM0n9Bk8z1-vNiuAbdHzFpHoNFN4ub6Cv8AJQkdzoVR4UF4lh49wA-pKEs5pTKNelqWoqwWqllw0NNbydxUOKyEASsC6ND8DF41gwwZqEHyi0iIW0M0FkZ6Tn1bNyzleKnrN0cb_r9S1jIdFbSHQeFxcNg"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-2">
-<span class="text-white text-[10px] font-bold bg-primary px-1.5 py-0.5 rounded">Popular</span>
-</div>
-</div>
-<h3 class="font-display font-bold text-base text-text-main mb-0.5">Gazelle Horns</h3>
-<p class="text-[10px] text-stone-500 mb-2">Almond paste pastry</p>
-<span class="text-price-color font-bold text-sm block">20 MAD</span>
-</div>
-<div class="group bg-white p-3 rounded-2xl shadow-sm border border-stone-100 hover:shadow-md transition-all">
-<div class="aspect-square rounded-xl overflow-hidden mb-3 relative">
-<img alt="Chebakia" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAghy2C-qWF10YxOPZ3aflQgrFdX2j1PMxQJvhmhwgxJfe29AVhImTFw0yjAsN8RFxqWTuIAm1eLpH9ziyq7bc05_xCheHLcuay8pJOoRcPrYMBs4vlAS0ll5p24qrXNlZIlrbzBYG5sQWRgNcFiUWVYs7TDtPiJ3RfhF1K38-SDL4GbB09Juy04yA2ywtoclPBto-pUQc0iZ2Fgn10cNOOmBwhsZqn-ATRFejV9Ij2XYKKBTbZwawAEyr4BjVr5VSJc2h0jrAzlQ"/>
-</div>
-<h3 class="font-display font-bold text-base text-text-main mb-0.5">Chebakia</h3>
-<p class="text-[10px] text-stone-500 mb-2">Honey &amp; sesame</p>
-<span class="text-price-color font-bold text-sm block">15 MAD</span>
-</div>
-<div class="group bg-white p-3 rounded-2xl shadow-sm border border-stone-100 hover:shadow-md transition-all col-span-2 md:col-span-1">
-<div class="aspect-square rounded-xl overflow-hidden mb-3 relative">
-<img alt="Creme Brulee" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfGiQSWZ5mAQbz2-lpm3CBNtGGcOTNG86ldJvqSEABeJtBF_luDCHZlcCZN0M9agRNxLpr6iLdUGWzZ8QZZDI5U5c6VP3yTaA980n-MD9K0jcm1MLyrM0n9Bk8z1-vNiuAbdHzFpHoNFN4ub6Cv8AJQkdzoVR4UF4lh49wA-pKEs5pTKNelqWoqwWqllw0NNbydxUOKyEASsC6ND8DF41gwwZqEHyi0iIW0M0FkZ6Tn1bNyzleKnrN0cb_r9S1jIdFbSHQeFxcNg"/>
-</div>
-<h3 class="font-display font-bold text-base text-text-main mb-0.5">Crème Brûlée</h3>
-<p class="text-[10px] text-stone-500 mb-2">Vanilla bean custard</p>
-<span class="text-price-color font-bold text-sm block">45 MAD</span>
-</div>
-</div>
-</section>
-<footer class="text-center pb-10 pt-8 border-t border-stone-200">
-<div class="flex items-center justify-center gap-2 mb-3 text-accent-brown">
-<span class="material-symbols-outlined filled">coffee</span>
-<span class="font-bold text-sm uppercase tracking-widest font-display">Vintage Coffee &amp; Kitchen</span>
-</div>
-<p class="text-[10px] text-stone-400">© 2024 Vintage Coffee &amp; Kitchen. All rights reserved.</p>
-</footer>
-</main>
-</div>
-</div>
-<nav class="fixed bottom-0 w-full bg-white/95 backdrop-blur-md border-t border-stone-200 pb-safe pt-2 px-6 z-50 md:hidden shadow-[0_-5px_10px_rgba(0,0,0,0.02)]">
-<div class="flex justify-between items-center h-16 max-w-md mx-auto">
-<button class="flex flex-col items-center gap-1 text-primary">
-<span class="material-symbols-outlined text-2xl filled">restaurant_menu</span>
-<span class="text-[10px] font-bold">Menu</span>
-</button>
-<button class="flex flex-col items-center gap-1 text-stone-400 hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-2xl">favorite</span>
-<span class="text-[10px] font-medium">Favorites</span>
-</button>
-<div class="relative -top-6">
-<button class="w-14 h-14 bg-gradient-to-tr from-primary to-primary-dark text-white rounded-full shadow-floating flex items-center justify-center transform transition-transform hover:scale-105 active:scale-95 ring-4 ring-white">
-<span class="material-symbols-outlined text-2xl">shopping_bag</span>
-<span class="absolute top-0 right-0 h-4 w-4 bg-accent-brown rounded-full text-[9px] flex items-center justify-center border-2 border-white font-bold">2</span>
-</button>
-</div>
-<button class="flex flex-col items-center gap-1 text-stone-400 hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-2xl">receipt_long</span>
-<span class="text-[10px] font-medium">Orders</span>
-</button>
-<button class="flex flex-col items-center gap-1 text-stone-400 hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-2xl">person</span>
-<span class="text-[10px] font-medium">Profile</span>
-</button>
-</div>
-</nav>
+<html lang="en">
 
-</body></html>
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Vintage Coffee &amp; Kitchen Menu</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Lato:wght@300;400;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="../../assets/js/tailwind6-orange.config.js"></script>
+    <link href="../../assets/css/menu6-3.css" rel="stylesheet" />
+</head>
+
+<body class="bg-background-light font-body text-text-main antialiased min-h-screen pb-20 md:pb-0">
+    <div
+        class="fixed top-0 left-0 right-0 z-50 bg-background-light/95 backdrop-blur-md border-b border-stone-200/60 px-5 py-3 flex justify-between items-center md:hidden shadow-sm transition-all duration-300">
+        <div class="flex items-center gap-2 text-accent-brown font-display font-bold text-xl tracking-tight">
+            <span class="material-symbols-outlined text-primary text-2xl filled">coffee</span>
+            <span>Vintage</span>
+        </div>
+        <button
+            class="bg-primary text-white text-xs font-bold px-5 py-2.5 rounded-full shadow-lg shadow-primary/20 hover:bg-primary-dark transition active:scale-95">
+            Book a Table
+        </button>
+    </div>
+    <div class="max-w-7xl mx-auto pt-20 md:pt-8 md:px-8 pb-8 flex flex-col md:flex-row gap-8 h-screen overflow-hidden">
+        <aside
+            class="hidden md:flex flex-col w-72 flex-shrink-0 bg-white rounded-3xl shadow-soft p-8 h-full overflow-hidden border border-stone-100">
+            <div class="space-y-8 h-full flex flex-col">
+                <div class="text-center pb-6 border-b border-stone-100">
+                    <div
+                        class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-surface-highlight text-primary mb-3">
+                        <span class="material-symbols-outlined text-2xl">restaurant</span>
+                    </div>
+                    <h2 class="font-display font-bold text-2xl text-accent-brown">Menu Categories</h2>
+                    <p class="text-xs text-text-secondary mt-1">Select a section to view</p>
+                </div>
+                <nav class="space-y-2 overflow-y-auto hide-scroll flex-1 pr-2">
+                    <a class="flex items-center gap-4 p-4 rounded-xl bg-surface-highlight text-primary font-bold shadow-sm ring-1 ring-primary/10 transition-all hover:translate-x-1"
+                        href="#breakfast">
+                        <span class="material-symbols-outlined text-xl">bakery_dining</span>
+                        <span class="text-sm tracking-wide">Breakfast</span>
+                    </a>
+                    <a class="flex items-center gap-4 p-4 rounded-xl text-text-secondary hover:bg-stone-50 hover:text-accent-brown transition-all hover:translate-x-1 group"
+                        href="#lunch">
+                        <span
+                            class="material-symbols-outlined text-xl group-hover:text-primary transition-colors">lunch_dining</span>
+                        <span class="text-sm tracking-wide">Lunch</span>
+                    </a>
+                    <a class="flex items-center gap-4 p-4 rounded-xl text-text-secondary hover:bg-stone-50 hover:text-accent-brown transition-all hover:translate-x-1 group"
+                        href="#coffee">
+                        <span
+                            class="material-symbols-outlined text-xl group-hover:text-primary transition-colors">coffee</span>
+                        <span class="text-sm tracking-wide">Coffee &amp; Tea</span>
+                    </a>
+                    <a class="flex items-center gap-4 p-4 rounded-xl text-text-secondary hover:bg-stone-50 hover:text-accent-brown transition-all hover:translate-x-1 group"
+                        href="#desserts">
+                        <span
+                            class="material-symbols-outlined text-xl group-hover:text-primary transition-colors">icecream</span>
+                        <span class="text-sm tracking-wide">Desserts</span>
+                    </a>
+                </nav>
+                <div class="mt-auto pt-6 border-t border-stone-100">
+                    <button
+                        class="w-full bg-accent-brown text-white font-bold py-3.5 rounded-xl shadow-lg hover:bg-primary transition text-sm flex items-center justify-center gap-2 group">
+                        <span class="material-symbols-outlined text-lg group-hover:animate-bounce">download</span>
+                        Download Menu
+                    </button>
+                </div>
+            </div>
+        </aside>
+        <div class="flex flex-1 h-full overflow-hidden md:gap-6 relative">
+            <div
+                class="w-[88px] flex-shrink-0 bg-white border-r border-stone-100 flex flex-col items-center py-6 space-y-8 overflow-y-auto hide-scroll z-10 pb-32 md:hidden h-full">
+                <div class="px-2 w-full">
+                    <div class="text-[10px] uppercase tracking-widest text-center font-bold text-stone-400">Sections
+                    </div>
+                </div>
+                <a class="flex flex-col items-center gap-2 group w-full px-1" href="#breakfast">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-surface-highlight text-primary flex items-center justify-center shadow-sm ring-1 ring-primary/20 transition-transform active:scale-95">
+                        <span class="material-symbols-outlined text-2xl">bakery_dining</span>
+                    </div>
+                    <span class="text-[10px] font-bold text-primary text-center leading-tight">Matin</span>
+                </a>
+                <a class="flex flex-col items-center gap-2 group w-full px-1 opacity-70 hover:opacity-100 transition"
+                    href="#lunch">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-stone-50 text-stone-500 flex items-center justify-center border border-stone-100 group-hover:bg-white group-hover:shadow-sm active:scale-95 transition-all">
+                        <span class="material-symbols-outlined text-2xl">lunch_dining</span>
+                    </div>
+                    <span class="text-[10px] font-bold text-stone-500 text-center leading-tight">Déjeuner</span>
+                </a>
+                <a class="flex flex-col items-center gap-2 group w-full px-1 opacity-70 hover:opacity-100 transition"
+                    href="#coffee">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-stone-50 text-stone-500 flex items-center justify-center border border-stone-100 group-hover:bg-white group-hover:shadow-sm active:scale-95 transition-all">
+                        <span class="material-symbols-outlined text-2xl">coffee</span>
+                    </div>
+                    <span class="text-[10px] font-bold text-stone-500 text-center leading-tight">Café</span>
+                </a>
+                <a class="flex flex-col items-center gap-2 group w-full px-1 opacity-70 hover:opacity-100 transition"
+                    href="#desserts">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-stone-50 text-stone-500 flex items-center justify-center border border-stone-100 group-hover:bg-white group-hover:shadow-sm active:scale-95 transition-all">
+                        <span class="material-symbols-outlined text-2xl">icecream</span>
+                    </div>
+                    <span class="text-[10px] font-bold text-stone-500 text-center leading-tight">Dessert</span>
+                </a>
+            </div>
+            <main class="flex-1 overflow-y-auto hide-scroll pb-32 md:pb-0 bg-background-light px-5 md:px-2 md:pr-4">
+                <div
+                    class="sticky top-0 z-30 bg-background-light pt-2 pb-4 -mx-5 px-5 md:mx-0 md:px-0 transition-all duration-300">
+                    <div class="relative group max-w-2xl mx-auto md:mx-0">
+                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                            <span
+                                class="material-symbols-outlined text-stone-400 group-focus-within:text-primary transition-colors">search</span>
+                        </div>
+                        <input
+                            class="block w-full pl-12 pr-12 py-3.5 bg-white border-none ring-1 ring-stone-200/80 rounded-2xl text-text-main placeholder:text-stone-400 focus:ring-2 focus:ring-primary/40 focus:outline-none shadow-card text-sm font-medium transition-all"
+                            placeholder="Search dishes, drinks..." type="text" />
+                        <div class="absolute inset-y-0 right-0 pr-2 flex items-center">
+                            <button
+                                class="bg-surface-highlight hover:bg-orange-100 p-2 rounded-xl text-primary transition-colors">
+                                <span class="material-symbols-outlined text-xl">tune</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="relative w-full h-56 md:h-72 rounded-3xl overflow-hidden mb-10 shadow-lg group mx-auto max-w-4xl md:mx-0">
+                    <img alt="Coffee aesthetics"
+                        class="w-full h-full object-cover transition duration-1000 group-hover:scale-105"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfj5GpIIPZPC5zE21L0qfU0GvpbJBWvn-xS_2VJsjQ3gxKdNz_QEliX0MG-kf9LA_QVESr52XW39cXRuuGHur_eaMrYa8eanh3TrZ4SKlr40ezp0AXaX5R64o-wcGpfZe92_BfBGKALCLxIrrICcsAxK7Ras4r0RFaN3uY4jUh7v0UHrnWYMpr5PvRzmdxv0lwd9PMu2-Ojo7um03CP5lUZT2oZ8ZtaOkv7GsqdS6dq9EEnFeWNZZpNit9-0kHcQCiD-W-s7_wNg" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/10"></div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-8 text-center md:text-left flex flex-col items-center md:items-start">
+                        <div
+                            class="inline-block bg-primary/95 backdrop-blur-sm text-[10px] font-extrabold text-white px-3 py-1 rounded-full mb-3 uppercase tracking-widest shadow-sm">
+                            Est. 2024 Tangier</div>
+                        <h1 class="text-white font-display font-bold text-5xl drop-shadow-lg mb-2 tracking-tight">La
+                            Carte</h1>
+                        <p class="text-white/90 text-sm font-light italic tracking-wide">A culinary journey through
+                            Tangier's heritage.</p>
+                    </div>
+                </div>
+                <section class="mb-12 scroll-mt-28 max-w-4xl" id="breakfast">
+                    <div class="flex items-end justify-between mb-6 border-b border-stone-200/80 pb-3">
+                        <h2 class="text-3xl font-display font-bold text-accent-brown">Le Petit Déjeuner</h2>
+                        <span
+                            class="text-xs text-text-secondary italic font-medium bg-white px-2 py-1 rounded-md border border-stone-100 shadow-sm">Until
+                            11:30 AM</span>
+                    </div>
+                    <div class="space-y-4">
+                        <div
+                            class="bg-surface-highlight border border-orange-100/50 rounded-2xl p-5 shadow-card relative overflow-hidden group hover:shadow-lg transition-all duration-300">
+                            <div class="flex gap-5 items-center">
+                                <div
+                                    class="w-24 h-24 flex-shrink-0 rounded-full border-4 border-white shadow-md overflow-hidden bg-white relative">
+                                    <img alt="Vintage Breakfast Set"
+                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9MdCUPz66WB62KmEtAvJ9RyUjDKkBXj8_fj6DgKVaSEPdlQ3lnPmRfS3Qo7FFyuyi9qaRhw4Aqlp6dSl-MJEKdrl3EG0yI_RBZM-MD6bSIQQj2NK4xLn7RT0j2gZW3pp2_ZZTi_FUvq_VyvGndq24fLOZAjvXLV_knB0uGmqKyQrSuI92T_Fy_FkbpMnFyjl_ixAH3tuc2Y1Ox_2fxvQP0jLGRGrSmTwaL-oanXqATivawnCW6wchIUJ4n4m-m4QI0LuHXWD4Sw" />
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <div class="flex flex-col">
+                                        <span
+                                            class="bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded-full w-fit mb-1.5 uppercase tracking-wide">Chef's
+                                            Choice</span>
+                                        <h3 class="font-display font-bold text-xl text-text-main truncate">Shakshuka
+                                            Royal</h3>
+                                        <p class="text-xs text-text-secondary mt-1.5 line-clamp-2 leading-relaxed">Eggs
+                                            poached in tomatoes, chili peppers, onions &amp; cumin. Served with crusty
+                                            baguette.</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end justify-center pl-2">
+                                    <span class="text-xl font-display font-bold text-price-color">65 <span
+                                            class="text-xs font-sans font-medium text-text-secondary">MAD</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div
+                                class="bg-white rounded-2xl p-5 shadow-card border border-stone-100/60 hover:border-primary/20 transition-colors group">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3
+                                        class="font-display font-bold text-lg text-text-main group-hover:text-primary transition-colors">
+                                        Moroccan Breakfast</h3>
+                                    <span class="font-bold text-price-color text-base whitespace-nowrap">120 MAD</span>
+                                </div>
+                                <p class="text-xs text-text-secondary leading-relaxed">Traditional assortment of breads,
+                                    organic olive oil, amlou, olives, and fresh mint tea.</p>
+                            </div>
+                            <div
+                                class="bg-white rounded-2xl p-5 shadow-card border border-stone-100/60 hover:border-primary/20 transition-colors group">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3
+                                        class="font-display font-bold text-lg text-text-main group-hover:text-primary transition-colors">
+                                        Beldi Breakfast</h3>
+                                    <span class="font-bold text-price-color text-base whitespace-nowrap">45 MAD</span>
+                                </div>
+                                <p class="text-xs text-text-secondary leading-relaxed">Olive oil, olives, honey, khlii,
+                                    and harcha. A classic start to the day.</p>
+                            </div>
+                            <div
+                                class="bg-white rounded-2xl p-5 shadow-card border border-stone-100/60 hover:border-primary/20 transition-colors group md:col-span-2">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3
+                                        class="font-display font-bold text-lg text-text-main group-hover:text-primary transition-colors">
+                                        Baghrir Trio</h3>
+                                    <span class="font-bold text-price-color text-base whitespace-nowrap">80 MAD</span>
+                                </div>
+                                <p class="text-xs text-text-secondary leading-relaxed">Three "thousand hole" spongy
+                                    pancakes served warm with honey and melted butter.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="mb-12 scroll-mt-28 max-w-4xl" id="lunch">
+                    <div class="flex items-end justify-between mb-6 border-b border-stone-200/80 pb-3">
+                        <h2 class="text-3xl font-display font-bold text-accent-brown">Déjeuner (Lunch)</h2>
+                        <span
+                            class="text-xs text-text-secondary italic font-medium bg-white px-2 py-1 rounded-md border border-stone-100 shadow-sm">From
+                            12:00 PM</span>
+                    </div>
+                    <div class="space-y-6">
+                        <div
+                            class="bg-white rounded-2xl overflow-hidden shadow-card border border-stone-100 hover:shadow-lg transition-shadow duration-300">
+                            <div class="flex flex-row h-36">
+                                <div class="w-36 md:w-48 relative overflow-hidden">
+                                    <img alt="Tagine"
+                                        class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEWtzrzNfZRTrzBXszpFaXtDkCU58nWaGH_-7O6UPrTplCNWheskbv47aLprTyAan_40drczkTOcXhO9v3y3QKrUHcRqLBRfYvKgeIdTAAoRcpk2-G-PZeg-pCdoE8BSfBjXEblGQNYK-na5TR0EVOzYpzr4dbvCX8-bgqK-7VvRP5a7fwkM7-diVzdKM06JjyTI_LVR-UrkgH7RUw3MSt-BxBSkCFan6EDZtAfcHz7ceSVfoIDFPhvP0_QCfBh8YWgsl1myByJQ" />
+                                </div>
+                                <div class="flex-1 p-4 flex flex-col justify-between">
+                                    <div>
+                                        <div class="flex justify-between items-start gap-2">
+                                            <h3 class="font-display font-bold text-lg text-text-main leading-tight">
+                                                Lemon Chicken Tagine</h3>
+                                            <span class="font-bold text-price-color text-base whitespace-nowrap">180
+                                                MAD</span>
+                                        </div>
+                                        <p class="text-xs text-text-secondary mt-2 line-clamp-2 leading-relaxed">
+                                            Slow-cooked chicken with preserved lemons and olives, served in a
+                                            traditional clay pot.</p>
+                                    </div>
+                                    <div class="flex gap-2 mt-2 flex-wrap">
+                                        <span
+                                            class="text-[9px] font-bold bg-stone-100 text-stone-500 px-2 py-1 rounded-md border border-stone-200 uppercase tracking-wider">Gluten-Free</span>
+                                        <span
+                                            class="text-[9px] font-bold bg-stone-100 text-stone-500 px-2 py-1 rounded-md border border-stone-200 uppercase tracking-wider">Classic</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white rounded-2xl overflow-hidden shadow-card border border-stone-100 hover:shadow-lg transition-shadow duration-300">
+                            <div class="flex flex-row h-36">
+                                <div class="w-36 md:w-48 relative overflow-hidden">
+                                    <img alt="Couscous"
+                                        class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSrIckovh4vq97hnBVmsAhIlxVq3z4dlsCHxbW-4BR9gAHLVhxuTqLtXFWynfCBwBknbs1zv2pVXz_2w5p8-Lebfl2rSImD-bUoipnbyiGjfBbYOlD6irRbh2zUZr_TPVW9HH6y-BoMdTBhwfi_oCZP4YC-7h4nVEV_X_j5ET9_2L1yc4c-q-wwoaksbVvikhfxuPa1plL-ag_lpSjo8KFINrarDhkPPsIQLI-wVkZ5F5dUVuLkH98ZHP7II1RClWz_uBLL14ObQ" />
+                                </div>
+                                <div class="flex-1 p-4 flex flex-col justify-between">
+                                    <div>
+                                        <div class="flex justify-between items-start gap-2">
+                                            <h3 class="font-display font-bold text-lg text-text-main leading-tight">
+                                                Couscous Friday</h3>
+                                            <span class="font-bold text-price-color text-base whitespace-nowrap">160
+                                                MAD</span>
+                                        </div>
+                                        <p class="text-xs text-text-secondary mt-2 line-clamp-2 leading-relaxed">
+                                            Available daily. Semolina wheat steamed to perfection, topped with seven
+                                            vegetables.</p>
+                                    </div>
+                                    <div class="flex gap-2 mt-2">
+                                        <span
+                                            class="text-[9px] font-bold bg-green-50 text-green-700 px-2 py-1 rounded-md border border-green-100 uppercase tracking-wider">Vegetarian</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="mb-12 scroll-mt-28 max-w-4xl" id="coffee">
+                    <div class="flex items-end justify-between mb-6 border-b border-stone-200/80 pb-3">
+                        <h2 class="text-3xl font-display font-bold text-accent-brown">Café &amp; Thé</h2>
+                        <span class="text-xs text-text-secondary italic font-medium">The heart of Vintage</span>
+                    </div>
+                    <div
+                        class="bg-surface-dark rounded-3xl p-6 md:p-8 text-white shadow-xl relative overflow-hidden border border-white/5">
+                        <div
+                            class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none">
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+                            <div>
+                                <div class="flex items-center gap-3 mb-6">
+                                    <span class="w-8 h-[1px] bg-primary"></span>
+                                    <h3 class="text-primary font-bold uppercase tracking-[0.2em] text-sm">Coffee</h3>
+                                </div>
+                                <div class="space-y-4">
+                                    <div
+                                        class="bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl p-4 transition-all duration-300 group">
+                                        <div class="flex justify-between items-start mb-1">
+                                            <h4
+                                                class="font-display font-bold text-lg text-white group-hover:text-primary transition-colors">
+                                                Nous-Nous</h4>
+                                            <span class="text-primary font-bold text-base">25 MAD</span>
+                                        </div>
+                                        <p class="text-xs text-white/60 italic font-light">Half coffee, half milk,
+                                            Tangier style</p>
+                                    </div>
+                                    <div
+                                        class="bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl p-4 transition-all duration-300 group">
+                                        <div class="flex justify-between items-start mb-1">
+                                            <h4
+                                                class="font-display font-bold text-lg text-white group-hover:text-primary transition-colors">
+                                                Café Noir</h4>
+                                            <span class="text-primary font-bold text-base">20 MAD</span>
+                                        </div>
+                                        <p class="text-xs text-white/60 italic font-light">Strong espresso shot</p>
+                                    </div>
+                                    <div
+                                        class="bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl p-4 transition-all duration-300 group">
+                                        <div class="flex justify-between items-start mb-1">
+                                            <h4
+                                                class="font-display font-bold text-lg text-white group-hover:text-primary transition-colors">
+                                                Cappuccino Vintage</h4>
+                                            <span class="text-primary font-bold text-base">35 MAD</span>
+                                        </div>
+                                        <p class="text-xs text-white/60 italic font-light">With chocolate dust</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-3 mb-6 md:mb-6 mt-4 md:mt-0">
+                                    <span class="w-8 h-[1px] bg-primary"></span>
+                                    <h3 class="text-primary font-bold uppercase tracking-[0.2em] text-sm">Tea &amp;
+                                        Infusions</h3>
+                                </div>
+                                <div class="space-y-4">
+                                    <div
+                                        class="bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl p-4 transition-all duration-300 group">
+                                        <div class="flex justify-between items-start mb-1">
+                                            <h4
+                                                class="font-display font-bold text-lg text-white group-hover:text-primary transition-colors">
+                                                Moroccan Mint Tea</h4>
+                                            <span class="text-primary font-bold text-base">30 MAD</span>
+                                        </div>
+                                        <p class="text-xs text-white/60 italic font-light">Gunpowder tea with fresh mint
+                                            leaves</p>
+                                    </div>
+                                    <div
+                                        class="bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl p-4 transition-all duration-300 group">
+                                        <div class="flex justify-between items-start mb-1">
+                                            <h4
+                                                class="font-display font-bold text-lg text-white group-hover:text-primary transition-colors">
+                                                Spiced Coffee</h4>
+                                            <span class="text-primary font-bold text-base">30 MAD</span>
+                                        </div>
+                                        <p class="text-xs text-white/60 italic font-light">Brewed with cinnamon and
+                                            nutmeg</p>
+                                    </div>
+                                    <div
+                                        class="bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl p-4 transition-all duration-300 group">
+                                        <div class="flex justify-between items-start mb-1">
+                                            <h4
+                                                class="font-display font-bold text-lg text-white group-hover:text-primary transition-colors">
+                                                Verbena Infusion</h4>
+                                            <span class="text-primary font-bold text-base">25 MAD</span>
+                                        </div>
+                                        <p class="text-xs text-white/60 italic font-light">Calming Louisa leaves</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="mb-10 scroll-mt-28 max-w-4xl" id="desserts">
+                    <div class="flex items-end justify-between mb-6 border-b border-stone-200/80 pb-3">
+                        <h2 class="text-3xl font-display font-bold text-accent-brown">Desserts</h2>
+                        <span class="text-xs text-text-secondary italic font-medium">Sweet endings</span>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <div
+                            class="group bg-white p-3 rounded-2xl shadow-sm border border-stone-100 hover:shadow-md transition-all">
+                            <div class="aspect-square rounded-xl overflow-hidden mb-3 relative">
+                                <img alt="Gazelle Horns"
+                                    class="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfGiQSWZ5mAQbz2-lpm3CBNtGGcOTNG86ldJvqSEABeJtBF_luDCHZlcCZN0M9agRNxLpr6iLdUGWzZ8QZZDI5U5c6VP3yTaA980n-MD9K0jcm1MLyrM0n9Bk8z1-vNiuAbdHzFpHoNFN4ub6Cv8AJQkdzoVR4UF4lh49wA-pKEs5pTKNelqWoqwWqllw0NNbydxUOKyEASsC6ND8DF41gwwZqEHyi0iIW0M0FkZ6Tn1bNyzleKnrN0cb_r9S1jIdFbSHQeFxcNg" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-2">
+                                    <span
+                                        class="text-white text-[10px] font-bold bg-primary px-1.5 py-0.5 rounded">Popular</span>
+                                </div>
+                            </div>
+                            <h3 class="font-display font-bold text-base text-text-main mb-0.5">Gazelle Horns</h3>
+                            <p class="text-[10px] text-stone-500 mb-2">Almond paste pastry</p>
+                            <span class="text-price-color font-bold text-sm block">20 MAD</span>
+                        </div>
+                        <div
+                            class="group bg-white p-3 rounded-2xl shadow-sm border border-stone-100 hover:shadow-md transition-all">
+                            <div class="aspect-square rounded-xl overflow-hidden mb-3 relative">
+                                <img alt="Chebakia"
+                                    class="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAghy2C-qWF10YxOPZ3aflQgrFdX2j1PMxQJvhmhwgxJfe29AVhImTFw0yjAsN8RFxqWTuIAm1eLpH9ziyq7bc05_xCheHLcuay8pJOoRcPrYMBs4vlAS0ll5p24qrXNlZIlrbzBYG5sQWRgNcFiUWVYs7TDtPiJ3RfhF1K38-SDL4GbB09Juy04yA2ywtoclPBto-pUQc0iZ2Fgn10cNOOmBwhsZqn-ATRFejV9Ij2XYKKBTbZwawAEyr4BjVr5VSJc2h0jrAzlQ" />
+                            </div>
+                            <h3 class="font-display font-bold text-base text-text-main mb-0.5">Chebakia</h3>
+                            <p class="text-[10px] text-stone-500 mb-2">Honey &amp; sesame</p>
+                            <span class="text-price-color font-bold text-sm block">15 MAD</span>
+                        </div>
+                        <div
+                            class="group bg-white p-3 rounded-2xl shadow-sm border border-stone-100 hover:shadow-md transition-all col-span-2 md:col-span-1">
+                            <div class="aspect-square rounded-xl overflow-hidden mb-3 relative">
+                                <img alt="Creme Brulee"
+                                    class="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfGiQSWZ5mAQbz2-lpm3CBNtGGcOTNG86ldJvqSEABeJtBF_luDCHZlcCZN0M9agRNxLpr6iLdUGWzZ8QZZDI5U5c6VP3yTaA980n-MD9K0jcm1MLyrM0n9Bk8z1-vNiuAbdHzFpHoNFN4ub6Cv8AJQkdzoVR4UF4lh49wA-pKEs5pTKNelqWoqwWqllw0NNbydxUOKyEASsC6ND8DF41gwwZqEHyi0iIW0M0FkZ6Tn1bNyzleKnrN0cb_r9S1jIdFbSHQeFxcNg" />
+                            </div>
+                            <h3 class="font-display font-bold text-base text-text-main mb-0.5">Crème Brûlée</h3>
+                            <p class="text-[10px] text-stone-500 mb-2">Vanilla bean custard</p>
+                            <span class="text-price-color font-bold text-sm block">45 MAD</span>
+                        </div>
+                    </div>
+                </section>
+                <footer class="text-center pb-10 pt-8 border-t border-stone-200">
+                    <div class="flex items-center justify-center gap-2 mb-3 text-accent-brown">
+                        <span class="material-symbols-outlined filled">coffee</span>
+                        <span class="font-bold text-sm uppercase tracking-widest font-display">Vintage Coffee &amp;
+                            Kitchen</span>
+                    </div>
+                    <p class="text-[10px] text-stone-400">© 2024 Vintage Coffee &amp; Kitchen. All rights reserved.</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+    <nav
+        class="fixed bottom-0 w-full bg-white/95 backdrop-blur-md border-t border-stone-200 pb-safe pt-2 px-6 z-50 md:hidden shadow-[0_-5px_10px_rgba(0,0,0,0.02)]">
+        <div class="flex justify-between items-center h-16 max-w-md mx-auto">
+            <button class="flex flex-col items-center gap-1 text-primary">
+                <span class="material-symbols-outlined text-2xl filled">restaurant_menu</span>
+                <span class="text-[10px] font-bold">Menu</span>
+            </button>
+            <button class="flex flex-col items-center gap-1 text-stone-400 hover:text-primary transition-colors">
+                <span class="material-symbols-outlined text-2xl">favorite</span>
+                <span class="text-[10px] font-medium">Favorites</span>
+            </button>
+            <div class="relative -top-6">
+                <button
+                    class="w-14 h-14 bg-gradient-to-tr from-primary to-primary-dark text-white rounded-full shadow-floating flex items-center justify-center transform transition-transform hover:scale-105 active:scale-95 ring-4 ring-white">
+                    <span class="material-symbols-outlined text-2xl">shopping_bag</span>
+                    <span
+                        class="absolute top-0 right-0 h-4 w-4 bg-accent-brown rounded-full text-[9px] flex items-center justify-center border-2 border-white font-bold">2</span>
+                </button>
+            </div>
+            <button class="flex flex-col items-center gap-1 text-stone-400 hover:text-primary transition-colors">
+                <span class="material-symbols-outlined text-2xl">receipt_long</span>
+                <span class="text-[10px] font-medium">Orders</span>
+            </button>
+            <button class="flex flex-col items-center gap-1 text-stone-400 hover:text-primary transition-colors">
+                <span class="material-symbols-outlined text-2xl">person</span>
+                <span class="text-[10px] font-medium">Profile</span>
+            </button>
+        </div>
+    </nav>
+
+</body>
+
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Cafe Vintage Desktop Menu</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Lato:wght@300;400;700&amp;family=Material+Icons&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#c04e22", // Burnt orange from filter buttons
+                        "primary-dark": "#a03d1a",
+                        "background-light": "#fcf8f2", // Warm off-white
+                        "background-dark": "#1a1816", // Dark brown/black for dark mode
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#2a2622",
+                        "vintage-brown": "#5d4037",
+                        "text-light": "#333333",
+                        "text-dark": "#e0e0e0",
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        body: ["Lato", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px rgba(0, 0, 0, 0.05)',
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #d1c4b6;
+            border-radius: 20px;
+        }
+
+        .dark ::-webkit-scrollbar-thumb {
+            background-color: #4a4540;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-body text-text-light dark:text-text-dark transition-colors duration-300 min-h-screen flex flex-col">
+    <nav
+        class="bg-surface-light dark:bg-surface-dark shadow-soft sticky top-0 z-50 border-b border-gray-200 dark:border-gray-800">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                    <span class="material-icons text-vintage-brown dark:text-gray-300">arrow_back</span>
+                </button>
+                <h1 class="font-display text-3xl font-bold tracking-wider text-vintage-brown dark:text-white uppercase">
+                    Vintage</h1>
+            </div>
+            <div class="hidden md:flex flex-1 max-w-2xl mx-8 relative">
+                <span
+                    class="material-icons absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">search</span>
+                <input
+                    class="w-full pl-12 pr-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 border-none focus:ring-2 focus:ring-primary text-gray-700 dark:text-gray-200 shadow-inner"
+                    placeholder="Rechercher un plat, une boisson..." type="text" />
+            </div>
+            <div class="flex items-center gap-4">
+                <button
+                    class="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-vintage-brown dark:text-gray-300 font-medium">
+                    <span class="material-icons">person</span>
+                    <span>Compte</span>
+                </button>
+                <button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                    onclick="document.documentElement.classList.toggle('dark')">
+                    <span class="material-icons text-vintage-brown dark:text-gray-300">dark_mode</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <main class="container mx-auto px-6 py-8 flex-1 grid grid-cols-12 gap-8">
+        <aside class="col-span-12 lg:col-span-3 xl:col-span-3 hidden lg:block">
+            <div
+                class="bg-surface-light dark:bg-surface-dark rounded-2xl p-6 shadow-soft sticky top-28 border border-gray-100 dark:border-gray-800">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="font-display text-xl font-bold text-gray-900 dark:text-white">Filter Options</h2>
+                    <button class="text-sm text-gray-500 hover:text-primary transition-colors">Reset</button>
+                </div>
+                <div class="mb-8">
+                    <div class="flex items-center gap-2 mb-4 text-primary font-bold">
+                        <span class="material-icons text-sm">category</span>
+                        <h3 class="text-sm uppercase tracking-wide">Category</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <button
+                            class="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:bg-primary-dark transition-colors shadow-md shadow-orange-200 dark:shadow-none">
+                            <span class="material-icons text-base">local_cafe</span> Beverages
+                        </button>
+                        <button
+                            class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors text-gray-700 dark:text-gray-200">
+                            <span class="material-icons text-base">restaurant</span> Food
+                        </button>
+                        <button
+                            class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors text-gray-700 dark:text-gray-200">
+                            <span class="material-icons text-base">cake</span> Desserts
+                        </button>
+                    </div>
+                </div>
+                <div class="mb-8">
+                    <div class="flex items-center gap-2 mb-4 text-primary font-bold">
+                        <span class="material-icons text-sm">thermostat</span>
+                        <h3 class="text-sm uppercase tracking-wide">Temperature</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <button
+                            class="flex justify-center items-center gap-2 px-4 py-2.5 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors text-gray-700 dark:text-gray-200 group">
+                            <span
+                                class="material-icons text-orange-500 text-base group-hover:scale-110 transition-transform">local_fire_department</span>
+                            Hot
+                        </button>
+                        <button
+                            class="flex justify-center items-center gap-2 px-4 py-2.5 bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800 rounded-xl text-sm font-medium text-blue-600 dark:text-blue-300">
+                            <span class="material-icons text-base">ac_unit</span> Cold
+                        </button>
+                    </div>
+                </div>
+                <div class="mb-8 bg-green-50 dark:bg-green-900/10 p-4 rounded-xl flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-green-100 dark:bg-green-800 p-2 rounded-full text-green-600 dark:text-green-300">
+                            <span class="material-icons text-lg">eco</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 dark:text-gray-200 text-sm">Vegan Options</h4>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">Plant-based only</p>
+                        </div>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input class="sr-only peer" type="checkbox" value="" />
+                        <div
+                            class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-green-500">
+                        </div>
+                    </label>
+                </div>
+                <div class="mb-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-2 text-primary font-bold">
+                            <span class="material-icons text-sm">payments</span>
+                            <h3 class="text-sm uppercase tracking-wide">Price Range</h3>
+                        </div>
+                        <span class="text-primary font-bold text-sm">15 - 80 MAD</span>
+                    </div>
+                    <div class="relative pt-1">
+                        <div class="h-1 bg-gray-200 dark:bg-gray-700 rounded-full">
+                            <div class="absolute h-1 bg-primary rounded-full left-1/4 right-1/4"></div>
+                        </div>
+                        <div
+                            class="absolute top-0 left-1/4 -ml-2 w-4 h-4 bg-white border-2 border-primary rounded-full cursor-pointer shadow">
+                        </div>
+                        <div
+                            class="absolute top-0 right-1/4 -mr-2 w-4 h-4 bg-white border-2 border-primary rounded-full cursor-pointer shadow">
+                        </div>
+                        <div class="flex justify-between mt-2 text-xs text-gray-400">
+                            <span>0 MAD</span>
+                            <span>200 MAD</span>
+                        </div>
+                    </div>
+                </div>
+                <button
+                    class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3 px-6 rounded-xl shadow-lg shadow-orange-200 dark:shadow-none transition-all transform active:scale-95">
+                    Apply Filters
+                </button>
+            </div>
+        </aside>
+        <section class="col-span-12 lg:col-span-9 xl:col-span-9">
+            <div
+                class="flex overflow-x-auto pb-4 mb-6 gap-8 border-b border-gray-200 dark:border-gray-700 no-scrollbar">
+                <button class="whitespace-nowrap pb-3 text-lg font-bold text-primary border-b-2 border-primary">
+                    Nos catégories
+                </button>
+                <button
+                    class="whitespace-nowrap pb-3 text-lg font-medium text-gray-500 dark:text-gray-400 hover:text-vintage-brown dark:hover:text-gray-200 transition-colors">
+                    Favoris
+                </button>
+                <button
+                    class="whitespace-nowrap pb-3 text-lg font-medium text-gray-500 dark:text-gray-400 hover:text-vintage-brown dark:hover:text-gray-200 transition-colors">
+                    Populaire
+                </button>
+                <button
+                    class="whitespace-nowrap pb-3 text-lg font-medium text-gray-500 dark:text-gray-400 hover:text-vintage-brown dark:hover:text-gray-200 transition-colors">
+                    Nouveau
+                </button>
+            </div>
+            <div class="mb-8">
+                <h2 class="font-display text-2xl font-bold text-vintage-brown dark:text-white mb-6">Explorer le Menu
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div
+                        class="group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10">
+                        </div>
+                        <img alt="Petit déjeuner avec croissants et jus d'orange"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-TtCWcGTiY_rowwrtg1652vCvInZyg4pi5YZ0E-g_ZijS_0M7gbintiOoS2AE6C3MgdjWB3tY1c-3YMQkAUIIpRPFhlpM817WQsHzxrzvczXtWqPx98S0h-kmXH5vIHQy4M77enhYW3Q4arJM6CQZfhaE55x-kqB0LErDg3DwbZi3mGfQgAQPTdl6K47qyddBu7L00AOJ88D0SuKS1jBJG0333rSZlaqfVzo793MaqBMcqKmebdco57zplANX5CeD0SaF-x4llEI" />
+                        <div class="absolute bottom-0 left-0 p-6 z-20">
+                            <h3 class="font-display text-3xl font-bold text-white mb-1">Petit déjeuner</h3>
+                            <p class="text-white/80 font-light text-sm">Commencez votre journée</p>
+                        </div>
+                    </div>
+                    <div
+                        class="group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10">
+                        </div>
+                        <img alt="Pizza italienne fraîche"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoo3rvWG4ENUiuWF2prW72F_mdETKpJb2YILLWVtEo187VbIZRC6YiRfsTq2ToPEosGuhg9gYgPL41Z-LHhnlPfUaYkF4_TppL8GqB4BVhPLjWmerDLjJNotSLDq_rbYoljKggNBYKTVuggxo-GhqiHGG9yoiKhGg14mPylFqISZWwUgW3I5jvMpOr1KOQq8ts_n8aq1pYcBi07tUo3w0F52LpyKsYpzajWcVdNc9UmmlyUJMzW1nPQ7R7CHR7TZVSGwMJzAuh4E" />
+                        <div class="absolute bottom-0 left-0 p-6 z-20">
+                            <h3 class="font-display text-3xl font-bold text-white mb-1">Pâte et pizza</h3>
+                            <p class="text-white/80 font-light text-sm">Saveurs d'Italie</p>
+                        </div>
+                    </div>
+                    <div
+                        class="group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10">
+                        </div>
+                        <img alt="Burger et frites"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX43mnqtaWhAcaFVVtNVDKYBBr4xD-vgCBO2s5COHLyWJyVEErQF13zCaiw3hkmgkOYQGSaXY_Xf6ZUJ4t0rccCBcxvXcFEvaALMn6XSuqJXyiu3CMUF5_Ek13ppGvZby1X7pWJSEOJRaqTtMhQ7tAQ7O7ML_etFUAEyjVzv7UKNXq7Hpd8vibC58_L46Z_m046Hnf-osBgNNODNjtPvYxUovtBflcvySqzAO-M2RuP6DviSBJW2ZOPOsXNA9za-8jAkQO5mM6HUs" />
+                        <div class="absolute bottom-0 left-0 p-6 z-20">
+                            <h3 class="font-display text-3xl font-bold text-white mb-1">Fast food</h3>
+                            <p class="text-white/80 font-light text-sm">Rapide et délicieux</p>
+                        </div>
+                    </div>
+                    <div
+                        class="group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10">
+                        </div>
+                        <img alt="Cocktails rafraîchissants"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn7QVJrBHLPjXn4D2BtqVQ_3BMJiUi4moBv2gR4t9RHEjiPxrYKkcYqKgseSJ22mIUxq0wS1OrYJDqj8XNdrEJztFDFi_TEoc4z8yFuVrLNZcAkLtkQpVFaWi8c5mmO2tchcnORBAX1Ax9uYh9jU3AfkPoc6YEGrRaN06Ihyt46fsov7M_vBicxEMpK0f1HvhaB4sPL7cbVSwsPoh6hn82bK7J5k8lnIXAkUYwtDlRqwoOcM_kwwK0joqCZlRHxup5wzjBMaeKfSQ" />
+                        <div class="absolute bottom-0 left-0 p-6 z-20">
+                            <h3 class="font-display text-3xl font-bold text-white mb-1">Cocktail et boissons</h3>
+                            <p class="text-white/80 font-light text-sm">Rafraîchissez-vous</p>
+                        </div>
+                    </div>
+                    <div
+                        class="group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-shadow duration-300 md:col-span-2">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10">
+                        </div>
+                        <img alt="Gâteaux et pâtisseries"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuALTn4Mcz4HnLqTNn4YgsZ1YURw-r5bqNnAIXkixVWr1r4F5fcqVECsa5ZWvjsSgxkuUlcGtkxeo_5zFW35pp2V4q12M9kqWCUE8fTAyAn0jqngOfSQ0i33JWgBIopRMt0kEMxiX5Gj8_hnKtSlgFTq-cd3twSXcyb_2oRhhDEobr1ha1JDD0EOVyKWmKG2bUJd43JpzckvSlE_EvOcvJUFW5Zhd9N87WwfDkF2ww2-Lxw6SJ4iQZP_U0a-nGpBqw5uZsIYKrjQKjU" />
+                        <div class="absolute bottom-0 left-0 p-6 z-20">
+                            <h3 class="font-display text-3xl font-bold text-white mb-1">Pâtisserie &amp; Desserts</h3>
+                            <p class="text-white/80 font-light text-sm">Une touche sucrée pour finir</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800 py-12">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="col-span-1 md:col-span-1">
+                <h1
+                    class="font-display text-2xl font-bold tracking-wider text-vintage-brown dark:text-white uppercase mb-4">
+                    Vintage</h1>
+                <p class="text-gray-500 dark:text-gray-400 text-sm">Authentic taste in the heart of Tangier. Experience
+                    the vintage vibes with modern culinary delights.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-gray-900 dark:text-white mb-4">Menu</h4>
+                <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+                    <li><a class="hover:text-primary transition-colors" href="#">Petit déjeuner</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Pizza</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Drinks</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-gray-900 dark:text-white mb-4">Contact</h4>
+                <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+                    <li class="flex items-center gap-2"><span class="material-icons text-xs">location_on</span> Tangier,
+                        Morocco</li>
+                    <li class="flex items-center gap-2"><span class="material-icons text-xs">phone</span> +212 555 0000
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-gray-900 dark:text-white mb-4">Social</h4>
+                <div class="flex gap-4">
+                    <a class="text-gray-400 hover:text-primary transition-colors" href="#"><i
+                            class="material-icons">facebook</i></a>
+                    <a class="text-gray-400 hover:text-primary transition-colors" href="#"><i
+                            class="material-icons">camera_alt</i></a>
+                </div>
+            </div>
+        </div>
+        <div
+            class="container mx-auto px-6 mt-12 pt-8 border-t border-gray-100 dark:border-gray-800 text-center text-xs text-gray-400">
+            © 2023 Cafe Vintage. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+
+</html>

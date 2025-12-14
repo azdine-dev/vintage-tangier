@@ -39,3 +39,17 @@
     background-color: #D4A373;
     width: 2rem;
 }
+
+.patron-scroll-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.patron-scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.masonry-grid {
+    display: grid;
+    grid-template-rows: masonry;
+}

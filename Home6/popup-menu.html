@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Cafe Vintage - Filter Options</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="../../assets/js/tailwind6-popup.config.js"></script>
+    <link href="../../assets/css/popup-menu.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-900/40 font-display flex items-end justify-center min-h-screen w-full overflow-hidden">
+    <!-- Bottom Sheet Container -->
+    <div
+        class="relative w-full max-w-md bg-background-light dark:bg-background-dark rounded-t-3xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+        <!-- Handle -->
+        <div class="flex flex-col items-center pt-3 pb-2 shrink-0 bg-background-light dark:bg-background-dark z-10">
+            <div class="h-1.5 w-12 rounded-full bg-stone-300 dark:bg-stone-600"></div>
+        </div>
+        <!-- Header -->
+        <div class="px-6 pb-4 flex items-center justify-between shrink-0">
+            <h2 class="text-stone-custom dark:text-white text-2xl font-bold tracking-tight">Filter Options</h2>
+            <button
+                class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <!-- Scrollable Content -->
+        <div class="flex-1 overflow-y-auto px-6 pb-24 space-y-8">
+            <!-- Category Section -->
+            <section>
+                <h3 class="text-stone-custom dark:text-white text-lg font-bold mb-3 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-xl">category</span>
+                    Category
+                </h3>
+                <div class="flex flex-wrap gap-3">
+                    <!-- Active Chip -->
+                    <button
+                        class="group flex h-10 items-center justify-center gap-x-2 rounded-xl bg-primary px-5 transition-transform active:scale-95 shadow-sm shadow-orange-900/10">
+                        <span class="material-symbols-outlined text-white text-[18px]">local_cafe</span>
+                        <p class="text-white text-sm font-medium">Beverages</p>
+                    </button>
+                    <!-- Inactive Chips -->
+                    <button
+                        class="group flex h-10 items-center justify-center gap-x-2 rounded-xl bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 px-5 transition-transform active:scale-95">
+                        <span
+                            class="material-symbols-outlined text-stone-500 dark:text-stone-400 text-[18px]">restaurant</span>
+                        <p class="text-stone-600 dark:text-stone-300 text-sm font-medium">Food</p>
+                    </button>
+                    <button
+                        class="group flex h-10 items-center justify-center gap-x-2 rounded-xl bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 px-5 transition-transform active:scale-95">
+                        <span
+                            class="material-symbols-outlined text-stone-500 dark:text-stone-400 text-[18px]">cake</span>
+                        <p class="text-stone-600 dark:text-stone-300 text-sm font-medium">Desserts</p>
+                    </button>
+                </div>
+            </section>
+            <!-- Temperature Section -->
+            <section>
+                <h3 class="text-stone-custom dark:text-white text-lg font-bold mb-3 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-xl">device_thermostat</span>
+                    Temperature
+                </h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <button
+                        class="flex h-12 items-center justify-center gap-x-2 rounded-xl bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 hover:border-primary/50 dark:hover:border-primary/50 transition-colors">
+                        <span class="material-symbols-outlined text-orange-600 text-[20px]">local_fire_department</span>
+                        <p class="text-stone-600 dark:text-stone-300 font-medium">Hot</p>
+                    </button>
+                    <button
+                        class="flex h-12 items-center justify-center gap-x-2 rounded-xl bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 transition-colors">
+                        <span class="material-symbols-outlined text-blue-500 text-[20px]">ac_unit</span>
+                        <p class="text-blue-700 dark:text-blue-300 font-medium">Cold</p>
+                    </button>
+                </div>
+            </section>
+            <!-- Dietary Section -->
+            <section>
+                <div class="flex items-center justify-between py-2">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="h-10 w-10 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-700 dark:text-green-400">
+                            <span class="material-symbols-outlined">eco</span>
+                        </div>
+                        <div>
+                            <h3 class="text-stone-custom dark:text-white text-lg font-bold">Vegan Options</h3>
+                            <p class="text-stone-500 dark:text-stone-400 text-sm">Show only plant-based items</p>
+                        </div>
+                    </div>
+                    <!-- Toggle Switch -->
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input class="sr-only peer" type="checkbox" value="" />
+                        <div
+                            class="w-14 h-8 bg-stone-200 dark:bg-stone-700 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary/20 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-7 after:w-7 after:transition-all peer-checked:bg-primary">
+                        </div>
+                    </label>
+                </div>
+            </section>
+            <!-- Price Range Section -->
+            <section>
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-stone-custom dark:text-white text-lg font-bold flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-xl">payments</span>
+                        Price Range
+                    </h3>
+                    <p class="text-primary font-bold">15 MAD - 80 MAD</p>
+                </div>
+                <!-- Custom Visual Slider -->
+                <div class="relative w-full h-12 flex items-center">
+                    <!-- Background Track -->
+                    <div class="absolute w-full h-1.5 bg-stone-200 dark:bg-stone-700 rounded-full"></div>
+                    <!-- Active Track (Simulated) -->
+                    <div class="absolute h-1.5 bg-primary rounded-full left-[15%] right-[20%]"></div>
+                    <!-- Left Thumb (Simulated) -->
+                    <div
+                        class="absolute left-[15%] h-7 w-7 bg-white dark:bg-stone-800 border-2 border-primary rounded-full shadow-lg cursor-grab flex items-center justify-center -translate-x-1/2 hover:scale-110 transition-transform">
+                        <div class="h-2 w-2 bg-primary rounded-full"></div>
+                    </div>
+                    <!-- Right Thumb (Simulated) -->
+                    <div
+                        class="absolute right-[20%] h-7 w-7 bg-white dark:bg-stone-800 border-2 border-primary rounded-full shadow-lg cursor-grab flex items-center justify-center translate-x-1/2 hover:scale-110 transition-transform">
+                        <div class="h-2 w-2 bg-primary rounded-full"></div>
+                    </div>
+                </div>
+                <div class="flex justify-between text-xs text-stone-400 dark:text-stone-500 font-medium mt-1">
+                    <span>0 MAD</span>
+                    <span>200 MAD</span>
+                </div>
+            </section>
+        </div>
+        <!-- Sticky Footer -->
+        <div
+            class="absolute bottom-0 left-0 w-full bg-background-light dark:bg-background-dark border-t border-stone-100 dark:border-stone-800 p-4 pb-8 flex gap-4 backdrop-blur-xl bg-opacity-95 dark:bg-opacity-95">
+            <button
+                class="flex-1 h-12 rounded-xl border border-stone-200 dark:border-stone-700 text-stone-600 dark:text-stone-300 font-semibold hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                Reset
+            </button>
+            <button
+                class="flex-[2] h-12 rounded-xl bg-primary text-white font-bold shadow-lg shadow-primary/30 hover:bg-primary/90 transition-colors flex items-center justify-center gap-2">
+                Apply Filters
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
